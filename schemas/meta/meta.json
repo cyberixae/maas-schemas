@@ -1,0 +1,69 @@
+{
+  "$id": "http://maasglobal.com/meta/meta.json",
+  "definitions": {
+    "id": {
+      "type": "string",
+      "pattern": "^http://maasglobal.com/.*.json$"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["string", "object"]
+    },
+    "definitions": {
+      "type": "object",
+      "additionalProperties": {
+        "schema": { "$ref": "#/definitions/schema" }
+      }
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "$id": { "$ref": "#/definitions/id" },
+        "type": { "$ref": "#/definitions/type" },
+        "definitions": { "$ref": "#/definitions/definitions" },
+        "properties": { "$ref": "#/definitions/definitions" },
+        "additionalProperties": { "type": "boolean" },
+        "allOf": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/schema" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "relativeRef": {
+      "type": "string",
+      "pattern": "^#/definitions"
+    },
+    "absoluteRef": {
+      "type": "string",
+      "pattern": "^http://maasglobal.com/"
+    },
+    "ref": {
+      "type": "object",
+      "properties": {
+        "$ref": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^#/definitions"
+            },
+            {
+              "type": "string",
+              "pattern": "^http://maasglobal.com/"
+            }
+          ]
+        }
+      }
+    },
+    "refOrInline": {
+      "anyOf": [
+        { "$ref": "#/definitions/ref" },
+        { "$ref": "#/definitions/schema" }
+      ]
+    }
+
+  },
+  "allOf": [
+    { "$ref": "#/definitions/schema" }
+  ]
+}
