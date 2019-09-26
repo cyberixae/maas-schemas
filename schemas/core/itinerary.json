@@ -46,11 +46,9 @@
     "legs": {
       "type": "array",
       "minItems": 0,
-      "items": [
-        {
-          "$ref": "leg.json"
-        }
-      ]
+      "items": {
+        "$ref": "leg.json"
+      }
     },
     "productOptions": {
       "type": "array",

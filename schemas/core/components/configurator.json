@@ -81,11 +81,9 @@
         },
         "fares": {
           "type": "array",
-          "items": [
-            {
-              "$ref": "fare.json"
-            }
-          ]
+          "items": {
+            "$ref": "fare.json"
+          }
         },
         "terms": {
           "$ref": "terms.json"
