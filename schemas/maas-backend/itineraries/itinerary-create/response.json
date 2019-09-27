@@ -47,7 +47,7 @@
     "paymentParameters": {
       "description": "Payment parameters for asynchronous payment methods",
       "oneOf": [
-        "items": { "$ref": "#/definitions/paymentParameter" },
+        { "$ref": "#/definitions/paymentParameter" },
         {
           "type": "array",
           "items": { "$ref": "#/definitions/paymentParameter" }
