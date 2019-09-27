@@ -26,7 +26,7 @@
     "currency": {
       "oneOf": [
         { "$ref": "units.json#/definitions/currency" },
-        { "type": null }
+        { "type": "null" }
       ]
     }
   },
