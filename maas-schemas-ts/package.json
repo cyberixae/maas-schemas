@@ -21,7 +21,7 @@
     "typecheck": "tsc --noEmit",
     "ci": "yarn cross-check && yarn lint && yarn build",
     "convert-all": "yarn clean-src && yarn lint && yarn build-converter && (yarn run-converter 2> translation.log) && yarn get-problems && yarn typecheck && yarn eslint --fix && yarn eslint && yarn build",
-    "cross-check": "yarn convert-all && git diff-index --quiet HEAD . || (git status && cat translation.log && echo 'Please run \"npm run convert-all\" in maas-schemas-ts directory' && exit 1)",
+    "cross-check": "yarn convert-all && git checkout yarn.lock && git diff-index --quiet HEAD . || (git status && cat translation.log && echo 'Please run \"npm run convert-all\" in maas-schemas-ts directory' && exit 1)",
     "get-info-culprits": "cat translation.log|grep INFO -A 1|grep '  in'|sort|uniq -c|sort||true",
     "get-warning-culprits": "cat translation.log|grep WARNING -A 1|grep '  in'|sort|uniq -c|sort||true",
     "get-error-culprits": "cat translation.log|grep ERROR -A 1|grep '  in'|sort|uniq -c|sort||true",
