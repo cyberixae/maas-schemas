@@ -549,7 +549,7 @@ function fromSchema(schema: JSONSchema7Definition, isRoot = false): gen.TypeRefe
   throw new Error(`unknown schema: ${JSON.stringify(schema)}`);
 }
 
-type Examples = Array<unknown>
+type Examples = Array<unknown>;
 
 type DefMeta = {
   title: JSONSchema7['title'];
@@ -562,13 +562,10 @@ type DefInput = {
   dec: gen.TypeDeclaration;
 };
 
-function extractExamples(schema: JSONSchema7Definition): Examples {
-  const implicitExamples = [schema.default].filter(v => typeof v !== undefined);
-  const explicitExamples = schema.examples||[];
-  const examples = [
-    ...implicitExamples,
-    ...explicitExamples,
-  ];
+function extractExamples(schema: Exclude<JSONSchema7Definition, boolean>): Examples {
+  const implicitExamples = [schema.default].filter((v) => typeof v !== undefined);
+  const explicitExamples = schema.examples || [];
+  const examples = [].concat(implicitExamples).concat(explicitExamples);
   return examples;
 }
 
@@ -680,7 +677,7 @@ function fromRoot(root: JSONSchema7): Array<DefInput> {
       },
     ];
   }
-  const items = fromNonRefRoot(schema);
+  const items = fromNonRefRoot(root);
   if (items.length > 0) {
     imps.add("import * as t from 'io-ts';");
     exps.add('export default Default;');
@@ -733,7 +730,7 @@ function constructDefs(defInputs: Array<DefInput>): Array<Def> {
   });
 }
 
-if (inputSchema.$id.split(#).length > 1) {
+if (inputSchema.$id.split('#').length > 1) {
   info('Fragment used as part of $id');
 }
 
