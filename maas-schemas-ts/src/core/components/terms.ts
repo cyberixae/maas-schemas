@@ -60,6 +60,8 @@ export const Seat = t.brand(
 export interface SeatBrand {
   readonly Seat: unique symbol;
 }
+export const jsonSeatExamples: Array<unknown> = [];
+export const safeSeatExamples = t.array(Seat).decode(jsonSeatExamples);
 // Cancellation
 // The purpose of this remains a mystery
 export type Cancellation = t.Branded<
@@ -106,6 +108,10 @@ export const Cancellation = t.brand(
 export interface CancellationBrand {
   readonly Cancellation: unique symbol;
 }
+export const jsonCancellationExamples: Array<unknown> = [];
+export const safeCancellationExamples = t
+  .array(Cancellation)
+  .decode(jsonCancellationExamples);
 // Amendment
 // The purpose of this remains a mystery
 export type Amendment = t.Branded<
@@ -146,6 +152,8 @@ export const Amendment = t.brand(
 export interface AmendmentBrand {
   readonly Amendment: unique symbol;
 }
+export const jsonAmendmentExamples: Array<unknown> = [];
+export const safeAmendmentExamples = t.array(Amendment).decode(jsonAmendmentExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -295,6 +303,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

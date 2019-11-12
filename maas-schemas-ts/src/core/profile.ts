@@ -121,6 +121,10 @@ export const SubscriptionInstance = t.brand(
 export interface SubscriptionInstanceBrand {
   readonly SubscriptionInstance: unique symbol;
 }
+export const jsonSubscriptionInstanceExamples: Array<unknown> = [];
+export const safeSubscriptionInstanceExamples = t
+  .array(SubscriptionInstance)
+  .decode(jsonSubscriptionInstanceExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -263,6 +267,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

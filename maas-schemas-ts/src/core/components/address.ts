@@ -29,6 +29,10 @@ export const ComponentAddress = t.brand(
 export interface ComponentAddressBrand {
   readonly ComponentAddress: unique symbol;
 }
+export const jsonComponentAddressExamples: Array<unknown> = [];
+export const safeComponentAddressExamples = t
+  .array(ComponentAddress)
+  .decode(jsonComponentAddressExamples);
 // PlaceName
 // Place name (given in autocomplete)
 export type PlaceName = t.Branded<string, PlaceNameBrand>;
@@ -40,22 +44,32 @@ export const PlaceName = t.brand(
 export interface PlaceNameBrand {
   readonly PlaceName: unique symbol;
 }
+export const jsonPlaceNameExamples: Array<unknown> = [];
+export const safePlaceNameExamples = t.array(PlaceName).decode(jsonPlaceNameExamples);
 // FirstName
 // The purpose of this remains a mystery
 export type FirstName = Common_.PersonalName;
 export const FirstName = Common_.PersonalName;
+export const jsonFirstNameExamples: Array<unknown> = [];
+export const safeFirstNameExamples = t.array(FirstName).decode(jsonFirstNameExamples);
 // LastName
 // The purpose of this remains a mystery
 export type LastName = Common_.PersonalName;
 export const LastName = Common_.PersonalName;
+export const jsonLastNameExamples: Array<unknown> = [];
+export const safeLastNameExamples = t.array(LastName).decode(jsonLastNameExamples);
 // Phone
 // The purpose of this remains a mystery
 export type Phone = Common_.Phone;
 export const Phone = Common_.Phone;
+export const jsonPhoneExamples: Array<unknown> = [];
+export const safePhoneExamples = t.array(Phone).decode(jsonPhoneExamples);
 // Email
 // The purpose of this remains a mystery
 export type Email = Common_.Email;
 export const Email = Common_.Email;
+export const jsonEmailExamples: Array<unknown> = [];
+export const safeEmailExamples = t.array(Email).decode(jsonEmailExamples);
 // Address
 // Street address (and optional number), http://www.bitboost.com/ref/international-address-formats.html
 export type Address = t.Branded<string, AddressBrand>;
@@ -67,6 +81,8 @@ export const Address = t.brand(
 export interface AddressBrand {
   readonly Address: unique symbol;
 }
+export const jsonAddressExamples: Array<unknown> = [];
+export const safeAddressExamples = t.array(Address).decode(jsonAddressExamples);
 // ZipCode
 // Numeric zip code, see https://en.wikipedia.org/wiki/Postal_code
 export type ZipCode = t.Branded<string, ZipCodeBrand>;
@@ -79,6 +95,8 @@ export const ZipCode = t.brand(
 export interface ZipCodeBrand {
   readonly ZipCode: unique symbol;
 }
+export const jsonZipCodeExamples: Array<unknown> = [];
+export const safeZipCodeExamples = t.array(ZipCode).decode(jsonZipCodeExamples);
 // CountryName
 // Alphabetic country name
 export type CountryName = t.Branded<string, CountryNameBrand>;
@@ -92,6 +110,10 @@ export const CountryName = t.brand(
 export interface CountryNameBrand {
   readonly CountryName: unique symbol;
 }
+export const jsonCountryNameExamples: Array<unknown> = [];
+export const safeCountryNameExamples = t
+  .array(CountryName)
+  .decode(jsonCountryNameExamples);
 // Country
 // ISO 3166-1 alpha-2 country code, see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 export type Country = t.Branded<string, CountryBrand>;
@@ -104,6 +126,8 @@ export const Country = t.brand(
 export interface CountryBrand {
   readonly Country: unique symbol;
 }
+export const jsonCountryExamples: Array<unknown> = [];
+export const safeCountryExamples = t.array(Country).decode(jsonCountryExamples);
 // City
 // Alphabetic city name
 export type City = t.Branded<string, CityBrand>;
@@ -115,6 +139,8 @@ export const City = t.brand(
 export interface CityBrand {
   readonly City: unique symbol;
 }
+export const jsonCityExamples: Array<unknown> = [];
+export const safeCityExamples = t.array(City).decode(jsonCityExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -126,6 +152,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

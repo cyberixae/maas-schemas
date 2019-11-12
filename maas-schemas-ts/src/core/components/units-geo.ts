@@ -38,6 +38,8 @@ export const Latitude = t.brand(
 export interface LatitudeBrand {
   readonly Latitude: unique symbol;
 }
+export const jsonLatitudeExamples: Array<unknown> = [];
+export const safeLatitudeExamples = t.array(Latitude).decode(jsonLatitudeExamples);
 // Longitude
 // Geographic longitude (east-west axis) in WGS-84 system, see https://en.wikipedia.org/wiki/World_Geodetic_System
 export type Longitude = t.Branded<number, LongitudeBrand>;
@@ -50,6 +52,8 @@ export const Longitude = t.brand(
 export interface LongitudeBrand {
   readonly Longitude: unique symbol;
 }
+export const jsonLongitudeExamples: Array<unknown> = [];
+export const safeLongitudeExamples = t.array(Longitude).decode(jsonLongitudeExamples);
 // RelaxedLatitude
 // No-numeric precision version of MaaS core latitude
 export type RelaxedLatitude = t.Branded<number, RelaxedLatitudeBrand>;
@@ -62,6 +66,10 @@ export const RelaxedLatitude = t.brand(
 export interface RelaxedLatitudeBrand {
   readonly RelaxedLatitude: unique symbol;
 }
+export const jsonRelaxedLatitudeExamples: Array<unknown> = [];
+export const safeRelaxedLatitudeExamples = t
+  .array(RelaxedLatitude)
+  .decode(jsonRelaxedLatitudeExamples);
 // RelaxedLongitude
 // No-numeric precision version of MaaS core longitude
 export type RelaxedLongitude = t.Branded<number, RelaxedLongitudeBrand>;
@@ -74,6 +82,10 @@ export const RelaxedLongitude = t.brand(
 export interface RelaxedLongitudeBrand {
   readonly RelaxedLongitude: unique symbol;
 }
+export const jsonRelaxedLongitudeExamples: Array<unknown> = [];
+export const safeRelaxedLongitudeExamples = t
+  .array(RelaxedLongitude)
+  .decode(jsonRelaxedLongitudeExamples);
 // Distance
 // Distance in meters
 export type Distance = t.Branded<number, DistanceBrand>;
@@ -86,6 +98,8 @@ export const Distance = t.brand(
 export interface DistanceBrand {
   readonly Distance: unique symbol;
 }
+export const jsonDistanceExamples: Array<unknown> = [];
+export const safeDistanceExamples = t.array(Distance).decode(jsonDistanceExamples);
 // Polyline
 // Google encoded polyline, see: https://developers.google.com/maps/documentation/utilities/polylinealgorithm
 export type Polyline = t.Branded<string, PolylineBrand>;
@@ -101,6 +115,8 @@ export const Polyline = t.brand(
 export interface PolylineBrand {
   readonly Polyline: unique symbol;
 }
+export const jsonPolylineExamples: Array<unknown> = [];
+export const safePolylineExamples = t.array(Polyline).decode(jsonPolylineExamples);
 // Location
 // Geographic latitude-longitude object in WGS-84 system, see https://en.wikipedia.org/wiki/World_Geodetic_System
 export type Location = t.Branded<
@@ -141,6 +157,8 @@ export const Location = t.brand(
 export interface LocationBrand {
   readonly Location: unique symbol;
 }
+export const jsonLocationExamples: Array<unknown> = [];
+export const safeLocationExamples = t.array(Location).decode(jsonLocationExamples);
 // RelaxedLocation
 // No-numeric precision version of MaaS core location
 export type RelaxedLocation = t.Branded<
@@ -181,6 +199,10 @@ export const RelaxedLocation = t.brand(
 export interface RelaxedLocationBrand {
   readonly RelaxedLocation: unique symbol;
 }
+export const jsonRelaxedLocationExamples: Array<unknown> = [];
+export const safeRelaxedLocationExamples = t
+  .array(RelaxedLocation)
+  .decode(jsonRelaxedLocationExamples);
 // ShortLocation
 // Geographic latitude-longitude number-pair array in WGS-84 system, see https://en.wikipedia.org/wiki/World_Geodetic_System
 export type ShortLocation = t.Branded<[Latitude, Longitude], ShortLocationBrand>;
@@ -192,6 +214,10 @@ export const ShortLocation = t.brand(
 export interface ShortLocationBrand {
   readonly ShortLocation: unique symbol;
 }
+export const jsonShortLocationExamples: Array<unknown> = [];
+export const safeShortLocationExamples = t
+  .array(ShortLocation)
+  .decode(jsonShortLocationExamples);
 // ShortLocationString
 // Geographic latitude-longitude number-pair as a string in WGS-84 system, see https://en.wikipedia.org/wiki/World_Geodetic_System
 export type ShortLocationString = t.Branded<string, ShortLocationStringBrand>;
@@ -208,6 +234,10 @@ export const ShortLocationString = t.brand(
 export interface ShortLocationStringBrand {
   readonly ShortLocationString: unique symbol;
 }
+export const jsonShortLocationStringExamples: Array<unknown> = [];
+export const safeShortLocationStringExamples = t
+  .array(ShortLocationString)
+  .decode(jsonShortLocationStringExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -219,6 +249,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

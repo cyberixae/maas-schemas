@@ -40,6 +40,10 @@ export const ObsoleteTime = t.brand(
 export interface ObsoleteTimeBrand {
   readonly ObsoleteTime: unique symbol;
 }
+export const jsonObsoleteTimeExamples: Array<unknown> = [];
+export const safeObsoleteTimeExamples = t
+  .array(ObsoleteTime)
+  .decode(jsonObsoleteTimeExamples);
 // BookingStateTransition
 // The purpose of this remains a mystery
 export type BookingStateTransition = t.Branded<
@@ -101,6 +105,10 @@ export const BookingStateTransition = t.brand(
 export interface BookingStateTransitionBrand {
   readonly BookingStateTransition: unique symbol;
 }
+export const jsonBookingStateTransitionExamples: Array<unknown> = [];
+export const safeBookingStateTransitionExamples = t
+  .array(BookingStateTransition)
+  .decode(jsonBookingStateTransitionExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<Array<BookingStateTransition>, DefaultBrand>;
@@ -112,6 +120,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

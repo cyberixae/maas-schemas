@@ -28,6 +28,10 @@ export const AcceptHeader = t.brand(
 export interface AcceptHeaderBrand {
   readonly AcceptHeader: unique symbol;
 }
+export const jsonAcceptHeaderExamples: Array<unknown> = [];
+export const safeAcceptHeaderExamples = t
+  .array(AcceptHeader)
+  .decode(jsonAcceptHeaderExamples);
 // UserAgentHeader
 // The purpose of this remains a mystery
 export type UserAgentHeader = t.Branded<string, UserAgentHeaderBrand>;
@@ -40,6 +44,10 @@ export const UserAgentHeader = t.brand(
 export interface UserAgentHeaderBrand {
   readonly UserAgentHeader: unique symbol;
 }
+export const jsonUserAgentHeaderExamples: Array<unknown> = [];
+export const safeUserAgentHeaderExamples = t
+  .array(UserAgentHeader)
+  .decode(jsonUserAgentHeaderExamples);
 // Headers
 // The purpose of this remains a mystery
 export type Headers = t.Branded<
@@ -68,6 +76,8 @@ export const Headers = t.brand(
 export interface HeadersBrand {
   readonly Headers: unique symbol;
 }
+export const jsonHeadersExamples: Array<unknown> = [];
+export const safeHeadersExamples = t.array(Headers).decode(jsonHeadersExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -79,6 +89,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

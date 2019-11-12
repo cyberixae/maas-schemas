@@ -65,6 +65,8 @@ export const Developer = t.brand(
 export interface DeveloperBrand {
   readonly Developer: unique symbol;
 }
+export const jsonDeveloperExamples: Array<unknown> = [];
+export const safeDeveloperExamples = t.array(Developer).decode(jsonDeveloperExamples);
 // EnvironmentId
 // The purpose of this remains a mystery
 export type EnvironmentId = t.Branded<string, EnvironmentIdBrand>;
@@ -76,6 +78,10 @@ export const EnvironmentId = t.brand(
 export interface EnvironmentIdBrand {
   readonly EnvironmentId: unique symbol;
 }
+export const jsonEnvironmentIdExamples: Array<unknown> = [];
+export const safeEnvironmentIdExamples = t
+  .array(EnvironmentId)
+  .decode(jsonEnvironmentIdExamples);
 // EnvironmentUrl
 // The purpose of this remains a mystery
 export type EnvironmentUrl = t.Branded<string & Units_.Url, EnvironmentUrlBrand>;
@@ -88,6 +94,10 @@ export const EnvironmentUrl = t.brand(
 export interface EnvironmentUrlBrand {
   readonly EnvironmentUrl: unique symbol;
 }
+export const jsonEnvironmentUrlExamples: Array<unknown> = [];
+export const safeEnvironmentUrlExamples = t
+  .array(EnvironmentUrl)
+  .decode(jsonEnvironmentUrlExamples);
 // EnvironmentLive
 // Live environments are connected to actual payment and TSP services
 export type EnvironmentLive = t.Branded<boolean, EnvironmentLiveBrand>;
@@ -99,6 +109,10 @@ export const EnvironmentLive = t.brand(
 export interface EnvironmentLiveBrand {
   readonly EnvironmentLive: unique symbol;
 }
+export const jsonEnvironmentLiveExamples: Array<unknown> = [];
+export const safeEnvironmentLiveExamples = t
+  .array(EnvironmentLive)
+  .decode(jsonEnvironmentLiveExamples);
 // EnvironmentName
 // The purpose of this remains a mystery
 export type EnvironmentName = t.Branded<string, EnvironmentNameBrand>;
@@ -110,6 +124,10 @@ export const EnvironmentName = t.brand(
 export interface EnvironmentNameBrand {
   readonly EnvironmentName: unique symbol;
 }
+export const jsonEnvironmentNameExamples: Array<unknown> = [];
+export const safeEnvironmentNameExamples = t
+  .array(EnvironmentName)
+  .decode(jsonEnvironmentNameExamples);
 // EnvironmentDescription
 // The purpose of this remains a mystery
 export type EnvironmentDescription = t.Branded<string, EnvironmentDescriptionBrand>;
@@ -121,6 +139,10 @@ export const EnvironmentDescription = t.brand(
 export interface EnvironmentDescriptionBrand {
   readonly EnvironmentDescription: unique symbol;
 }
+export const jsonEnvironmentDescriptionExamples: Array<unknown> = [];
+export const safeEnvironmentDescriptionExamples = t
+  .array(EnvironmentDescription)
+  .decode(jsonEnvironmentDescriptionExamples);
 // Environment
 // The purpose of this remains a mystery
 export type Environment = t.Branded<
@@ -179,6 +201,18 @@ export const Environment = t.brand(
 export interface EnvironmentBrand {
   readonly Environment: unique symbol;
 }
+export const jsonEnvironmentExamples: Array<unknown> = [
+  {
+    id: 'production',
+    api: 'https://production.example.com/api/',
+    live: true,
+    contact: { name: 'Alisha Admin', email: 'admin@example.com' },
+    description: 'Production environment',
+  },
+];
+export const safeEnvironmentExamples = t
+  .array(Environment)
+  .decode(jsonEnvironmentExamples);
 // DevEnvironment
 // The purpose of this remains a mystery
 export type DevEnvironment = t.Branded<
@@ -218,6 +252,18 @@ export const DevEnvironment = t.brand(
 export interface DevEnvironmentBrand {
   readonly DevEnvironment: unique symbol;
 }
+export const jsonDevEnvironmentExamples: Array<unknown> = [
+  {
+    id: 'testing',
+    api: 'https://testing.example.com/api/',
+    live: false,
+    contact: { name: 'Alisha Admin' },
+    description: 'Testing environment',
+  },
+];
+export const safeDevEnvironmentExamples = t
+  .array(DevEnvironment)
+  .decode(jsonDevEnvironmentExamples);
 // EnvironmentGroupName
 // The purpose of this remains a mystery
 export type EnvironmentGroupName = t.Branded<string, EnvironmentGroupNameBrand>;
@@ -229,6 +275,10 @@ export const EnvironmentGroupName = t.brand(
 export interface EnvironmentGroupNameBrand {
   readonly EnvironmentGroupName: unique symbol;
 }
+export const jsonEnvironmentGroupNameExamples: Array<unknown> = [];
+export const safeEnvironmentGroupNameExamples = t
+  .array(EnvironmentGroupName)
+  .decode(jsonEnvironmentGroupNameExamples);
 // EnvironmentGroupDescription
 // The purpose of this remains a mystery
 export type EnvironmentGroupDescription = t.Branded<
@@ -243,6 +293,10 @@ export const EnvironmentGroupDescription = t.brand(
 export interface EnvironmentGroupDescriptionBrand {
   readonly EnvironmentGroupDescription: unique symbol;
 }
+export const jsonEnvironmentGroupDescriptionExamples: Array<unknown> = [];
+export const safeEnvironmentGroupDescriptionExamples = t
+  .array(EnvironmentGroupDescription)
+  .decode(jsonEnvironmentGroupDescriptionExamples);
 // EnvironmentGroup
 // The purpose of this remains a mystery
 export type EnvironmentGroup = t.Branded<
@@ -286,6 +340,10 @@ export const EnvironmentGroup = t.brand(
 export interface EnvironmentGroupBrand {
   readonly EnvironmentGroup: unique symbol;
 }
+export const jsonEnvironmentGroupExamples: Array<unknown> = [];
+export const safeEnvironmentGroupExamples = t
+  .array(EnvironmentGroup)
+  .decode(jsonEnvironmentGroupExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -320,6 +378,45 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [
+  {
+    index: [
+      {
+        name: 'Core Environments',
+        envs: [
+          {
+            id: 'production',
+            api: 'https://production.example.com/api/',
+            live: true,
+            contact: { name: 'Alisha Admin', email: 'admin@example.com' },
+            description: 'Production environment',
+          },
+          {
+            id: 'testing',
+            api: 'https://testing.example.com/api/',
+            live: false,
+            contact: { name: 'Alisha Admin' },
+            description: 'Testing environment',
+          },
+        ],
+      },
+      {
+        name: 'Development Environments',
+        envs: [
+          {
+            id: 'fantasyTopping',
+            api: 'https://fantasy.example.com/api/',
+            live: false,
+            contact: { name: 'Dennis Developer' },
+            name: 'Fantasy Topping',
+            description: 'Add support for pizza customization',
+          },
+        ],
+      },
+    ],
+  },
+];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

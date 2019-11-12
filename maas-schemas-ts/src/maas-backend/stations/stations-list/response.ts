@@ -8,6 +8,7 @@ undefined
 */
 
 import * as Response_ from 'maas-schemas-ts/tsp/stations-list/response';
+import * as t from 'io-ts';
 
 export const schemaId =
   'http://maasglobal.com/maas-backend/stations/stations-list/response.json';
@@ -15,6 +16,8 @@ export const schemaId =
 // The default export. More information at the top.
 export type Default = Response_.Default;
 export const Default = Response_.Default;
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

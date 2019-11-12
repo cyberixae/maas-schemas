@@ -88,6 +88,10 @@ export const AvainpayResponse = t.brand(
 export interface AvainpayResponseBrand {
   readonly AvainpayResponse: unique symbol;
 }
+export const jsonAvainpayResponseExamples: Array<unknown> = [];
+export const safeAvainpayResponseExamples = t
+  .array(AvainpayResponse)
+  .decode(jsonAvainpayResponseExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<AvainpayResponse, DefaultBrand>;
@@ -99,6 +103,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

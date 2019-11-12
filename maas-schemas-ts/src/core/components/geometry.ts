@@ -38,6 +38,8 @@ export const Position = t.brand(
 export interface PositionBrand {
   readonly Position: unique symbol;
 }
+export const jsonPositionExamples: Array<unknown> = [];
+export const safePositionExamples = t.array(Position).decode(jsonPositionExamples);
 // PositionArray
 // An array of positions
 export type PositionArray = t.Branded<Array<Position>, PositionArrayBrand>;
@@ -49,6 +51,10 @@ export const PositionArray = t.brand(
 export interface PositionArrayBrand {
   readonly PositionArray: unique symbol;
 }
+export const jsonPositionArrayExamples: Array<unknown> = [];
+export const safePositionArrayExamples = t
+  .array(PositionArray)
+  .decode(jsonPositionArrayExamples);
 // LineString
 // An array of two or more positions
 export type LineString = t.Branded<PositionArray & unknown, LineStringBrand>;
@@ -60,6 +66,8 @@ export const LineString = t.brand(
 export interface LineStringBrand {
   readonly LineString: unique symbol;
 }
+export const jsonLineStringExamples: Array<unknown> = [];
+export const safeLineStringExamples = t.array(LineString).decode(jsonLineStringExamples);
 // LinearRing
 // An array of four positions where the first equals the last
 export type LinearRing = t.Branded<PositionArray & unknown, LinearRingBrand>;
@@ -71,6 +79,8 @@ export const LinearRing = t.brand(
 export interface LinearRingBrand {
   readonly LinearRing: unique symbol;
 }
+export const jsonLinearRingExamples: Array<unknown> = [];
+export const safeLinearRingExamples = t.array(LinearRing).decode(jsonLinearRingExamples);
 // Polygon
 // An array of linear rings
 export type Polygon = t.Branded<Array<LinearRing>, PolygonBrand>;
@@ -82,6 +92,8 @@ export const Polygon = t.brand(
 export interface PolygonBrand {
   readonly Polygon: unique symbol;
 }
+export const jsonPolygonExamples: Array<unknown> = [];
+export const safePolygonExamples = t.array(Polygon).decode(jsonPolygonExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -114,6 +126,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

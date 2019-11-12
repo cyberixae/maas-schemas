@@ -99,6 +99,8 @@ export const Leg = t.brand(
 export interface LegBrand {
   readonly Leg: unique symbol;
 }
+export const jsonLegExamples: Array<unknown> = [];
+export const safeLegExamples = t.array(Leg).decode(jsonLegExamples);
 // TspProduct
 // Defines what kind of TSP product the booking option represents.
 export type TspProduct = t.Branded<
@@ -133,10 +135,14 @@ export const TspProduct = t.brand(
 export interface TspProductBrand {
   readonly TspProduct: unique symbol;
 }
+export const jsonTspProductExamples: Array<unknown> = [];
+export const safeTspProductExamples = t.array(TspProduct).decode(jsonTspProductExamples);
 // Customer
 // The purpose of this remains a mystery
 export type Customer = Customer_.Default;
 export const Customer = Customer_.Default;
+export const jsonCustomerExamples: Array<unknown> = [];
+export const safeCustomerExamples = t.array(Customer).decode(jsonCustomerExamples);
 // ContentWithCost
 // The purpose of this remains a mystery
 export type ContentWithCost = t.Branded<
@@ -198,6 +204,10 @@ export const ContentWithCost = t.brand(
 export interface ContentWithCostBrand {
   readonly ContentWithCost: unique symbol;
 }
+export const jsonContentWithCostExamples: Array<unknown> = [];
+export const safeContentWithCostExamples = t
+  .array(ContentWithCost)
+  .decode(jsonContentWithCostExamples);
 // ContentWithConfigurator
 // The purpose of this remains a mystery
 export type ContentWithConfigurator = t.Branded<
@@ -259,6 +269,10 @@ export const ContentWithConfigurator = t.brand(
 export interface ContentWithConfiguratorBrand {
   readonly ContentWithConfigurator: unique symbol;
 }
+export const jsonContentWithConfiguratorExamples: Array<unknown> = [];
+export const safeContentWithConfiguratorExamples = t
+  .array(ContentWithConfigurator)
+  .decode(jsonContentWithConfiguratorExamples);
 // LegDelta
 // A leg delta, containing any subset of the valid properties
 export type LegDelta = t.Branded<
@@ -299,6 +313,8 @@ export const LegDelta = t.brand(
 export interface LegDeltaBrand {
   readonly LegDelta: unique symbol;
 }
+export const jsonLegDeltaExamples: Array<unknown> = [];
+export const safeLegDeltaExamples = t.array(LegDelta).decode(jsonLegDeltaExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<ContentWithCost | ContentWithConfigurator, DefaultBrand>;
@@ -310,6 +326,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

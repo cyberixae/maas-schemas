@@ -38,22 +38,32 @@ export const schemaId = 'http://maasglobal.com/core/leg.json';
 // The purpose of this remains a mystery
 export type State = State_.LegState;
 export const State = State_.LegState;
+export const jsonStateExamples: Array<unknown> = [];
+export const safeStateExamples = t.array(State).decode(jsonStateExamples);
 // From
 // The purpose of this remains a mystery
 export type From = Place_.Default;
 export const From = Place_.Default;
+export const jsonFromExamples: Array<unknown> = [];
+export const safeFromExamples = t.array(From).decode(jsonFromExamples);
 // To
 // The purpose of this remains a mystery
 export type To = Place_.Default;
 export const To = Place_.Default;
+export const jsonToExamples: Array<unknown> = [];
+export const safeToExamples = t.array(To).decode(jsonToExamples);
 // StartTime
 // The purpose of this remains a mystery
 export type StartTime = Units_.Time;
 export const StartTime = Units_.Time;
+export const jsonStartTimeExamples: Array<unknown> = [];
+export const safeStartTimeExamples = t.array(StartTime).decode(jsonStartTimeExamples);
 // EndTime
 // The purpose of this remains a mystery
 export type EndTime = Units_.Time;
 export const EndTime = Units_.Time;
+export const jsonEndTimeExamples: Array<unknown> = [];
+export const safeEndTimeExamples = t.array(EndTime).decode(jsonEndTimeExamples);
 // Mode
 // The purpose of this remains a mystery
 export type Mode = t.Branded<
@@ -81,6 +91,8 @@ export const Mode = t.brand(
 export interface ModeBrand {
   readonly Mode: unique symbol;
 }
+export const jsonModeExamples: Array<unknown> = [];
+export const safeModeExamples = t.array(Mode).decode(jsonModeExamples);
 // Stops
 // The purpose of this remains a mystery
 export type Stops = t.Branded<Array<Stop_.Default>, StopsBrand>;
@@ -92,18 +104,30 @@ export const Stops = t.brand(
 export interface StopsBrand {
   readonly Stops: unique symbol;
 }
+export const jsonStopsExamples: Array<unknown> = [];
+export const safeStopsExamples = t.array(Stops).decode(jsonStopsExamples);
 // DepartureDelay
 // The purpose of this remains a mystery
 export type DepartureDelay = Units_.Duration;
 export const DepartureDelay = Units_.Duration;
+export const jsonDepartureDelayExamples: Array<unknown> = [];
+export const safeDepartureDelayExamples = t
+  .array(DepartureDelay)
+  .decode(jsonDepartureDelayExamples);
 // ArrivalDelay
 // The purpose of this remains a mystery
 export type ArrivalDelay = Units_.Duration;
 export const ArrivalDelay = Units_.Duration;
+export const jsonArrivalDelayExamples: Array<unknown> = [];
+export const safeArrivalDelayExamples = t
+  .array(ArrivalDelay)
+  .decode(jsonArrivalDelayExamples);
 // Distance
 // The purpose of this remains a mystery
 export type Distance = UnitsGeo_.Distance;
 export const Distance = UnitsGeo_.Distance;
+export const jsonDistanceExamples: Array<unknown> = [];
+export const safeDistanceExamples = t.array(Distance).decode(jsonDistanceExamples);
 // Route
 // The purpose of this remains a mystery
 export type Route = t.Branded<string, RouteBrand>;
@@ -117,6 +141,8 @@ export const Route = t.brand(
 export interface RouteBrand {
   readonly Route: unique symbol;
 }
+export const jsonRouteExamples: Array<unknown> = [];
+export const safeRouteExamples = t.array(Route).decode(jsonRouteExamples);
 // RouteShortName
 // The purpose of this remains a mystery
 export type RouteShortName = t.Branded<string, RouteShortNameBrand>;
@@ -129,6 +155,10 @@ export const RouteShortName = t.brand(
 export interface RouteShortNameBrand {
   readonly RouteShortName: unique symbol;
 }
+export const jsonRouteShortNameExamples: Array<unknown> = [];
+export const safeRouteShortNameExamples = t
+  .array(RouteShortName)
+  .decode(jsonRouteShortNameExamples);
 // RouteLongName
 // The purpose of this remains a mystery
 export type RouteLongName = t.Branded<string, RouteLongNameBrand>;
@@ -142,10 +172,16 @@ export const RouteLongName = t.brand(
 export interface RouteLongNameBrand {
   readonly RouteLongName: unique symbol;
 }
+export const jsonRouteLongNameExamples: Array<unknown> = [];
+export const safeRouteLongNameExamples = t
+  .array(RouteLongName)
+  .decode(jsonRouteLongNameExamples);
 // AgencyId
 // The purpose of this remains a mystery
 export type AgencyId = Common_.AgencyId;
 export const AgencyId = Common_.AgencyId;
+export const jsonAgencyIdExamples: Array<unknown> = [];
+export const safeAgencyIdExamples = t.array(AgencyId).decode(jsonAgencyIdExamples);
 // LegGeometry
 // The purpose of this remains a mystery
 export type LegGeometry = t.Branded<
@@ -171,10 +207,16 @@ export const LegGeometry = t.brand(
 export interface LegGeometryBrand {
   readonly LegGeometry: unique symbol;
 }
+export const jsonLegGeometryExamples: Array<unknown> = [];
+export const safeLegGeometryExamples = t
+  .array(LegGeometry)
+  .decode(jsonLegGeometryExamples);
 // TspProduct
 // The purpose of this remains a mystery
 export type TspProduct = BookingOption_.TspProduct;
 export const TspProduct = BookingOption_.TspProduct;
+export const jsonTspProductExamples: Array<unknown> = [];
+export const safeTspProductExamples = t.array(TspProduct).decode(jsonTspProductExamples);
 // ProductOption
 // Index of the productOption used in the itinerary's productOptions
 export type ProductOption = t.Branded<number, ProductOptionBrand>;
@@ -186,6 +228,10 @@ export const ProductOption = t.brand(
 export interface ProductOptionBrand {
   readonly ProductOption: unique symbol;
 }
+export const jsonProductOptionExamples: Array<unknown> = [];
+export const safeProductOptionExamples = t
+  .array(ProductOption)
+  .decode(jsonProductOptionExamples);
 // LegExtensions
 // MaaS specific leg extensions
 export type LegExtensions = t.Branded<
@@ -214,6 +260,10 @@ export const LegExtensions = t.brand(
 export interface LegExtensionsBrand {
   readonly LegExtensions: unique symbol;
 }
+export const jsonLegExtensionsExamples: Array<unknown> = [];
+export const safeLegExtensionsExamples = t
+  .array(LegExtensions)
+  .decode(jsonLegExtensionsExamples);
 // LegCore
 // The purpose of this remains a mystery
 export type LegCore = t.Branded<
@@ -311,6 +361,8 @@ export const LegCore = t.brand(
 export interface LegCoreBrand {
   readonly LegCore: unique symbol;
 }
+export const jsonLegCoreExamples: Array<unknown> = [];
+export const safeLegCoreExamples = t.array(LegCore).decode(jsonLegCoreExamples);
 // WaitingLeg
 // The purpose of this remains a mystery
 export type WaitingLeg = t.Branded<
@@ -357,6 +409,8 @@ export const WaitingLeg = t.brand(
 export interface WaitingLegBrand {
   readonly WaitingLeg: unique symbol;
 }
+export const jsonWaitingLegExamples: Array<unknown> = [];
+export const safeWaitingLegExamples = t.array(WaitingLeg).decode(jsonWaitingLegExamples);
 // TransferLeg
 // The purpose of this remains a mystery
 export type TransferLeg = t.Branded<
@@ -403,6 +457,10 @@ export const TransferLeg = t.brand(
 export interface TransferLegBrand {
   readonly TransferLeg: unique symbol;
 }
+export const jsonTransferLegExamples: Array<unknown> = [];
+export const safeTransferLegExamples = t
+  .array(TransferLeg)
+  .decode(jsonTransferLegExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -425,6 +483,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

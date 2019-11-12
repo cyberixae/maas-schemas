@@ -21,6 +21,10 @@ export const WaitingMode = t.brand(
 export interface WaitingModeBrand {
   readonly WaitingMode: unique symbol;
 }
+export const jsonWaitingModeExamples: Array<unknown> = [];
+export const safeWaitingModeExamples = t
+  .array(WaitingMode)
+  .decode(jsonWaitingModeExamples);
 // TransferMode
 // A mode that involves changing transports
 export type TransferMode = t.Branded<
@@ -35,6 +39,10 @@ export const TransferMode = t.brand(
 export interface TransferModeBrand {
   readonly TransferMode: unique symbol;
 }
+export const jsonTransferModeExamples: Array<unknown> = [];
+export const safeTransferModeExamples = t
+  .array(TransferMode)
+  .decode(jsonTransferModeExamples);
 // PersonalMode
 // A mode that involves using your personal vehicle or legs
 export type PersonalMode = t.Branded<
@@ -63,6 +71,10 @@ export const PersonalMode = t.brand(
 export interface PersonalModeBrand {
   readonly PersonalMode: unique symbol;
 }
+export const jsonPersonalModeExamples: Array<unknown> = [];
+export const safePersonalModeExamples = t
+  .array(PersonalMode)
+  .decode(jsonPersonalModeExamples);
 // PublicTransitMode
 // A mode that involves transit with fixed schedules
 export type PublicTransitMode = t.Branded<
@@ -96,6 +108,10 @@ export const PublicTransitMode = t.brand(
 export interface PublicTransitModeBrand {
   readonly PublicTransitMode: unique symbol;
 }
+export const jsonPublicTransitModeExamples: Array<unknown> = [];
+export const safePublicTransitModeExamples = t
+  .array(PublicTransitMode)
+  .decode(jsonPublicTransitModeExamples);
 // PrivateTransitMode
 // A mode that is available on-demand for your personal use
 export type PrivateTransitMode = t.Branded<
@@ -145,6 +161,10 @@ export const PrivateTransitMode = t.brand(
 export interface PrivateTransitModeBrand {
   readonly PrivateTransitMode: unique symbol;
 }
+export const jsonPrivateTransitModeExamples: Array<unknown> = [];
+export const safePrivateTransitModeExamples = t
+  .array(PrivateTransitMode)
+  .decode(jsonPrivateTransitModeExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -170,6 +190,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

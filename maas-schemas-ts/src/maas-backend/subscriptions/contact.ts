@@ -33,6 +33,8 @@ export const schemaId = 'http://maasglobal.com/maas-backend/subscriptions/contac
 // The purpose of this remains a mystery
 export type IdentityId = Units_.IdentityId;
 export const IdentityId = Units_.IdentityId;
+export const jsonIdentityIdExamples: Array<unknown> = [];
+export const safeIdentityIdExamples = t.array(IdentityId).decode(jsonIdentityIdExamples);
 // ContactBase
 // The purpose of this remains a mystery
 export type ContactBase = t.Branded<
@@ -82,6 +84,10 @@ export const ContactBase = t.brand(
 export interface ContactBaseBrand {
   readonly ContactBase: unique symbol;
 }
+export const jsonContactBaseExamples: Array<unknown> = [];
+export const safeContactBaseExamples = t
+  .array(ContactBase)
+  .decode(jsonContactBaseExamples);
 // StripePaymentMethod
 // The payment (gateway) method info; no credit cards here
 export type StripePaymentMethod = t.Branded<
@@ -122,6 +128,10 @@ export const StripePaymentMethod = t.brand(
 export interface StripePaymentMethodBrand {
   readonly StripePaymentMethod: unique symbol;
 }
+export const jsonStripePaymentMethodExamples: Array<unknown> = [];
+export const safeStripePaymentMethodExamples = t
+  .array(StripePaymentMethod)
+  .decode(jsonStripePaymentMethodExamples);
 // CreditCardPaymentMethod
 // Credit card based payment (only for testing)
 export type CreditCardPaymentMethod = t.Branded<
@@ -180,6 +190,10 @@ export const CreditCardPaymentMethod = t.brand(
 export interface CreditCardPaymentMethodBrand {
   readonly CreditCardPaymentMethod: unique symbol;
 }
+export const jsonCreditCardPaymentMethodExamples: Array<unknown> = [];
+export const safeCreditCardPaymentMethodExamples = t
+  .array(CreditCardPaymentMethod)
+  .decode(jsonCreditCardPaymentMethodExamples);
 // NewPaymentMethod
 // The purpose of this remains a mystery
 export type NewPaymentMethod = t.Branded<
@@ -199,6 +213,10 @@ export const NewPaymentMethod = t.brand(
 export interface NewPaymentMethodBrand {
   readonly NewPaymentMethod: unique symbol;
 }
+export const jsonNewPaymentMethodExamples: Array<unknown> = [];
+export const safeNewPaymentMethodExamples = t
+  .array(NewPaymentMethod)
+  .decode(jsonNewPaymentMethodExamples);
 // NewContact
 // The purpose of this remains a mystery
 export type NewContact = t.Branded<
@@ -239,6 +257,8 @@ export const NewContact = t.brand(
 export interface NewContactBrand {
   readonly NewContact: unique symbol;
 }
+export const jsonNewContactExamples: Array<unknown> = [];
+export const safeNewContactExamples = t.array(NewContact).decode(jsonNewContactExamples);
 // ContactUpdate
 // The purpose of this remains a mystery
 export type ContactUpdate = t.Branded<
@@ -276,6 +296,10 @@ export const ContactUpdate = t.brand(
 export interface ContactUpdateBrand {
   readonly ContactUpdate: unique symbol;
 }
+export const jsonContactUpdateExamples: Array<unknown> = [];
+export const safeContactUpdateExamples = t
+  .array(ContactUpdate)
+  .decode(jsonContactUpdateExamples);
 // PaymentMethodResponse
 // The payment (gateway) method info; no credit cards here
 export type PaymentMethodResponse = t.Branded<
@@ -316,6 +340,10 @@ export const PaymentMethodResponse = t.brand(
 export interface PaymentMethodResponseBrand {
   readonly PaymentMethodResponse: unique symbol;
 }
+export const jsonPaymentMethodResponseExamples: Array<unknown> = [];
+export const safePaymentMethodResponseExamples = t
+  .array(PaymentMethodResponse)
+  .decode(jsonPaymentMethodResponseExamples);
 // ContactResponse
 // The purpose of this remains a mystery
 export type ContactResponse = t.Branded<
@@ -356,6 +384,10 @@ export const ContactResponse = t.brand(
 export interface ContactResponseBrand {
   readonly ContactResponse: unique symbol;
 }
+export const jsonContactResponseExamples: Array<unknown> = [];
+export const safeContactResponseExamples = t
+  .array(ContactResponse)
+  .decode(jsonContactResponseExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -367,6 +399,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

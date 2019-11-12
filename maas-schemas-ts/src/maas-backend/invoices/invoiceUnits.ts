@@ -21,6 +21,8 @@ export const InvoiceId = t.brand(
 export interface InvoiceIdBrand {
   readonly InvoiceId: unique symbol;
 }
+export const jsonInvoiceIdExamples: Array<unknown> = [];
+export const safeInvoiceIdExamples = t.array(InvoiceId).decode(jsonInvoiceIdExamples);
 // InvoiceLineItemId
 // The purpose of this remains a mystery
 export type InvoiceLineItemId = t.Branded<string, InvoiceLineItemIdBrand>;
@@ -33,6 +35,10 @@ export const InvoiceLineItemId = t.brand(
 export interface InvoiceLineItemIdBrand {
   readonly InvoiceLineItemId: unique symbol;
 }
+export const jsonInvoiceLineItemIdExamples: Array<unknown> = [];
+export const safeInvoiceLineItemIdExamples = t
+  .array(InvoiceLineItemId)
+  .decode(jsonInvoiceLineItemIdExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -44,6 +50,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

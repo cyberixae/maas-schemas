@@ -64,6 +64,8 @@ export const Payload = t.brand(
 export interface PayloadBrand {
   readonly Payload: unique symbol;
 }
+export const jsonPayloadExamples: Array<unknown> = [];
+export const safePayloadExamples = t.array(Payload).decode(jsonPayloadExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -107,6 +109,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

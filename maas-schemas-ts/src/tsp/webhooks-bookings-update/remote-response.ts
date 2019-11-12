@@ -105,6 +105,10 @@ export const BookingDelta = t.brand(
 export interface BookingDeltaBrand {
   readonly BookingDelta: unique symbol;
 }
+export const jsonBookingDeltaExamples: Array<unknown> = [];
+export const safeBookingDeltaExamples = t
+  .array(BookingDelta)
+  .decode(jsonBookingDeltaExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -133,6 +137,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

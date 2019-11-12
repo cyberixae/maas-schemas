@@ -68,6 +68,8 @@ export const Geometry = t.brand(
 export interface GeometryBrand {
   readonly Geometry: unique symbol;
 }
+export const jsonGeometryExamples: Array<unknown> = [];
+export const safeGeometryExamples = t.array(Geometry).decode(jsonGeometryExamples);
 // Properties
 // The purpose of this remains a mystery
 export type Properties = t.Branded<
@@ -123,6 +125,8 @@ export const Properties = t.brand(
 export interface PropertiesBrand {
   readonly Properties: unique symbol;
 }
+export const jsonPropertiesExamples: Array<unknown> = [];
+export const safePropertiesExamples = t.array(Properties).decode(jsonPropertiesExamples);
 // Feature
 // The purpose of this remains a mystery
 export type Feature = t.Branded<
@@ -169,6 +173,8 @@ export const Feature = t.brand(
 export interface FeatureBrand {
   readonly Feature: unique symbol;
 }
+export const jsonFeatureExamples: Array<unknown> = [];
+export const safeFeatureExamples = t.array(Feature).decode(jsonFeatureExamples);
 // FeatureCollection
 // The purpose of this remains a mystery
 export type FeatureCollection = t.Branded<
@@ -209,6 +215,10 @@ export const FeatureCollection = t.brand(
 export interface FeatureCollectionBrand {
   readonly FeatureCollection: unique symbol;
 }
+export const jsonFeatureCollectionExamples: Array<unknown> = [];
+export const safeFeatureCollectionExamples = t
+  .array(FeatureCollection)
+  .decode(jsonFeatureCollectionExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -220,6 +230,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

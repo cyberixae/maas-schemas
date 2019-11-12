@@ -90,6 +90,8 @@ export const Choice = t.brand(
 export interface ChoiceBrand {
   readonly Choice: unique symbol;
 }
+export const jsonChoiceExamples: Array<unknown> = [];
+export const safeChoiceExamples = t.array(Choice).decode(jsonChoiceExamples);
 // Config
 // A customization to the booking option
 export type Config = t.Branded<
@@ -145,6 +147,8 @@ export const Config = t.brand(
 export interface ConfigBrand {
   readonly Config: unique symbol;
 }
+export const jsonConfigExamples: Array<unknown> = [];
+export const safeConfigExamples = t.array(Config).decode(jsonConfigExamples);
 // Text
 // Generic text field to pass information from user
 export type Text = t.Branded<
@@ -191,6 +195,8 @@ export const Text = t.brand(
 export interface TextBrand {
   readonly Text: unique symbol;
 }
+export const jsonTextExamples: Array<unknown> = [];
+export const safeTextExamples = t.array(Text).decode(jsonTextExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -240,6 +246,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

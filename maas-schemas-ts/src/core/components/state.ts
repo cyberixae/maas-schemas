@@ -74,6 +74,10 @@ export const BookingState = t.brand(
 export interface BookingStateBrand {
   readonly BookingState: unique symbol;
 }
+export const jsonBookingStateExamples: Array<unknown> = [];
+export const safeBookingStateExamples = t
+  .array(BookingState)
+  .decode(jsonBookingStateExamples);
 // LegState
 // The life-cycle state of a leg
 export type LegState = t.Branded<
@@ -103,6 +107,8 @@ export const LegState = t.brand(
 export interface LegStateBrand {
   readonly LegState: unique symbol;
 }
+export const jsonLegStateExamples: Array<unknown> = [];
+export const safeLegStateExamples = t.array(LegState).decode(jsonLegStateExamples);
 // ItineraryState
 // The life-cycle state of an itinerary
 export type ItineraryState = t.Branded<
@@ -149,6 +155,10 @@ export const ItineraryState = t.brand(
 export interface ItineraryStateBrand {
   readonly ItineraryState: unique symbol;
 }
+export const jsonItineraryStateExamples: Array<unknown> = [];
+export const safeItineraryStateExamples = t
+  .array(ItineraryState)
+  .decode(jsonItineraryStateExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -160,6 +170,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

@@ -37,6 +37,8 @@ export const schemaId = 'http://maasglobal.com/core/itinerary.json';
 // The purpose of this remains a mystery
 export type Id = Units_.Uuid;
 export const Id = Units_.Uuid;
+export const jsonIdExamples: Array<unknown> = [];
+export const safeIdExamples = t.array(Id).decode(jsonIdExamples);
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -116,6 +118,8 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 

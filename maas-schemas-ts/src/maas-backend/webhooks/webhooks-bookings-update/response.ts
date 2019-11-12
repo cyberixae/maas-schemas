@@ -8,6 +8,7 @@ MaaS webhook to update bookings for tsp adapter callback response schema.
 */
 
 import * as RemoteResponse_ from 'maas-schemas-ts/tsp/webhooks-bookings-update/remote-response';
+import * as t from 'io-ts';
 
 export const schemaId =
   'http://maasglobal.com/maas-backend/webhooks/webhooks-bookings-update/response.json';
@@ -15,6 +16,8 @@ export const schemaId =
 // The default export. More information at the top.
 export type Default = RemoteResponse_.Default;
 export const Default = RemoteResponse_.Default;
+export const jsonDefaultExamples: Array<unknown> = [];
+export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
 
