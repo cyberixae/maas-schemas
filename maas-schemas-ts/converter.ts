@@ -731,7 +731,7 @@ function constructDefs(defInputs: Array<DefInput>): Array<Def> {
 }
 
 if (inputSchema.$id.split('#').length > 1) {
-  info('Fragment used as part of $id');
+  info('fragment used as part of $id');
 }
 
 const defs: Array<Def> = constructDefs(fromFile(inputSchema as JSONSchema7));
