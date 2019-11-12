@@ -209,6 +209,7 @@ export interface DefaultBrand {
   readonly Default: unique symbol;
 }
 export const jsonDefaultExamples: Array<unknown> = [
+  null,
   {
     identityId: 'eu-west-1:4828507e-683f-41bf-9d87-689808fbf958',
     id: 1234,

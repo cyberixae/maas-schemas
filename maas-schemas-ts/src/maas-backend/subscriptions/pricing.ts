@@ -87,8 +87,9 @@ export const LineItem = t.brand(
 export interface LineItemBrand {
   readonly LineItem: unique symbol;
 }
-export const jsonLineItemExamples: Array<unknown> = [];
+export const jsonLineItemExamples: Array<unknown> = [null];
 export const safeLineItemExamples = t.array(LineItem).decode(jsonLineItemExamples);
+
 // Discount
 // A discount from coupon or such
 export type Discount = t.Branded<
@@ -129,8 +130,9 @@ export const Discount = t.brand(
 export interface DiscountBrand {
   readonly Discount: unique symbol;
 }
-export const jsonDiscountExamples: Array<unknown> = [];
+export const jsonDiscountExamples: Array<unknown> = [null];
 export const safeDiscountExamples = t.array(Discount).decode(jsonDiscountExamples);
+
 // Terms
 // Terms related to this subscription
 export type Terms = t.Branded<
@@ -186,8 +188,9 @@ export const Terms = t.brand(
 export interface TermsBrand {
   readonly Terms: unique symbol;
 }
-export const jsonTermsExamples: Array<unknown> = [];
+export const jsonTermsExamples: Array<unknown> = [null];
 export const safeTermsExamples = t.array(Terms).decode(jsonTermsExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -234,7 +237,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

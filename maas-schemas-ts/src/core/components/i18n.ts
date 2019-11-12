@@ -23,8 +23,9 @@ export const Locale = t.brand(
 export interface LocaleBrand {
   readonly Locale: unique symbol;
 }
-export const jsonLocaleExamples: Array<unknown> = [];
+export const jsonLocaleExamples: Array<unknown> = [null];
 export const safeLocaleExamples = t.array(Locale).decode(jsonLocaleExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -36,7 +37,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

@@ -56,10 +56,11 @@ export const OutwardReturnWrapper = t.brand(
 export interface OutwardReturnWrapperBrand {
   readonly OutwardReturnWrapper: unique symbol;
 }
-export const jsonOutwardReturnWrapperExamples: Array<unknown> = [];
+export const jsonOutwardReturnWrapperExamples: Array<unknown> = [null];
 export const safeOutwardReturnWrapperExamples = t
   .array(OutwardReturnWrapper)
   .decode(jsonOutwardReturnWrapperExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -106,7 +107,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

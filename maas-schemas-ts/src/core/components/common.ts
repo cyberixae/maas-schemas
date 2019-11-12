@@ -23,8 +23,9 @@ export const AgencyId = t.brand(
 export interface AgencyIdBrand {
   readonly AgencyId: unique symbol;
 }
-export const jsonAgencyIdExamples: Array<unknown> = [];
+export const jsonAgencyIdExamples: Array<unknown> = [null];
 export const safeAgencyIdExamples = t.array(AgencyId).decode(jsonAgencyIdExamples);
+
 // DeviceToken
 // The purpose of this remains a mystery
 export type DeviceToken = t.Branded<string, DeviceTokenBrand>;
@@ -37,10 +38,11 @@ export const DeviceToken = t.brand(
 export interface DeviceTokenBrand {
   readonly DeviceToken: unique symbol;
 }
-export const jsonDeviceTokenExamples: Array<unknown> = [];
+export const jsonDeviceTokenExamples: Array<unknown> = [null];
 export const safeDeviceTokenExamples = t
   .array(DeviceToken)
   .decode(jsonDeviceTokenExamples);
+
 // Signature
 // Signature of a signed object
 export type Signature = t.Branded<string, SignatureBrand>;
@@ -54,8 +56,9 @@ export const Signature = t.brand(
 export interface SignatureBrand {
   readonly Signature: unique symbol;
 }
-export const jsonSignatureExamples: Array<unknown> = [];
+export const jsonSignatureExamples: Array<unknown> = [null];
 export const safeSignatureExamples = t.array(Signature).decode(jsonSignatureExamples);
+
 // HtmlBlock
 // HTML string of block level content
 export type HtmlBlock = t.Branded<string, HtmlBlockBrand>;
@@ -67,8 +70,9 @@ export const HtmlBlock = t.brand(
 export interface HtmlBlockBrand {
   readonly HtmlBlock: unique symbol;
 }
-export const jsonHtmlBlockExamples: Array<unknown> = [];
+export const jsonHtmlBlockExamples: Array<unknown> = [null];
 export const safeHtmlBlockExamples = t.array(HtmlBlock).decode(jsonHtmlBlockExamples);
+
 // JsonParam
 // JSON encoded object or array
 export type JsonParam = t.Branded<string, JsonParamBrand>;
@@ -80,8 +84,9 @@ export const JsonParam = t.brand(
 export interface JsonParamBrand {
   readonly JsonParam: unique symbol;
 }
-export const jsonJsonParamExamples: Array<unknown> = [];
+export const jsonJsonParamExamples: Array<unknown> = [null];
 export const safeJsonParamExamples = t.array(JsonParam).decode(jsonJsonParamExamples);
+
 // PersonalName
 // First or last name of a customer (e.g. John)
 export type PersonalName = t.Branded<string, PersonalNameBrand>;
@@ -96,10 +101,11 @@ export const PersonalName = t.brand(
 export interface PersonalNameBrand {
   readonly PersonalName: unique symbol;
 }
-export const jsonPersonalNameExamples: Array<unknown> = [];
+export const jsonPersonalNameExamples: Array<unknown> = [null];
 export const safePersonalNameExamples = t
   .array(PersonalName)
   .decode(jsonPersonalNameExamples);
+
 // Phone
 // ITU-T E.164 phone number, see https://www.safaribooksonline.com/library/view/regular-expressions-cookbook/9781449327453/ch04s03.html
 export type Phone = t.Branded<string, PhoneBrand>;
@@ -112,8 +118,9 @@ export const Phone = t.brand(
 export interface PhoneBrand {
   readonly Phone: unique symbol;
 }
-export const jsonPhoneExamples: Array<unknown> = ['+358401234567'];
+export const jsonPhoneExamples: Array<unknown> = [null, '+358401234567'];
 export const safePhoneExamples = t.array(Phone).decode(jsonPhoneExamples);
+
 // RawPhone
 // Slightly looser definition of phone number
 export type RawPhone = t.Branded<string, RawPhoneBrand>;
@@ -126,8 +133,9 @@ export const RawPhone = t.brand(
 export interface RawPhoneBrand {
   readonly RawPhone: unique symbol;
 }
-export const jsonRawPhoneExamples: Array<unknown> = [];
+export const jsonRawPhoneExamples: Array<unknown> = [null];
 export const safeRawPhoneExamples = t.array(RawPhone).decode(jsonRawPhoneExamples);
+
 // Email
 // Rough validation of a valid e-mail address, see https://davidcel.is/posts/stop-validating-email-addresses-with-regex/
 export type Email = t.Branded<string, EmailBrand>;
@@ -141,8 +149,9 @@ export const Email = t.brand(
 export interface EmailBrand {
   readonly Email: unique symbol;
 }
-export const jsonEmailExamples: Array<unknown> = ['joe.customer@example.com'];
+export const jsonEmailExamples: Array<unknown> = [null, 'joe.customer@example.com'];
 export const safeEmailExamples = t.array(Email).decode(jsonEmailExamples);
+
 // CustomerReference
 // Any unique way to refer a customer
 export type CustomerReference = t.Branded<
@@ -158,12 +167,14 @@ export interface CustomerReferenceBrand {
   readonly CustomerReference: unique symbol;
 }
 export const jsonCustomerReferenceExamples: Array<unknown> = [
+  null,
   '4828507e-683f-41bf-9d87-689808fbf958',
   '+358401234567',
 ];
 export const safeCustomerReferenceExamples = t
   .array(CustomerReference)
   .decode(jsonCustomerReferenceExamples);
+
 // LooseCustomerReference
 // Any unique way to refer a customer, plus some opportunistic ways
 export type LooseCustomerReference = t.Branded<
@@ -179,6 +190,7 @@ export interface LooseCustomerReferenceBrand {
   readonly LooseCustomerReference: unique symbol;
 }
 export const jsonLooseCustomerReferenceExamples: Array<unknown> = [
+  null,
   '4828507e-683f-41bf-9d87-689808fbf958',
   '+358401234567',
   'joe.customer@example.com',
@@ -186,6 +198,7 @@ export const jsonLooseCustomerReferenceExamples: Array<unknown> = [
 export const safeLooseCustomerReferenceExamples = t
   .array(LooseCustomerReference)
   .decode(jsonLooseCustomerReferenceExamples);
+
 // PaymentSourceId
 // The purpose of this remains a mystery
 export type PaymentSourceId = t.Branded<string, PaymentSourceIdBrand>;
@@ -199,10 +212,11 @@ export const PaymentSourceId = t.brand(
 export interface PaymentSourceIdBrand {
   readonly PaymentSourceId: unique symbol;
 }
-export const jsonPaymentSourceIdExamples: Array<unknown> = [];
+export const jsonPaymentSourceIdExamples: Array<unknown> = [null];
 export const safePaymentSourceIdExamples = t
   .array(PaymentSourceId)
   .decode(jsonPaymentSourceIdExamples);
+
 // AppInstanceId
 // An id specific to a user device
 export type AppInstanceId = t.Branded<string, AppInstanceIdBrand>;
@@ -215,10 +229,11 @@ export const AppInstanceId = t.brand(
 export interface AppInstanceIdBrand {
   readonly AppInstanceId: unique symbol;
 }
-export const jsonAppInstanceIdExamples: Array<unknown> = [];
+export const jsonAppInstanceIdExamples: Array<unknown> = [null];
 export const safeAppInstanceIdExamples = t
   .array(AppInstanceId)
   .decode(jsonAppInstanceIdExamples);
+
 // OpaqueId
 // Typically the hash of the identityId
 export type OpaqueId = t.Branded<string, OpaqueIdBrand>;
@@ -231,8 +246,9 @@ export const OpaqueId = t.brand(
 export interface OpaqueIdBrand {
   readonly OpaqueId: unique symbol;
 }
-export const jsonOpaqueIdExamples: Array<unknown> = [];
+export const jsonOpaqueIdExamples: Array<unknown> = [null];
 export const safeOpaqueIdExamples = t.array(OpaqueId).decode(jsonOpaqueIdExamples);
+
 // ClientId
 // An id indicating the source of the client
 export type ClientId = t.Branded<string & ('whim' | 'wechat'), ClientIdBrand>;
@@ -244,8 +260,9 @@ export const ClientId = t.brand(
 export interface ClientIdBrand {
   readonly ClientId: unique symbol;
 }
-export const jsonClientIdExamples: Array<unknown> = [];
+export const jsonClientIdExamples: Array<unknown> = [null];
 export const safeClientIdExamples = t.array(ClientId).decode(jsonClientIdExamples);
+
 // Ssid
 // Social Security ID
 export type Ssid = t.Branded<string, SsidBrand>;
@@ -257,8 +274,9 @@ export const Ssid = t.brand(
 export interface SsidBrand {
   readonly Ssid: unique symbol;
 }
-export const jsonSsidExamples: Array<unknown> = [];
+export const jsonSsidExamples: Array<unknown> = [null];
 export const safeSsidExamples = t.array(Ssid).decode(jsonSsidExamples);
+
 // EncodedQueryParam
 // Encoded Query Params
 export type EncodedQueryParam = t.Branded<string, EncodedQueryParamBrand>;
@@ -272,10 +290,11 @@ export const EncodedQueryParam = t.brand(
 export interface EncodedQueryParamBrand {
   readonly EncodedQueryParam: unique symbol;
 }
-export const jsonEncodedQueryParamExamples: Array<unknown> = [];
+export const jsonEncodedQueryParamExamples: Array<unknown> = [null];
 export const safeEncodedQueryParamExamples = t
   .array(EncodedQueryParam)
   .decode(jsonEncodedQueryParamExamples);
+
 // ErrorKey
 // Error key
 export type ErrorKey = t.Branded<string, ErrorKeyBrand>;
@@ -289,8 +308,9 @@ export const ErrorKey = t.brand(
 export interface ErrorKeyBrand {
   readonly ErrorKey: unique symbol;
 }
-export const jsonErrorKeyExamples: Array<unknown> = [];
+export const jsonErrorKeyExamples: Array<unknown> = [null];
 export const safeErrorKeyExamples = t.array(ErrorKey).decode(jsonErrorKeyExamples);
+
 // WhimDeepLink
 // Whim only deep link to localhost and freely defined view - not a complete URI validation
 export type WhimDeepLink = t.Branded<string, WhimDeepLinkBrand>;
@@ -304,10 +324,11 @@ export const WhimDeepLink = t.brand(
 export interface WhimDeepLinkBrand {
   readonly WhimDeepLink: unique symbol;
 }
-export const jsonWhimDeepLinkExamples: Array<unknown> = [];
+export const jsonWhimDeepLinkExamples: Array<unknown> = [null];
 export const safeWhimDeepLinkExamples = t
   .array(WhimDeepLink)
   .decode(jsonWhimDeepLinkExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -319,7 +340,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

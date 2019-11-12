@@ -39,8 +39,9 @@ export const TokenId = t.brand(
 export interface TokenIdBrand {
   readonly TokenId: unique symbol;
 }
-export const jsonTokenIdExamples: Array<unknown> = [];
+export const jsonTokenIdExamples: Array<unknown> = [null];
 export const safeTokenIdExamples = t.array(TokenId).decode(jsonTokenIdExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -99,7 +100,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

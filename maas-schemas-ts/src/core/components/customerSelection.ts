@@ -21,10 +21,11 @@ export const ConfigChoiceSelection = t.brand(
 export interface ConfigChoiceSelectionBrand {
   readonly ConfigChoiceSelection: unique symbol;
 }
-export const jsonConfigChoiceSelectionExamples: Array<unknown> = [];
+export const jsonConfigChoiceSelectionExamples: Array<unknown> = [null];
 export const safeConfigChoiceSelectionExamples = t
   .array(ConfigChoiceSelection)
   .decode(jsonConfigChoiceSelectionExamples);
+
 // TextInputSelection
 // customerSelection format for configurator config type - text
 export type TextInputSelection = t.Branded<string, TextInputSelectionBrand>;
@@ -37,10 +38,11 @@ export const TextInputSelection = t.brand(
 export interface TextInputSelectionBrand {
   readonly TextInputSelection: unique symbol;
 }
-export const jsonTextInputSelectionExamples: Array<unknown> = [];
+export const jsonTextInputSelectionExamples: Array<unknown> = [null];
 export const safeTextInputSelectionExamples = t
   .array(TextInputSelection)
   .decode(jsonTextInputSelectionExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -90,7 +92,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

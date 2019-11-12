@@ -39,10 +39,11 @@ export const StripePaymentParameters = t.brand(
 export interface StripePaymentParametersBrand {
   readonly StripePaymentParameters: unique symbol;
 }
-export const jsonStripePaymentParametersExamples: Array<unknown> = [];
+export const jsonStripePaymentParametersExamples: Array<unknown> = [null];
 export const safeStripePaymentParametersExamples = t
   .array(StripePaymentParameters)
   .decode(jsonStripePaymentParametersExamples);
+
 // AvainpayPaymentParameters
 // The purpose of this remains a mystery
 export type AvainpayPaymentParameters = t.Branded<
@@ -166,10 +167,11 @@ export const AvainpayPaymentParameters = t.brand(
 export interface AvainpayPaymentParametersBrand {
   readonly AvainpayPaymentParameters: unique symbol;
 }
-export const jsonAvainpayPaymentParametersExamples: Array<unknown> = [];
+export const jsonAvainpayPaymentParametersExamples: Array<unknown> = [null];
 export const safeAvainpayPaymentParametersExamples = t
   .array(AvainpayPaymentParameters)
   .decode(jsonAvainpayPaymentParametersExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -181,7 +183,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

@@ -40,10 +40,11 @@ export const Itineraries = t.brand(
 export interface ItinerariesBrand {
   readonly Itineraries: unique symbol;
 }
-export const jsonItinerariesExamples: Array<unknown> = [];
+export const jsonItinerariesExamples: Array<unknown> = [null];
 export const safeItinerariesExamples = t
   .array(Itineraries)
   .decode(jsonItinerariesExamples);
+
 // Plan1
 // The purpose of this remains a mystery
 export type Plan1 = t.Branded<
@@ -96,8 +97,9 @@ export const Plan1 = t.brand(
 export interface Plan1Brand {
   readonly Plan1: unique symbol;
 }
-export const jsonPlan1Examples: Array<unknown> = [];
+export const jsonPlan1Examples: Array<unknown> = [null];
 export const safePlan1Examples = t.array(Plan1).decode(jsonPlan1Examples);
+
 // Plan2
 // The purpose of this remains a mystery
 export type Plan2 = t.Branded<
@@ -144,8 +146,9 @@ export const Plan2 = t.brand(
 export interface Plan2Brand {
   readonly Plan2: unique symbol;
 }
-export const jsonPlan2Examples: Array<unknown> = [];
+export const jsonPlan2Examples: Array<unknown> = [null];
 export const safePlan2Examples = t.array(Plan2).decode(jsonPlan2Examples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<Plan1 | Plan2, DefaultBrand>;
@@ -157,7 +160,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

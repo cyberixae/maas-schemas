@@ -41,10 +41,11 @@ export const PaymentSourceId = t.brand(
 export interface PaymentSourceIdBrand {
   readonly PaymentSourceId: unique symbol;
 }
-export const jsonPaymentSourceIdExamples: Array<unknown> = [];
+export const jsonPaymentSourceIdExamples: Array<unknown> = [null];
 export const safePaymentSourceIdExamples = t
   .array(PaymentSourceId)
   .decode(jsonPaymentSourceIdExamples);
+
 // GatewayName
 // The purpose of this remains a mystery
 export type GatewayName = t.Branded<string, GatewayNameBrand>;
@@ -58,10 +59,11 @@ export const GatewayName = t.brand(
 export interface GatewayNameBrand {
   readonly GatewayName: unique symbol;
 }
-export const jsonGatewayNameExamples: Array<unknown> = [];
+export const jsonGatewayNameExamples: Array<unknown> = [null];
 export const safeGatewayNameExamples = t
   .array(GatewayName)
   .decode(jsonGatewayNameExamples);
+
 // Type
 // The purpose of this remains a mystery
 export type Type = t.Branded<string, TypeBrand>;
@@ -75,8 +77,9 @@ export const Type = t.brand(
 export interface TypeBrand {
   readonly Type: unique symbol;
 }
-export const jsonTypeExamples: Array<unknown> = [];
+export const jsonTypeExamples: Array<unknown> = [null];
 export const safeTypeExamples = t.array(Type).decode(jsonTypeExamples);
+
 // Alias
 // The purpose of this remains a mystery
 export type Alias = t.Branded<string, AliasBrand>;
@@ -90,8 +93,9 @@ export const Alias = t.brand(
 export interface AliasBrand {
   readonly Alias: unique symbol;
 }
-export const jsonAliasExamples: Array<unknown> = [];
+export const jsonAliasExamples: Array<unknown> = [null];
 export const safeAliasExamples = t.array(Alias).decode(jsonAliasExamples);
+
 // Status
 // The purpose of this remains a mystery
 export type Status = t.Branded<string, StatusBrand>;
@@ -105,8 +109,9 @@ export const Status = t.brand(
 export interface StatusBrand {
   readonly Status: unique symbol;
 }
-export const jsonStatusExamples: Array<unknown> = [];
+export const jsonStatusExamples: Array<unknown> = [null];
 export const safeStatusExamples = t.array(Status).decode(jsonStatusExamples);
+
 // SetupIntentId
 // The purpose of this remains a mystery
 export type SetupIntentId = t.Branded<string, SetupIntentIdBrand>;
@@ -120,10 +125,11 @@ export const SetupIntentId = t.brand(
 export interface SetupIntentIdBrand {
   readonly SetupIntentId: unique symbol;
 }
-export const jsonSetupIntentIdExamples: Array<unknown> = [];
+export const jsonSetupIntentIdExamples: Array<unknown> = [null];
 export const safeSetupIntentIdExamples = t
   .array(SetupIntentId)
   .decode(jsonSetupIntentIdExamples);
+
 // PaymentSource
 // Payment source
 export type PaymentSource = t.Branded<
@@ -209,10 +215,11 @@ export const PaymentSource = t.brand(
 export interface PaymentSourceBrand {
   readonly PaymentSource: unique symbol;
 }
-export const jsonPaymentSourceExamples: Array<unknown> = [];
+export const jsonPaymentSourceExamples: Array<unknown> = [null];
 export const safePaymentSourceExamples = t
   .array(PaymentSource)
   .decode(jsonPaymentSourceExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -224,7 +231,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

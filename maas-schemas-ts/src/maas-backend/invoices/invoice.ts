@@ -81,8 +81,9 @@ export const Invoice = t.brand(
 export interface InvoiceBrand {
   readonly Invoice: unique symbol;
 }
-export const jsonInvoiceExamples: Array<unknown> = [];
+export const jsonInvoiceExamples: Array<unknown> = [null];
 export const safeInvoiceExamples = t.array(Invoice).decode(jsonInvoiceExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -94,7 +95,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

@@ -45,6 +45,7 @@ export type Id = Units_.Uuid;
 export const Id = Units_.Uuid;
 export const jsonIdExamples: Array<unknown> = [];
 export const safeIdExamples = t.array(Id).decode(jsonIdExamples);
+
 // Fares
 // The purpose of this remains a mystery
 export type Fares = t.Branded<Array<Fare_.Default>, FaresBrand>;
@@ -56,14 +57,16 @@ export const Fares = t.brand(
 export interface FaresBrand {
   readonly Fares: unique symbol;
 }
-export const jsonFaresExamples: Array<unknown> = [];
+export const jsonFaresExamples: Array<unknown> = [null];
 export const safeFaresExamples = t.array(Fares).decode(jsonFaresExamples);
+
 // Cost
 // The purpose of this remains a mystery
 export type Cost = Cost_.Default;
 export const Cost = Cost_.Default;
 export const jsonCostExamples: Array<unknown> = [];
 export const safeCostExamples = t.array(Cost).decode(jsonCostExamples);
+
 // Configurator
 // The purpose of this remains a mystery
 export type Configurator = Configurator_.Default;
@@ -72,6 +75,7 @@ export const jsonConfiguratorExamples: Array<unknown> = [];
 export const safeConfiguratorExamples = t
   .array(Configurator)
   .decode(jsonConfiguratorExamples);
+
 // TspId
 // The purpose of this remains a mystery
 export type TspId = t.Branded<string, TspIdBrand>;
@@ -85,8 +89,9 @@ export const TspId = t.brand(
 export interface TspIdBrand {
   readonly TspId: unique symbol;
 }
-export const jsonTspIdExamples: Array<unknown> = [];
+export const jsonTspIdExamples: Array<unknown> = [null];
 export const safeTspIdExamples = t.array(TspId).decode(jsonTspIdExamples);
+
 // Leg
 // MaaS response may return any subset of legCore
 export type Leg = t.Branded<
@@ -163,14 +168,16 @@ export const Leg = t.brand(
 export interface LegBrand {
   readonly Leg: unique symbol;
 }
-export const jsonLegExamples: Array<unknown> = [];
+export const jsonLegExamples: Array<unknown> = [null];
 export const safeLegExamples = t.array(Leg).decode(jsonLegExamples);
+
 // Terms
 // The purpose of this remains a mystery
 export type Terms = Terms_.Default;
 export const Terms = Terms_.Default;
 export const jsonTermsExamples: Array<unknown> = [];
 export const safeTermsExamples = t.array(Terms).decode(jsonTermsExamples);
+
 // Token
 // The validity token (such as booking ID, travel ticket etc.) that MaaS clients will display to validate the trip when starting the leg.
 export type Token = t.Branded<
@@ -211,8 +218,9 @@ export const Token = t.brand(
 export interface TokenBrand {
   readonly Token: unique symbol;
 }
-export const jsonTokenExamples: Array<unknown> = [];
+export const jsonTokenExamples: Array<unknown> = [null];
 export const safeTokenExamples = t.array(Token).decode(jsonTokenExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -317,6 +325,7 @@ export interface DefaultBrand {
   readonly Default: unique symbol;
 }
 export const jsonDefaultExamples: Array<unknown> = [
+  null,
   {
     id: '12345678-ABCD-1234-ABCD-123456789ABC',
     state: 'EXPIRED',

@@ -46,16 +46,18 @@ export const SubscriptionItemId = t.brand(
 export interface SubscriptionItemIdBrand {
   readonly SubscriptionItemId: unique symbol;
 }
-export const jsonSubscriptionItemIdExamples: Array<unknown> = [];
+export const jsonSubscriptionItemIdExamples: Array<unknown> = [null];
 export const safeSubscriptionItemIdExamples = t
   .array(SubscriptionItemId)
   .decode(jsonSubscriptionItemIdExamples);
+
 // Price
 // The purpose of this remains a mystery
 export type Price = Cost_.Default;
 export const Price = Cost_.Default;
 export const jsonPriceExamples: Array<unknown> = [];
 export const safePriceExamples = t.array(Price).decode(jsonPriceExamples);
+
 // Plan
 // Customer subscription plan
 export type Plan = t.Branded<
@@ -99,8 +101,9 @@ export const Plan = t.brand(
 export interface PlanBrand {
   readonly Plan: unique symbol;
 }
-export const jsonPlanExamples: Array<unknown> = [];
+export const jsonPlanExamples: Array<unknown> = [null];
 export const safePlanExamples = t.array(Plan).decode(jsonPlanExamples);
+
 // Addon
 // Customer subscription add-ons
 export type Addon = t.Branded<
@@ -150,8 +153,9 @@ export const Addon = t.brand(
 export interface AddonBrand {
   readonly Addon: unique symbol;
 }
-export const jsonAddonExamples: Array<unknown> = [];
+export const jsonAddonExamples: Array<unknown> = [null];
 export const safeAddonExamples = t.array(Addon).decode(jsonAddonExamples);
+
 // Coupon
 // Additional coupon that may provide discounts
 export type Coupon = t.Branded<
@@ -192,8 +196,9 @@ export const Coupon = t.brand(
 export interface CouponBrand {
   readonly Coupon: unique symbol;
 }
-export const jsonCouponExamples: Array<unknown> = [];
+export const jsonCouponExamples: Array<unknown> = [null];
 export const safeCouponExamples = t.array(Coupon).decode(jsonCouponExamples);
+
 // Terms
 // Terms related to this subscription
 export type Terms = t.Branded<
@@ -258,8 +263,9 @@ export const Terms = t.brand(
 export interface TermsBrand {
   readonly Terms: unique symbol;
 }
-export const jsonTermsExamples: Array<unknown> = [];
+export const jsonTermsExamples: Array<unknown> = [null];
 export const safeTermsExamples = t.array(Terms).decode(jsonTermsExamples);
+
 // SubscriptionBase
 // The purpose of this remains a mystery
 export type SubscriptionBase = t.Branded<
@@ -342,10 +348,11 @@ export const SubscriptionBase = t.brand(
 export interface SubscriptionBaseBrand {
   readonly SubscriptionBase: unique symbol;
 }
-export const jsonSubscriptionBaseExamples: Array<unknown> = [];
+export const jsonSubscriptionBaseExamples: Array<unknown> = [null];
 export const safeSubscriptionBaseExamples = t
   .array(SubscriptionBase)
   .decode(jsonSubscriptionBaseExamples);
+
 // Subscription
 // The purpose of this remains a mystery
 export type Subscription = SubscriptionBase;
@@ -354,6 +361,7 @@ export const jsonSubscriptionExamples: Array<unknown> = [];
 export const safeSubscriptionExamples = t
   .array(Subscription)
   .decode(jsonSubscriptionExamples);
+
 // SubscriptionCreatePayload
 // The purpose of this remains a mystery
 export type SubscriptionCreatePayload = SubscriptionBase;
@@ -362,6 +370,7 @@ export const jsonSubscriptionCreatePayloadExamples: Array<unknown> = [];
 export const safeSubscriptionCreatePayloadExamples = t
   .array(SubscriptionCreatePayload)
   .decode(jsonSubscriptionCreatePayloadExamples);
+
 // SubscriptionUpdatePayload
 // The purpose of this remains a mystery
 export type SubscriptionUpdatePayload = SubscriptionBase;
@@ -370,6 +379,7 @@ export const jsonSubscriptionUpdatePayloadExamples: Array<unknown> = [];
 export const safeSubscriptionUpdatePayloadExamples = t
   .array(SubscriptionUpdatePayload)
   .decode(jsonSubscriptionUpdatePayloadExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -381,7 +391,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

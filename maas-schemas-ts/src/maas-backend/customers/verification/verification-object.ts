@@ -156,10 +156,11 @@ export const Verification = t.brand(
 export interface VerificationBrand {
   readonly Verification: unique symbol;
 }
-export const jsonVerificationExamples: Array<unknown> = [];
+export const jsonVerificationExamples: Array<unknown> = [null];
 export const safeVerificationExamples = t
   .array(Verification)
   .decode(jsonVerificationExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -171,7 +172,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

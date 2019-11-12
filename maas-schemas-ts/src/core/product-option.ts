@@ -45,8 +45,9 @@ export const Ref = t.brand(
 export interface RefBrand {
   readonly Ref: unique symbol;
 }
-export const jsonRefExamples: Array<unknown> = [];
+export const jsonRefExamples: Array<unknown> = [null];
 export const safeRefExamples = t.array(Ref).decode(jsonRefExamples);
+
 // WithConfigurator
 // Works with configurator
 export type WithConfigurator = t.Branded<
@@ -111,10 +112,11 @@ export const WithConfigurator = t.brand(
 export interface WithConfiguratorBrand {
   readonly WithConfigurator: unique symbol;
 }
-export const jsonWithConfiguratorExamples: Array<unknown> = [];
+export const jsonWithConfiguratorExamples: Array<unknown> = [null];
 export const safeWithConfiguratorExamples = t
   .array(WithConfigurator)
   .decode(jsonWithConfiguratorExamples);
+
 // WithFares
 // Works with fares
 export type WithFares = t.Branded<
@@ -179,8 +181,9 @@ export const WithFares = t.brand(
 export interface WithFaresBrand {
   readonly WithFares: unique symbol;
 }
-export const jsonWithFaresExamples: Array<unknown> = [];
+export const jsonWithFaresExamples: Array<unknown> = [null];
 export const safeWithFaresExamples = t.array(WithFares).decode(jsonWithFaresExamples);
+
 // WithCost
 // Works with cost
 export type WithCost = t.Branded<
@@ -245,8 +248,9 @@ export const WithCost = t.brand(
 export interface WithCostBrand {
   readonly WithCost: unique symbol;
 }
-export const jsonWithCostExamples: Array<unknown> = [];
+export const jsonWithCostExamples: Array<unknown> = [null];
 export const safeWithCostExamples = t.array(WithCost).decode(jsonWithCostExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<WithConfigurator | WithFares | WithCost, DefaultBrand>;
@@ -258,7 +262,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

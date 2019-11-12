@@ -1,3 +1,11 @@
+INFO: fragment used as part of $id
+  in ./core/booking.json
+INFO: missing description
+  in ./core/booking.json
+INFO: missing example
+  in ./core/booking.json
+INFO: missing description
+  in ./core/booking.json
 INFO: missing description
   in ./core/booking.json
 INFO: missing example
@@ -8,51 +16,23 @@ INFO: missing example
   in ./core/booking.json
 INFO: missing description
   in ./core/booking.json
-INFO: missing example
-  in ./core/booking.json
 INFO: missing description
   in ./core/booking.json
 INFO: missing example
   in ./core/booking.json
-INFO: missing description
-  in ./core/booking.json
-INFO: missing example
-  in ./core/booking.json
-INFO: missing example
-  in ./core/booking.json
-INFO: missing description
-  in ./core/booking.json
-INFO: missing example
-  in ./core/booking.json
-INFO: missing example
-  in ./core/booking.json
-INFO: missing example
-  in ./core/booking-meta.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/booking-option.json
 WARNING: minLength field not supported outside top-level definitions
   in ./core/booking-option.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./core/booking-option.json
-INFO: missing example
-  in ./core/booking-option.json
-INFO: missing example
-  in ./core/booking-option.json
 INFO: missing description
   in ./core/booking-option.json
 INFO: missing example
   in ./core/booking-option.json
 INFO: missing description
   in ./core/booking-option.json
-INFO: missing example
-  in ./core/booking-option.json
 INFO: missing description
-  in ./core/booking-option.json
-INFO: missing example
-  in ./core/booking-option.json
-INFO: missing example
-  in ./core/booking-option.json
-INFO: missing example
   in ./core/booking-option.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/card.json
@@ -78,14 +58,6 @@ WARNING: maxLength field not supported outside top-level definitions
   in ./core/card.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/card.json
-INFO: missing example
-  in ./core/card.json
-INFO: missing example
-  in ./core/components/ACRISS.json
-INFO: missing example
-  in ./core/components/address.json
-INFO: missing example
-  in ./core/components/address.json
 INFO: missing description
   in ./core/components/address.json
 INFO: missing example
@@ -102,36 +74,12 @@ INFO: missing description
   in ./core/components/address.json
 INFO: missing example
   in ./core/components/address.json
-INFO: missing example
-  in ./core/components/address.json
-INFO: missing example
-  in ./core/components/address.json
-INFO: missing example
-  in ./core/components/address.json
-INFO: missing example
-  in ./core/components/address.json
-INFO: missing example
-  in ./core/components/address.json
-INFO: missing example
-  in ./core/components/address.json
-INFO: missing example
-  in ./core/components/agencyOptions.json
-INFO: missing example
-  in ./core/components/api-common.json
 INFO: missing description
   in ./core/components/api-common.json
-INFO: missing example
-  in ./core/components/api-common.json
 INFO: missing description
-  in ./core/components/api-common.json
-INFO: missing example
-  in ./core/components/api-common.json
-INFO: missing example
   in ./core/components/api-common.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/authorization.json
-INFO: missing example
-  in ./core/components/authorization.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/bike-station.json
 INFO: primitive type "string" used outside top-level definitions
@@ -147,8 +95,6 @@ WARNING: minimum field not supported outside top-level definitions
 INFO: primitive type "number" used outside top-level definitions
   in ./core/components/bike-station.json
 WARNING: minimum field not supported outside top-level definitions
-  in ./core/components/bike-station.json
-INFO: missing example
   in ./core/components/bike-station.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/car-rental.json
@@ -210,45 +156,11 @@ WARNING: minLength field not supported outside top-level definitions
   in ./core/components/car-rental.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./core/components/car-rental.json
-INFO: missing example
-  in ./core/components/car-rental.json
 INFO: missing description
-  in ./core/components/common.json
-INFO: missing example
   in ./core/components/common.json
 INFO: missing description
   in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
 INFO: missing description
-  in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
-INFO: missing example
-  in ./core/components/common.json
-INFO: missing example
   in ./core/components/common.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/configurator.json
@@ -286,14 +198,6 @@ WARNING: minLength field not supported outside top-level definitions
   in ./core/components/configurator.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./core/components/configurator.json
-INFO: missing example
-  in ./core/components/configurator.json
-INFO: missing example
-  in ./core/components/configurator.json
-INFO: missing example
-  in ./core/components/configurator.json
-INFO: missing example
-  in ./core/components/configurator.json
 WARNING: minimum field not supported outside top-level definitions
   in ./core/components/cost.json
 WARNING: multipleOf field not supported outside top-level definitions
@@ -313,20 +217,12 @@ INFO: primitive type "number" used outside top-level definitions
 WARNING: minimum field not supported outside top-level definitions
   in ./core/components/cost.json
 WARNING: multipleOf field not supported outside top-level definitions
-  in ./core/components/cost.json
-INFO: missing example
   in ./core/components/cost.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/customerSelection.json
 WARNING: minLength field not supported outside top-level definitions
   in ./core/components/customerSelection.json
 WARNING: maxLength field not supported outside top-level definitions
-  in ./core/components/customerSelection.json
-INFO: missing example
-  in ./core/components/customerSelection.json
-INFO: missing example
-  in ./core/components/customerSelection.json
-INFO: missing example
   in ./core/components/customerSelection.json
 WARNING: minimum field not supported outside top-level definitions
   in ./core/components/fare.json
@@ -339,10 +235,6 @@ WARNING: minimum field not supported outside top-level definitions
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/fare.json
 INFO: missing description
-  in ./core/components/fare.json
-INFO: missing example
-  in ./core/components/fare.json
-INFO: missing example
   in ./core/components/fare.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/geolocation.json
@@ -388,21 +280,11 @@ WARNING: maxLength field not supported outside top-level definitions
   in ./core/components/geolocation.json
 INFO: missing description
   in ./core/components/geolocation.json
-INFO: missing example
+INFO: missing description
   in ./core/components/geolocation.json
 INFO: missing description
   in ./core/components/geolocation.json
-INFO: missing example
-  in ./core/components/geolocation.json
 INFO: missing description
-  in ./core/components/geolocation.json
-INFO: missing example
-  in ./core/components/geolocation.json
-INFO: missing description
-  in ./core/components/geolocation.json
-INFO: missing example
-  in ./core/components/geolocation.json
-INFO: missing example
   in ./core/components/geolocation.json
 INFO: primitive type "number" used outside top-level definitions
   in ./core/components/geometry.json
@@ -412,23 +294,7 @@ WARNING: minItems field not supported outside top-level definitions
   in ./core/components/geometry.json
 WARNING: minItems field not supported outside top-level definitions
   in ./core/components/geometry.json
-INFO: missing example
-  in ./core/components/geometry.json
-INFO: missing example
-  in ./core/components/geometry.json
-INFO: missing example
-  in ./core/components/geometry.json
-INFO: missing example
-  in ./core/components/geometry.json
-INFO: missing example
-  in ./core/components/geometry.json
-INFO: missing example
-  in ./core/components/geometry.json
 INFO: missing description
-  in ./core/components/i18n.json
-INFO: missing example
-  in ./core/components/i18n.json
-INFO: missing example
   in ./core/components/i18n.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/payment-parameters.json
@@ -496,20 +362,12 @@ INFO: primitive type "string" used outside top-level definitions
   in ./core/components/payment-parameters.json
 INFO: missing description
   in ./core/components/payment-parameters.json
-INFO: missing example
-  in ./core/components/payment-parameters.json
 INFO: missing description
   in ./core/components/payment-parameters.json
-INFO: missing example
-  in ./core/components/payment-parameters.json
-INFO: missing example
-  in ./core/components/payment-parameters.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/personalDataAllowItem.json
 WARNING: minLength field not supported outside top-level definitions
   in ./core/components/personalDataAllowItem.json
-INFO: missing example
-  in ./core/components/personalDataAllowItem.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/place.json
 INFO: primitive type "string" used outside top-level definitions
@@ -536,31 +394,13 @@ WARNING: minLength field not supported outside top-level definitions
   in ./core/components/place.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./core/components/place.json
-INFO: missing example
-  in ./core/components/place.json
-INFO: missing example
-  in ./core/components/point-cost.json
-INFO: missing example
-  in ./core/components/state.json
-INFO: missing example
-  in ./core/components/state.json
-INFO: missing example
-  in ./core/components/state.json
-INFO: missing example
-  in ./core/components/state.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/state-log.json
 INFO: primitive type "number" used outside top-level definitions
   in ./core/components/state-log.json
 INFO: missing description
   in ./core/components/state-log.json
-INFO: missing example
-  in ./core/components/state-log.json
 INFO: missing description
-  in ./core/components/state-log.json
-INFO: missing example
-  in ./core/components/state-log.json
-INFO: missing example
   in ./core/components/state-log.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/station.json
@@ -580,7 +420,9 @@ INFO: primitive type "string" used outside top-level definitions
   in ./core/components/station.json
 INFO: missing description
   in ./core/components/station.json
-INFO: missing example
+INFO: missing description
+  in ./core/components/station.json
+INFO: missing description
   in ./core/components/station.json
 INFO: missing description
   in ./core/components/station.json
@@ -599,36 +441,12 @@ INFO: missing description
 INFO: missing example
   in ./core/components/station.json
 INFO: missing description
-  in ./core/components/station.json
-INFO: missing example
-  in ./core/components/station.json
-INFO: missing description
-  in ./core/components/station.json
-INFO: missing example
-  in ./core/components/station.json
-INFO: missing description
-  in ./core/components/station.json
-INFO: missing example
-  in ./core/components/station.json
-INFO: missing example
-  in ./core/components/station.json
-INFO: missing example
-  in ./core/components/station.json
-INFO: missing example
-  in ./core/components/station.json
-INFO: missing example
-  in ./core/components/station.json
-INFO: missing example
-  in ./core/components/station.json
-INFO: missing example
   in ./core/components/station.json
 INFO: missing example
   in ./core/components/station.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/subscriptionChangeState.json
 INFO: primitive type "string" used outside top-level definitions
-  in ./core/components/subscriptionChangeState.json
-INFO: missing example
   in ./core/components/subscriptionChangeState.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/terms.json
@@ -660,72 +478,16 @@ WARNING: minimum field not supported outside top-level definitions
   in ./core/components/terms.json
 WARNING: multipleOf field not supported outside top-level definitions
   in ./core/components/terms.json
-INFO: missing example
+INFO: missing description
   in ./core/components/terms.json
 INFO: missing description
   in ./core/components/terms.json
-INFO: missing example
-  in ./core/components/terms.json
 INFO: missing description
-  in ./core/components/terms.json
-INFO: missing example
-  in ./core/components/terms.json
-INFO: missing example
-  in ./core/components/terms.json
-INFO: missing example
-  in ./core/components/travel-mode.json
-INFO: missing example
-  in ./core/components/travel-mode.json
-INFO: missing example
-  in ./core/components/travel-mode.json
-INFO: missing example
-  in ./core/components/travel-mode.json
-INFO: missing example
-  in ./core/components/travel-mode.json
-INFO: missing example
-  in ./core/components/travel-mode.json
-INFO: missing example
-  in ./core/components/units.json
-INFO: missing description
-  in ./core/components/units.json
-INFO: missing example
   in ./core/components/units.json
 INFO: missing description
   in ./core/components/units.json
 INFO: missing description
   in ./core/components/units.json
-INFO: missing example
-  in ./core/components/units.json
-INFO: missing example
-  in ./core/components/units.json
-INFO: missing example
-  in ./core/components/units.json
-INFO: missing example
-  in ./core/components/units.json
-INFO: missing example
-  in ./core/components/units.json
-INFO: missing example
-  in ./core/components/units-geo.json
-INFO: missing example
-  in ./core/components/units-geo.json
-INFO: missing example
-  in ./core/components/units-geo.json
-INFO: missing example
-  in ./core/components/units-geo.json
-INFO: missing example
-  in ./core/components/units-geo.json
-INFO: missing example
-  in ./core/components/units-geo.json
-INFO: missing example
-  in ./core/components/units-geo.json
-INFO: missing example
-  in ./core/components/units-geo.json
-INFO: missing example
-  in ./core/components/units-geo.json
-INFO: missing example
-  in ./core/components/units-geo.json
-INFO: missing example
-  in ./core/components/units-geo.json
 INFO: primitive type "integer" used outside top-level definitions
   in ./core/customer.json
 WARNING: minimum field not supported outside top-level definitions
@@ -752,10 +514,6 @@ WARNING: minLength field not supported outside top-level definitions
   in ./core/error.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./core/error.json
-INFO: missing example
-  in ./core/error.json
-INFO: missing example
-  in ./core/iot-thing-shadow.json
 INFO: primitive type "number" used outside top-level definitions
   in ./core/itinerary.json
 WARNING: minimum field not supported outside top-level definitions
@@ -768,8 +526,6 @@ INFO: missing description
   in ./core/itinerary.json
 INFO: missing example
   in ./core/itinerary.json
-INFO: missing example
-  in ./core/itinerary.json
 INFO: missing description
   in ./core/leg.json
 INFO: missing example
@@ -792,7 +548,7 @@ INFO: missing example
   in ./core/leg.json
 INFO: missing description
   in ./core/leg.json
-INFO: missing example
+INFO: missing description
   in ./core/leg.json
 INFO: missing description
   in ./core/leg.json
@@ -808,7 +564,9 @@ INFO: missing example
   in ./core/leg.json
 INFO: missing description
   in ./core/leg.json
-INFO: missing example
+INFO: missing description
+  in ./core/leg.json
+INFO: missing description
   in ./core/leg.json
 INFO: missing description
   in ./core/leg.json
@@ -816,41 +574,15 @@ INFO: missing example
   in ./core/leg.json
 INFO: missing description
   in ./core/leg.json
-INFO: missing example
-  in ./core/leg.json
 INFO: missing description
   in ./core/leg.json
 INFO: missing example
   in ./core/leg.json
 INFO: missing description
   in ./core/leg.json
-INFO: missing example
-  in ./core/leg.json
 INFO: missing description
   in ./core/leg.json
-INFO: missing example
-  in ./core/leg.json
 INFO: missing description
-  in ./core/leg.json
-INFO: missing example
-  in ./core/leg.json
-INFO: missing example
-  in ./core/leg.json
-INFO: missing example
-  in ./core/leg.json
-INFO: missing description
-  in ./core/leg.json
-INFO: missing example
-  in ./core/leg.json
-INFO: missing description
-  in ./core/leg.json
-INFO: missing example
-  in ./core/leg.json
-INFO: missing description
-  in ./core/leg.json
-INFO: missing example
-  in ./core/leg.json
-INFO: missing example
   in ./core/leg.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/modes/MODE_BICYCLE.json
@@ -860,22 +592,8 @@ INFO: primitive type "string" used outside top-level definitions
   in ./core/modes/MODE_BICYCLE.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/modes/MODE_BICYCLE.json
-INFO: missing example
-  in ./core/modes/MODE_BICYCLE.json
-INFO: missing example
-  in ./core/modes/MODE_BUS.json
-INFO: missing example
-  in ./core/modes/MODE_BUSISH.json
-INFO: missing example
-  in ./core/modes/MODE_CABLE_CAR.json
 INFO: missing example
   in ./core/modes/MODE_CAR.json
-INFO: missing example
-  in ./core/modes/MODE_FERRY.json
-INFO: missing example
-  in ./core/modes/MODE_FUNICULAR.json
-INFO: missing example
-  in ./core/modes/MODE_GONDOLA.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/modes/MODE_RAIL.json
 INFO: primitive type "string" used outside top-level definitions
@@ -884,22 +602,14 @@ INFO: primitive type "string" used outside top-level definitions
   in ./core/modes/MODE_RAIL.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/modes/MODE_RAIL.json
-INFO: missing example
-  in ./core/modes/MODE_RAIL.json
 INFO: primitive type "string" used outside top-level definitions
-  in ./core/modes/MODE_SCOOTER.json
-INFO: missing example
   in ./core/modes/MODE_SCOOTER.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/modes/MODE_SHARED_BICYCLE.json
 INFO: primitive type "string" used outside top-level definitions
-  in ./core/modes/MODE_SHARED_BICYCLE.json
-INFO: missing example
   in ./core/modes/MODE_SHARED_BICYCLE.json
 INFO: missing example
   in ./core/modes/MODE_SHARED_CAR.json
-INFO: missing example
-  in ./core/modes/MODE_SUBWAY.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/modes/MODE_TAXI.json
 WARNING: minLength field not supported outside top-level definitions
@@ -938,18 +648,6 @@ WARNING: minLength field not supported outside top-level definitions
   in ./core/modes/MODE_TAXI.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./core/modes/MODE_TAXI.json
-INFO: missing example
-  in ./core/modes/MODE_TAXI.json
-INFO: missing example
-  in ./core/modes/MODE_TRAIN.json
-INFO: missing example
-  in ./core/modes/MODE_TRAINISH.json
-INFO: missing example
-  in ./core/modes/MODE_TRAM.json
-INFO: missing example
-  in ./core/modes/MODE_TRANSIT.json
-INFO: missing example
-  in ./core/modes/MODE_WALK.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/paymentSource.json
 WARNING: minLength field not supported outside top-level definitions
@@ -981,22 +679,12 @@ INFO: primitive type "string" used outside top-level definitions
 WARNING: minLength field not supported outside top-level definitions
   in ./core/paymentSource.json
 WARNING: maxLength field not supported outside top-level definitions
-  in ./core/paymentSource.json
-INFO: missing example
   in ./core/paymentSource.json
 INFO: missing description
   in ./core/plan.json
-INFO: missing example
-  in ./core/plan.json
 INFO: missing description
   in ./core/plan.json
-INFO: missing example
-  in ./core/plan.json
 INFO: missing description
-  in ./core/plan.json
-INFO: missing example
-  in ./core/plan.json
-INFO: missing example
   in ./core/plan.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/product.json
@@ -1028,10 +716,6 @@ WARNING: maxLength field not supported outside top-level definitions
   in ./core/product.json
 INFO: missing description
   in ./core/product.json
-INFO: missing example
-  in ./core/product.json
-INFO: missing example
-  in ./core/product.json
 INFO: primitive type "integer" used outside top-level definitions
   in ./core/product-option.json
 WARNING: minimum field not supported outside top-level definitions
@@ -1039,16 +723,6 @@ WARNING: minimum field not supported outside top-level definitions
 INFO: primitive type "integer" used outside top-level definitions
   in ./core/product-option.json
 WARNING: minimum field not supported outside top-level definitions
-  in ./core/product-option.json
-INFO: missing example
-  in ./core/product-option.json
-INFO: missing example
-  in ./core/product-option.json
-INFO: missing example
-  in ./core/product-option.json
-INFO: missing example
-  in ./core/product-option.json
-INFO: missing example
   in ./core/product-option.json
 INFO: primitive type "integer" used outside top-level definitions
   in ./core/profile.json
@@ -1130,10 +804,6 @@ WARNING: multipleOf field not supported outside top-level definitions
   in ./core/profile.json
 INFO: missing description
   in ./core/profile.json
-INFO: missing example
-  in ./core/profile.json
-INFO: missing example
-  in ./core/profile.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/region.json
 WARNING: minLength field not supported outside top-level definitions
@@ -1146,31 +816,11 @@ WARNING: minLength field not supported outside top-level definitions
   in ./core/region.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./core/region.json
-INFO: missing example
-  in ./core/region.json
-INFO: missing example
-  in ./core/stop.json
 INFO: missing description
-  in ./environments/environments.json
-INFO: missing example
   in ./environments/environments.json
 INFO: missing description
   in ./environments/environments.json
-INFO: missing example
-  in ./environments/environments.json
 INFO: missing description
-  in ./environments/environments.json
-INFO: missing example
-  in ./environments/environments.json
-INFO: missing example
-  in ./environments/environments.json
-INFO: missing description
-  in ./environments/environments.json
-INFO: missing example
-  in ./environments/environments.json
-INFO: missing description
-  in ./environments/environments.json
-INFO: missing example
   in ./environments/environments.json
 INFO: missing description
   in ./environments/environments.json
@@ -1178,15 +828,13 @@ INFO: missing description
   in ./environments/environments.json
 INFO: missing description
   in ./environments/environments.json
-INFO: missing example
+INFO: missing description
   in ./environments/environments.json
 INFO: missing description
   in ./environments/environments.json
-INFO: missing example
-  in ./environments/environments.json
 INFO: missing description
   in ./environments/environments.json
-INFO: missing example
+INFO: missing description
   in ./environments/environments.json
 INFO: primitive type "number" used outside top-level definitions
   in ./geojson/geometry.json
@@ -1195,18 +843,6 @@ INFO: primitive type "number" used outside top-level definitions
 WARNING: minItems field not supported outside top-level definitions
   in ./geojson/geometry.json
 WARNING: minItems field not supported outside top-level definitions
-  in ./geojson/geometry.json
-INFO: missing example
-  in ./geojson/geometry.json
-INFO: missing example
-  in ./geojson/geometry.json
-INFO: missing example
-  in ./geojson/geometry.json
-INFO: missing example
-  in ./geojson/geometry.json
-INFO: missing example
-  in ./geojson/geometry.json
-INFO: missing example
   in ./geojson/geometry.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/auth/auth-sms-login/request.json
@@ -1216,43 +852,23 @@ WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/auth/auth-sms-login/request.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/auth/auth-sms-login/request.json
-INFO: missing example
-  in ./maas-backend/auth/auth-sms-login/request.json
-INFO: missing example
-  in ./maas-backend/auth/auth-sms-request-code/request.json
 INFO: primitive type "integer" used outside top-level definitions
   in ./maas-backend/autocomplete/autocomplete-query/request.json
 WARNING: minimum field not supported outside top-level definitions
   in ./maas-backend/autocomplete/autocomplete-query/request.json
 WARNING: maximum field not supported outside top-level definitions
   in ./maas-backend/autocomplete/autocomplete-query/request.json
-INFO: missing example
-  in ./maas-backend/autocomplete/autocomplete-query/request.json
 INFO: primitive type "string" used outside top-level definitions
-  in ./maas-backend/autocomplete/autocomplete-query/response.json
-INFO: missing example
   in ./maas-backend/autocomplete/autocomplete-query/response.json
 WARNING: patternProperty support has limitations
   in ./maas-backend/bookings/bookings-agency-options/request.json
 INFO: missing description
   in ./maas-backend/bookings/bookings-agency-options/request.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-agency-options/request.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-agency-options/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/bookings/bookings-agency-options/response.json
 INFO: missing description
   in ./maas-backend/bookings/bookings-agency-options/response.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-agency-options/response.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-agency-options/response.json
 INFO: missing description
-  in ./maas-backend/bookings/bookings-agency-products/request.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-agency-products/request.json
-INFO: missing example
   in ./maas-backend/bookings/bookings-agency-products/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/bookings/bookings-agency-products/response.json
@@ -1286,18 +902,6 @@ WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/bookings/bookings-agency-products/response.json
 INFO: missing description
   in ./maas-backend/bookings/bookings-agency-products/response.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-agency-products/response.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-agency-products/response.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-cancel/request.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-cancel/response.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-create/request.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-create/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/bookings/bookings-list/request.json
 WARNING: pattern field not supported outside top-level definitions
@@ -1305,38 +909,16 @@ WARNING: pattern field not supported outside top-level definitions
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/bookings/bookings-list/request.json
 WARNING: pattern field not supported outside top-level definitions
-  in ./maas-backend/bookings/bookings-list/request.json
-INFO: missing example
   in ./maas-backend/bookings/bookings-list/request.json
 WARNING: minItems field not supported outside top-level definitions
   in ./maas-backend/bookings/bookings-list/response.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-list/response.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-retrieve/request.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-retrieve/response.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-update/request.json
-INFO: missing example
-  in ./maas-backend/bookings/bookings-update/response.json
-INFO: missing example
-  in ./maas-backend/bookings/v2/bookings-create/request.json
-INFO: missing example
-  in ./maas-backend/bookings/v2/bookings-create/response.json
 INFO: missing description
   in ./maas-backend/booking-option-create/request.json
-INFO: missing example
-  in ./maas-backend/booking-option-create/request.json
-INFO: missing example
-  in ./maas-backend/booking-option-create/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/booking-option-create/response.json
 WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/booking-option-create/response.json
 WARNING: maxLength field not supported outside top-level definitions
-  in ./maas-backend/booking-option-create/response.json
-INFO: missing example
   in ./maas-backend/booking-option-create/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/customers/customer.json
@@ -1344,18 +926,12 @@ WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/customers/customer.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/customers/customer.json
-INFO: missing example
-  in ./maas-backend/customers/customer.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/customers/payment-sources/create/request.json
 WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/customers/payment-sources/create/request.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/customers/payment-sources/create/request.json
-INFO: missing example
-  in ./maas-backend/customers/payment-sources/create/request.json
-INFO: missing example
-  in ./maas-backend/customers/payment-sources/delete/request.json
 INFO: primitive type "number" used outside top-level definitions
   in ./maas-backend/customers/payment-sources/paymentSource.json
 WARNING: minimum field not supported outside top-level definitions
@@ -1380,46 +956,22 @@ WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/customers/payment-sources/paymentSource.json
 INFO: missing description
   in ./maas-backend/customers/payment-sources/paymentSource.json
-INFO: missing example
+INFO: missing description
   in ./maas-backend/customers/payment-sources/paymentSource.json
 INFO: missing description
   in ./maas-backend/customers/payment-sources/paymentSource.json
-INFO: missing example
+INFO: missing description
   in ./maas-backend/customers/payment-sources/paymentSource.json
 INFO: missing description
   in ./maas-backend/customers/payment-sources/paymentSource.json
-INFO: missing example
-  in ./maas-backend/customers/payment-sources/paymentSource.json
 INFO: missing description
   in ./maas-backend/customers/payment-sources/paymentSource.json
-INFO: missing example
-  in ./maas-backend/customers/payment-sources/paymentSource.json
-INFO: missing description
-  in ./maas-backend/customers/payment-sources/paymentSource.json
-INFO: missing example
-  in ./maas-backend/customers/payment-sources/paymentSource.json
-INFO: missing description
-  in ./maas-backend/customers/payment-sources/paymentSource.json
-INFO: missing example
-  in ./maas-backend/customers/payment-sources/paymentSource.json
-INFO: missing example
-  in ./maas-backend/customers/payment-sources/paymentSource.json
-INFO: missing example
-  in ./maas-backend/customers/payment-sources/paymentSource.json
-INFO: missing example
-  in ./maas-backend/customers/payment-sources/setup-intent/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/customers/payment-sources/setup-intent/response.json
 WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/customers/payment-sources/setup-intent/response.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/customers/payment-sources/setup-intent/response.json
-INFO: missing example
-  in ./maas-backend/customers/payment-sources/setup-intent/response.json
-INFO: missing example
-  in ./maas-backend/customers/payment-sources/update/request.json
-INFO: missing example
-  in ./maas-backend/customers/payment-sources/update/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/customers/personalData.json
 INFO: primitive type "string" used outside top-level definitions
@@ -1428,20 +980,10 @@ WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/customers/personalData.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/customers/personalData.json
-INFO: missing example
-  in ./maas-backend/customers/personalData.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/customers/personal-data-delete/request.json
 WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/customers/personal-data-delete/request.json
-INFO: missing example
-  in ./maas-backend/customers/personal-data-delete/request.json
-INFO: missing example
-  in ./maas-backend/customers/retrieve/request.json
-INFO: missing example
-  in ./maas-backend/customers/retrieve/response.json
-INFO: missing example
-  in ./maas-backend/customers/stats/request.json
 INFO: primitive type "integer" used outside top-level definitions
   in ./maas-backend/customers/stats/response.json
 WARNING: minimum field not supported outside top-level definitions
@@ -1450,22 +992,12 @@ INFO: primitive type "integer" used outside top-level definitions
   in ./maas-backend/customers/stats/response.json
 WARNING: minimum field not supported outside top-level definitions
   in ./maas-backend/customers/stats/response.json
-INFO: missing example
-  in ./maas-backend/customers/stats/response.json
-INFO: missing example
-  in ./maas-backend/customers/update/request.json
-INFO: missing example
-  in ./maas-backend/customers/update/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/customers/verification/initiate/request.json
 WARNING: minLength field not supported outside top-level definitions
-  in ./maas-backend/customers/verification/initiate/request.json
-INFO: missing example
   in ./maas-backend/customers/verification/initiate/request.json
 WARNING: minItems field not supported outside top-level definitions
   in ./maas-backend/customers/verification/initiate/response.json
-INFO: missing example
-  in ./maas-backend/customers/verification/initiate/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/customers/verification/media/get/request.json
 WARNING: minLength field not supported outside top-level definitions
@@ -1474,17 +1006,7 @@ INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/customers/verification/media/get/request.json
 WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/customers/verification/media/get/request.json
-INFO: missing example
-  in ./maas-backend/customers/verification/media/get/request.json
-INFO: missing example
-  in ./maas-backend/customers/verification/media/list/request.json
-INFO: missing example
-  in ./maas-backend/customers/verification/register/request.json
-INFO: missing example
-  in ./maas-backend/customers/verification/register/response.json
 WARNING: minItems field not supported outside top-level definitions
-  in ./maas-backend/customers/verification/status/response.json
-INFO: missing example
   in ./maas-backend/customers/verification/status/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/customers/verification/verification-object.json
@@ -1510,10 +1032,6 @@ INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/customers/verification/verification-object.json
 INFO: missing description
   in ./maas-backend/customers/verification/verification-object.json
-INFO: missing example
-  in ./maas-backend/customers/verification/verification-object.json
-INFO: missing example
-  in ./maas-backend/customers/verification/verification-object.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/geocoding/geocoding-query/request.json
 WARNING: minLength field not supported outside top-level definitions
@@ -1526,27 +1044,15 @@ WARNING: minimum field not supported outside top-level definitions
   in ./maas-backend/geocoding/geocoding-query/request.json
 WARNING: maximum field not supported outside top-level definitions
   in ./maas-backend/geocoding/geocoding-query/request.json
-INFO: missing example
-  in ./maas-backend/geocoding/geocoding-query/request.json
-INFO: missing example
-  in ./maas-backend/geocoding/geocoding-query/response.json
 INFO: primitive type "integer" used outside top-level definitions
   in ./maas-backend/geocoding/geocoding-reverse/request.json
 WARNING: minimum field not supported outside top-level definitions
   in ./maas-backend/geocoding/geocoding-reverse/request.json
 WARNING: maximum field not supported outside top-level definitions
   in ./maas-backend/geocoding/geocoding-reverse/request.json
-INFO: missing example
-  in ./maas-backend/geocoding/geocoding-reverse/request.json
-INFO: missing example
-  in ./maas-backend/geocoding/geocoding-reverse/response.json
 WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/invoices/invoice.json
 INFO: missing description
-  in ./maas-backend/invoices/invoice.json
-INFO: missing example
-  in ./maas-backend/invoices/invoice.json
-INFO: missing example
   in ./maas-backend/invoices/invoice.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/invoices/invoiceLineItem.json
@@ -1568,37 +1074,13 @@ WARNING: minimum field not supported outside top-level definitions
   in ./maas-backend/invoices/invoiceLineItem.json
 WARNING: multipleOf field not supported outside top-level definitions
   in ./maas-backend/invoices/invoiceLineItem.json
-INFO: missing example
-  in ./maas-backend/invoices/invoiceLineItem.json
-INFO: missing example
-  in ./maas-backend/invoices/invoiceLineItem.json
 INFO: missing description
-  in ./maas-backend/invoices/invoiceUnits.json
-INFO: missing example
   in ./maas-backend/invoices/invoiceUnits.json
 INFO: missing description
   in ./maas-backend/invoices/invoiceUnits.json
-INFO: missing example
-  in ./maas-backend/invoices/invoiceUnits.json
-INFO: missing example
-  in ./maas-backend/invoices/invoiceUnits.json
-INFO: missing example
-  in ./maas-backend/itineraries/itinerary-cancel/request.json
-INFO: missing example
-  in ./maas-backend/itineraries/itinerary-cancel/response.json
 INFO: missing description
   in ./maas-backend/itineraries/itinerary-create/request.json
-INFO: missing example
-  in ./maas-backend/itineraries/itinerary-create/request.json
-INFO: missing example
-  in ./maas-backend/itineraries/itinerary-create/request.json
 INFO: missing description
-  in ./maas-backend/itineraries/itinerary-create/response.json
-INFO: missing example
-  in ./maas-backend/itineraries/itinerary-create/response.json
-INFO: missing example
-  in ./maas-backend/itineraries/itinerary-create/response.json
-INFO: missing example
   in ./maas-backend/itineraries/itinerary-create/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/itineraries/itinerary-list/request.json
@@ -1606,38 +1088,14 @@ WARNING: pattern field not supported outside top-level definitions
   in ./maas-backend/itineraries/itinerary-list/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/itineraries/itinerary-list/request.json
-INFO: missing example
-  in ./maas-backend/itineraries/itinerary-list/request.json
 WARNING: minItems field not supported outside top-level definitions
-  in ./maas-backend/itineraries/itinerary-list/response.json
-INFO: missing example
   in ./maas-backend/itineraries/itinerary-list/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/itineraries/itinerary-retrieve/request.json
-INFO: missing example
-  in ./maas-backend/itineraries/itinerary-retrieve/request.json
-INFO: missing example
-  in ./maas-backend/itineraries/itinerary-retrieve/response.json
-INFO: missing example
-  in ./maas-backend/itineraries/itinerary-update/request.json
-INFO: missing example
-  in ./maas-backend/itineraries/itinerary-update/response.json
 INFO: missing description
   in ./maas-backend/products/products-providers-options/request.json
-INFO: missing example
-  in ./maas-backend/products/products-providers-options/request.json
-INFO: missing example
-  in ./maas-backend/products/products-providers-options/request.json
-INFO: missing example
-  in ./maas-backend/products/products-providers-options/response.json
 INFO: missing description
   in ./maas-backend/products/products-providers-retrieve/request.json
-INFO: missing example
-  in ./maas-backend/products/products-providers-retrieve/request.json
-INFO: missing example
-  in ./maas-backend/products/products-providers-retrieve/request.json
-INFO: missing example
-  in ./maas-backend/products/products-providers-retrieve/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/products/provider.json
 WARNING: minLength field not supported outside top-level definitions
@@ -1682,15 +1140,11 @@ INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/products/provider.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/products/provider.json
-INFO: missing example
-  in ./maas-backend/products/provider.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/profile/profile-devices-put/request.json
 WARNING: pattern field not supported outside top-level definitions
   in ./maas-backend/profile/profile-devices-put/request.json
 INFO: primitive type "string" used outside top-level definitions
-  in ./maas-backend/profile/profile-devices-put/request.json
-INFO: missing example
   in ./maas-backend/profile/profile-devices-put/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/profile/profile-devices-put/response.json
@@ -1700,70 +1154,20 @@ INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/profile/profile-devices-put/response.json
 INFO: missing description
   in ./maas-backend/profile/profile-devices-put/response.json
-INFO: missing example
-  in ./maas-backend/profile/profile-devices-put/response.json
-INFO: missing example
-  in ./maas-backend/profile/profile-devices-put/response.json
-INFO: missing example
-  in ./maas-backend/profile/profile-edit/request.json
-INFO: missing example
-  in ./maas-backend/profile/profile-edit/response.json
-INFO: missing example
-  in ./maas-backend/profile/profile-favoriteLocations-add/request.json
-INFO: missing example
-  in ./maas-backend/profile/profile-favoriteLocations-add/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/profile/profile-favoriteLocations-delete/request.json
 WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/profile/profile-favoriteLocations-delete/request.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/profile/profile-favoriteLocations-delete/request.json
-INFO: missing example
-  in ./maas-backend/profile/profile-favoriteLocations-delete/request.json
-INFO: missing example
-  in ./maas-backend/profile/profile-favoriteLocations-delete/response.json
-INFO: missing example
-  in ./maas-backend/profile/profile-info/request.json
-INFO: missing example
-  in ./maas-backend/profile/profile-info/response.json
-INFO: missing example
-  in ./maas-backend/profile/profile-webhook/request.json
-INFO: missing example
-  in ./maas-backend/profile/profile-webhook/response.json
-INFO: missing example
-  in ./maas-backend/provider/autocomplete/request.json
-INFO: missing example
-  in ./maas-backend/provider/autocomplete/response.json
-INFO: missing example
-  in ./maas-backend/provider/geocoding-reverse/request.json
-INFO: missing example
-  in ./maas-backend/provider/geocoding-reverse/response.json
-INFO: missing example
-  in ./maas-backend/provider/geocoding/request.json
-INFO: missing example
-  in ./maas-backend/provider/geocoding/response.json
 WARNING: patternProperty support has limitations
   in ./maas-backend/provider/routes/request.json
-INFO: missing example
-  in ./maas-backend/provider/routes/request.json
 INFO: missing description
-  in ./maas-backend/provider/routes/response.json
-INFO: missing example
   in ./maas-backend/provider/routes/response.json
 INFO: missing description
   in ./maas-backend/provider/routes/response.json
-INFO: missing example
-  in ./maas-backend/provider/routes/response.json
 INFO: missing description
   in ./maas-backend/provider/routes/response.json
-INFO: missing example
-  in ./maas-backend/provider/routes/response.json
-INFO: missing example
-  in ./maas-backend/provider/routes/response.json
-INFO: missing example
-  in ./maas-backend/provider/sms/request.json
-INFO: missing example
-  in ./maas-backend/provider/sms/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/push-notification/request.json
 WARNING: minLength field not supported outside top-level definitions
@@ -1796,14 +1200,6 @@ WARNING: minItems field not supported outside top-level definitions
   in ./maas-backend/push-notification/request.json
 WARNING: maxItems field not supported outside top-level definitions
   in ./maas-backend/push-notification/request.json
-INFO: missing example
-  in ./maas-backend/push-notification/request.json
-INFO: missing example
-  in ./maas-backend/push-notification/response.json
-INFO: missing example
-  in ./maas-backend/regions/regions-options/request.json
-INFO: missing example
-  in ./maas-backend/regions/regions-options/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/routes/routes-query/request.json
 INFO: primitive type "string" used outside top-level definitions
@@ -1816,12 +1212,6 @@ INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/routes/routes-query/request.json
 INFO: missing description
   in ./maas-backend/routes/routes-query/request.json
-INFO: missing example
-  in ./maas-backend/routes/routes-query/request.json
-INFO: missing example
-  in ./maas-backend/routes/routes-query/request.json
-INFO: missing example
-  in ./maas-backend/routes/routes-query/response.json
 INFO: primitive type "integer" used outside top-level definitions
   in ./maas-backend/stations/stations-list/request.json
 WARNING: minimum field not supported outside top-level definitions
@@ -1833,16 +1223,12 @@ WARNING: minLength field not supported outside top-level definitions
 INFO: primitive type "integer" used outside top-level definitions
   in ./maas-backend/stations/stations-list/request.json
 WARNING: minimum field not supported outside top-level definitions
-  in ./maas-backend/stations/stations-list/request.json
-INFO: missing example
   in ./maas-backend/stations/stations-list/request.json
 INFO: missing example
   in ./maas-backend/stations/stations-list/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/stations/stations-retrieve/request.json
 WARNING: minLength field not supported outside top-level definitions
-  in ./maas-backend/stations/stations-retrieve/request.json
-INFO: missing example
   in ./maas-backend/stations/stations-retrieve/request.json
 INFO: missing example
   in ./maas-backend/stations/stations-retrieve/response.json
@@ -1884,31 +1270,13 @@ INFO: missing example
   in ./maas-backend/subscriptions/contact.json
 INFO: missing description
   in ./maas-backend/subscriptions/contact.json
-INFO: missing example
-  in ./maas-backend/subscriptions/contact.json
-INFO: missing example
-  in ./maas-backend/subscriptions/contact.json
-INFO: missing example
+INFO: missing description
   in ./maas-backend/subscriptions/contact.json
 INFO: missing description
   in ./maas-backend/subscriptions/contact.json
-INFO: missing example
-  in ./maas-backend/subscriptions/contact.json
 INFO: missing description
   in ./maas-backend/subscriptions/contact.json
-INFO: missing example
-  in ./maas-backend/subscriptions/contact.json
 INFO: missing description
-  in ./maas-backend/subscriptions/contact.json
-INFO: missing example
-  in ./maas-backend/subscriptions/contact.json
-INFO: missing example
-  in ./maas-backend/subscriptions/contact.json
-INFO: missing description
-  in ./maas-backend/subscriptions/contact.json
-INFO: missing example
-  in ./maas-backend/subscriptions/contact.json
-INFO: missing example
   in ./maas-backend/subscriptions/contact.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/subscriptions/pricing.json
@@ -1927,14 +1295,6 @@ WARNING: maximum field not supported outside top-level definitions
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/subscriptions/pricing.json
 WARNING: minLength field not supported outside top-level definitions
-  in ./maas-backend/subscriptions/pricing.json
-INFO: missing example
-  in ./maas-backend/subscriptions/pricing.json
-INFO: missing example
-  in ./maas-backend/subscriptions/pricing.json
-INFO: missing example
-  in ./maas-backend/subscriptions/pricing.json
-INFO: missing example
   in ./maas-backend/subscriptions/pricing.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/subscriptions/subscription.json
@@ -1978,19 +1338,11 @@ WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/subscriptions/subscription.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/subscriptions/subscription.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscription.json
 INFO: missing description
   in ./maas-backend/subscriptions/subscription.json
 INFO: missing example
   in ./maas-backend/subscriptions/subscription.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscription.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscription.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscription.json
-INFO: missing example
+INFO: missing description
   in ./maas-backend/subscriptions/subscription.json
 INFO: missing description
   in ./maas-backend/subscriptions/subscription.json
@@ -2005,112 +1357,28 @@ INFO: missing description
 INFO: missing example
   in ./maas-backend/subscriptions/subscription.json
 INFO: missing description
-  in ./maas-backend/subscriptions/subscription.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscription.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscription.json
-INFO: missing description
-  in ./maas-backend/subscriptions/subscriptionAddress.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptionAddress.json
-INFO: missing example
   in ./maas-backend/subscriptions/subscriptionAddress.json
 WARNING: minItems field not supported outside top-level definitions
   in ./maas-backend/subscriptions/subscriptionOption.json
 INFO: missing description
   in ./maas-backend/subscriptions/subscriptionOption.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptionOption.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptionOption.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-change-state/request.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-change-state/response.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-create/request.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-create/response.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-customer-retrieve/request.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-customer-retrieve/response.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-customer-update/request.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-customer-update/response.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-estimate/request.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-estimate/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/subscriptions/subscriptions-options/request.json
 WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/subscriptions/subscriptions-options/request.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/subscriptions/subscriptions-options/request.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-options/request.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-options/response.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-retrieve/request.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-retrieve/response.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-update/request.json
-INFO: missing example
-  in ./maas-backend/subscriptions/subscriptions-update/response.json
-INFO: missing example
-  in ./maas-backend/tracking/tracking-active-itinerary-get/request.json
-INFO: missing example
-  in ./maas-backend/tracking/tracking-active-itinerary-get/response.json
-INFO: missing example
-  in ./maas-backend/tracking/tracking-active-itinerary-set/request.json
-INFO: missing example
-  in ./maas-backend/tracking/tracking-active-itinerary-set/response.json
-INFO: missing example
-  in ./maas-backend/tracking/tracking-active-leg-get/request.json
-INFO: missing example
-  in ./maas-backend/tracking/tracking-active-leg-get/response.json
-INFO: missing example
-  in ./maas-backend/tracking/tracking-active-leg-set/request.json
-INFO: missing example
-  in ./maas-backend/tracking/tracking-active-leg-set/response.json
-INFO: missing example
-  in ./maas-backend/tracking/tracking-cancel-active-itinerary/request.json
-INFO: missing example
-  in ./maas-backend/tracking/tracking-cancel-active-itinerary/response.json
-INFO: missing example
-  in ./maas-backend/tracking/tracking-update-user-location/request.json
-INFO: missing example
-  in ./maas-backend/tracking/tracking-update-user-location/response.json
-INFO: missing example
-  in ./maas-backend/tsp-auth/init/request.json
-INFO: missing example
-  in ./maas-backend/tsp-auth/init/response.json
-INFO: missing example
-  in ./maas-backend/tsp-auth/validate/request.json
-INFO: missing example
-  in ./maas-backend/tsp-auth/validate/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/vehicle/vehicle-alert/request.json
 WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/vehicle/vehicle-alert/request.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/vehicle/vehicle-alert/request.json
-INFO: missing example
-  in ./maas-backend/vehicle/vehicle-alert/request.json
-INFO: missing example
-  in ./maas-backend/vehicle/vehicle-alert/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/webhooks/webhooks-bookings-update/request.json
 WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/webhooks/webhooks-bookings-update/request.json
 WARNING: maxLength field not supported outside top-level definitions
-  in ./maas-backend/webhooks/webhooks-bookings-update/request.json
-INFO: missing example
   in ./maas-backend/webhooks/webhooks-bookings-update/request.json
 INFO: missing example
   in ./maas-backend/webhooks/webhooks-bookings-update/response.json
@@ -2138,10 +1406,6 @@ INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/webhooks/webhooks-payments/gateway/avainpay.json
 INFO: missing description
   in ./maas-backend/webhooks/webhooks-payments/gateway/avainpay.json
-INFO: missing example
-  in ./maas-backend/webhooks/webhooks-payments/gateway/avainpay.json
-INFO: missing example
-  in ./maas-backend/webhooks/webhooks-payments/gateway/avainpay.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/webhooks/webhooks-payments/gateway/stripe.json
 WARNING: minLength field not supported outside top-level definitions
@@ -2196,12 +1460,6 @@ INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/webhooks/webhooks-payments/gateway/stripe.json
 INFO: missing description
   in ./maas-backend/webhooks/webhooks-payments/gateway/stripe.json
-INFO: missing example
-  in ./maas-backend/webhooks/webhooks-payments/gateway/stripe.json
-INFO: missing example
-  in ./maas-backend/webhooks/webhooks-payments/gateway/stripe.json
-INFO: missing example
-  in ./maas-backend/webhooks/webhooks-payments/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/webhooks/webhooks-payments/response.json
 WARNING: minLength field not supported outside top-level definitions
@@ -2221,10 +1479,6 @@ INFO: primitive type "string" used outside top-level definitions
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/webhooks/webhooks-payments/response.json
 INFO: missing description
-  in ./maas-backend/webhooks/webhooks-payments/response.json
-INFO: missing example
-  in ./maas-backend/webhooks/webhooks-payments/response.json
-INFO: missing example
   in ./maas-backend/webhooks/webhooks-payments/response.json
 WARNING: minItems field not supported outside top-level definitions
   in ./maas-backend/webhooks/zendesk-push-notification/request.json
@@ -2248,18 +1502,6 @@ WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/webhooks/zendesk-push-notification/request.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/webhooks/zendesk-push-notification/request.json
-INFO: missing example
-  in ./maas-backend/webhooks/zendesk-push-notification/request.json
-INFO: missing example
-  in ./maas-backend/webhooks/zendesk-push-notification/response.json
-INFO: missing example
-  in ./tsp/booking-cancel/request.json
-INFO: missing example
-  in ./tsp/booking-cancel/response.json
-INFO: missing example
-  in ./tsp/booking-create/request.json
-INFO: missing example
-  in ./tsp/booking-create/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./tsp/booking-options-list/request.json
 WARNING: maxLength field not supported outside top-level definitions
@@ -2318,18 +1560,6 @@ INFO: primitive type "string" used outside top-level definitions
   in ./tsp/booking-options-list/request.json
 WARNING: minLength field not supported outside top-level definitions
   in ./tsp/booking-options-list/request.json
-INFO: missing example
-  in ./tsp/booking-options-list/request.json
-INFO: missing example
-  in ./tsp/booking-options-list/response.json
-INFO: missing example
-  in ./tsp/booking-read-by-id/request.json
-INFO: missing example
-  in ./tsp/booking-read-by-id/response.json
-INFO: missing example
-  in ./tsp/booking-receipt/request.json
-INFO: missing example
-  in ./tsp/booking-receipt/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./tsp/booking-ticket/request.json
 WARNING: pattern field not supported outside top-level definitions
@@ -2340,39 +1570,17 @@ WARNING: pattern field not supported outside top-level definitions
   in ./tsp/booking-ticket/request.json
 WARNING: minimum field not supported outside top-level definitions
   in ./tsp/booking-ticket/request.json
-INFO: missing example
-  in ./tsp/booking-ticket/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./tsp/booking-ticket/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./tsp/booking-ticket/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./tsp/booking-ticket/response.json
-INFO: missing example
-  in ./tsp/booking-ticket/response.json
-INFO: missing example
-  in ./tsp/booking-update/request.json
-INFO: missing example
-  in ./tsp/booking-update/response.json
-INFO: missing example
-  in ./tsp/customer-auth-validate/request.json
-INFO: missing example
-  in ./tsp/customer-auth-validate/response.json
-INFO: missing example
-  in ./tsp/customer-auth/request.json
-INFO: missing example
-  in ./tsp/customer-auth/response.json
-INFO: missing example
-  in ./tsp/customer-registration/request.json
-INFO: missing example
-  in ./tsp/customer-registration/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./tsp/journey-planner/request.json
 WARNING: patternProperty support has limitations
   in ./tsp/journey-planner/request.json
 INFO: primitive type "string" used outside top-level definitions
-  in ./tsp/journey-planner/request.json
-INFO: missing example
   in ./tsp/journey-planner/request.json
 INFO: missing example
   in ./tsp/journey-planner/response.json
@@ -2384,29 +1592,11 @@ INFO: primitive type "integer" used outside top-level definitions
   in ./tsp/stations-list/request.json
 WARNING: minimum field not supported outside top-level definitions
   in ./tsp/stations-list/request.json
-INFO: missing example
-  in ./tsp/stations-list/request.json
-INFO: missing example
-  in ./tsp/stations-list/response.json
-INFO: missing example
-  in ./tsp/stations-retrieve/request.json
-INFO: missing example
-  in ./tsp/stations-retrieve/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./tsp/vehicle-alert/request.json
 WARNING: minLength field not supported outside top-level definitions
   in ./tsp/vehicle-alert/request.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./tsp/vehicle-alert/request.json
-INFO: missing example
-  in ./tsp/vehicle-alert/request.json
-INFO: missing example
-  in ./tsp/vehicle-alert/response.json
-INFO: missing example
-  in ./tsp/webhooks-bookings-update/remote-request.json
 INFO: missing description
-  in ./tsp/webhooks-bookings-update/remote-response.json
-INFO: missing example
-  in ./tsp/webhooks-bookings-update/remote-response.json
-INFO: missing example
   in ./tsp/webhooks-bookings-update/remote-response.json

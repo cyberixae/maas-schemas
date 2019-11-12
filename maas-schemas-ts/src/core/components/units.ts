@@ -23,8 +23,12 @@ export const Uuid = t.brand(
 export interface UuidBrand {
   readonly Uuid: unique symbol;
 }
-export const jsonUuidExamples: Array<unknown> = ['4828507e-683f-41bf-9d87-689808fbf958'];
+export const jsonUuidExamples: Array<unknown> = [
+  null,
+  '4828507e-683f-41bf-9d87-689808fbf958',
+];
 export const safeUuidExamples = t.array(Uuid).decode(jsonUuidExamples);
+
 // Url
 // Uniform resource locator, see https://en.wikipedia.org/wiki/Uniform_Resource_Locator and https://mathiasbynens.be/demo/url-regex
 export type Url = t.Branded<string, UrlBrand>;
@@ -38,8 +42,9 @@ export const Url = t.brand(
 export interface UrlBrand {
   readonly Url: unique symbol;
 }
-export const jsonUrlExamples: Array<unknown> = [];
+export const jsonUrlExamples: Array<unknown> = [null];
 export const safeUrlExamples = t.array(Url).decode(jsonUrlExamples);
+
 // Arn
 // The purpose of this remains a mystery
 export type Arn = t.Branded<string, ArnBrand>;
@@ -57,8 +62,9 @@ export const Arn = t.brand(
 export interface ArnBrand {
   readonly Arn: unique symbol;
 }
-export const jsonArnExamples: Array<unknown> = [];
+export const jsonArnExamples: Array<unknown> = [null];
 export const safeArnExamples = t.array(Arn).decode(jsonArnExamples);
+
 // ObsoleteIdentityId
 // The purpose of this remains a mystery
 export type ObsoleteIdentityId = t.Branded<string, ObsoleteIdentityIdBrand>;
@@ -75,11 +81,13 @@ export interface ObsoleteIdentityIdBrand {
   readonly ObsoleteIdentityId: unique symbol;
 }
 export const jsonObsoleteIdentityIdExamples: Array<unknown> = [
+  null,
   'eu-west-1:4828507e-683f-41bf-9d87-689808fbf958',
 ];
 export const safeObsoleteIdentityIdExamples = t
   .array(ObsoleteIdentityId)
   .decode(jsonObsoleteIdentityIdExamples);
+
 // IdentityId
 // The purpose of this remains a mystery
 export type IdentityId = t.Branded<ObsoleteIdentityId | Uuid, IdentityIdBrand>;
@@ -92,10 +100,12 @@ export interface IdentityIdBrand {
   readonly IdentityId: unique symbol;
 }
 export const jsonIdentityIdExamples: Array<unknown> = [
+  null,
   'eu-west-1:4828507e-683f-41bf-9d87-689808fbf958',
   '4828507e-683f-41bf-9d87-689808fbf958',
 ];
 export const safeIdentityIdExamples = t.array(IdentityId).decode(jsonIdentityIdExamples);
+
 // Currency
 // Accepted monetary unit in ISO 4127 format, see https://en.wikipedia.org/wiki/ISO_4217#cite_note-1
 export type Currency = t.Branded<
@@ -120,8 +130,9 @@ export const Currency = t.brand(
 export interface CurrencyBrand {
   readonly Currency: unique symbol;
 }
-export const jsonCurrencyExamples: Array<unknown> = [];
+export const jsonCurrencyExamples: Array<unknown> = [null];
 export const safeCurrencyExamples = t.array(Currency).decode(jsonCurrencyExamples);
+
 // Time
 // POSIX time in milliseconds, https://en.wikipedia.org/wiki/Unix_time
 export type Time = t.Branded<number, TimeBrand>;
@@ -136,8 +147,9 @@ export const Time = t.brand(
 export interface TimeBrand {
   readonly Time: unique symbol;
 }
-export const jsonTimeExamples: Array<unknown> = [];
+export const jsonTimeExamples: Array<unknown> = [null];
 export const safeTimeExamples = t.array(Time).decode(jsonTimeExamples);
+
 // Duration
 // duration in milliseconds (negative values permitted), https://en.wikipedia.org/wiki/Unix_time
 export type Duration = t.Branded<number, DurationBrand>;
@@ -152,8 +164,9 @@ export const Duration = t.brand(
 export interface DurationBrand {
   readonly Duration: unique symbol;
 }
-export const jsonDurationExamples: Array<unknown> = [];
+export const jsonDurationExamples: Array<unknown> = [null];
 export const safeDurationExamples = t.array(Duration).decode(jsonDurationExamples);
+
 // IsoDate
 // A date in the form YYYY-MM-DD without a time component
 export type IsoDate = t.Branded<string, IsoDateBrand>;
@@ -166,8 +179,9 @@ export const IsoDate = t.brand(
 export interface IsoDateBrand {
   readonly IsoDate: unique symbol;
 }
-export const jsonIsoDateExamples: Array<unknown> = [];
+export const jsonIsoDateExamples: Array<unknown> = [null];
 export const safeIsoDateExamples = t.array(IsoDate).decode(jsonIsoDateExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<unknown, DefaultBrand>;
@@ -179,7 +193,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

@@ -57,10 +57,11 @@ export const PaymentParameter = t.brand(
 export interface PaymentParameterBrand {
   readonly PaymentParameter: unique symbol;
 }
-export const jsonPaymentParameterExamples: Array<unknown> = [];
+export const jsonPaymentParameterExamples: Array<unknown> = [null];
 export const safePaymentParameterExamples = t
   .array(PaymentParameter)
   .decode(jsonPaymentParameterExamples);
+
 // PaymentParameters
 // Payment parameters for asynchronous payment methods
 export type PaymentParameters = t.Branded<
@@ -78,10 +79,11 @@ export const PaymentParameters = t.brand(
 export interface PaymentParametersBrand {
   readonly PaymentParameters: unique symbol;
 }
-export const jsonPaymentParametersExamples: Array<unknown> = [];
+export const jsonPaymentParametersExamples: Array<unknown> = [null];
 export const safePaymentParametersExamples = t
   .array(PaymentParameters)
   .decode(jsonPaymentParametersExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<
@@ -145,7 +147,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;

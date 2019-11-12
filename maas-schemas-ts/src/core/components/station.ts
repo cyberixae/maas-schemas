@@ -27,8 +27,9 @@ export const Id = t.brand(
 export interface IdBrand {
   readonly Id: unique symbol;
 }
-export const jsonIdExamples: Array<unknown> = [];
+export const jsonIdExamples: Array<unknown> = [null];
 export const safeIdExamples = t.array(Id).decode(jsonIdExamples);
+
 // Code
 // The purpose of this remains a mystery
 export type Code = t.Branded<string, CodeBrand>;
@@ -40,8 +41,9 @@ export const Code = t.brand(
 export interface CodeBrand {
   readonly Code: unique symbol;
 }
-export const jsonCodeExamples: Array<unknown> = [];
+export const jsonCodeExamples: Array<unknown> = [null];
 export const safeCodeExamples = t.array(Code).decode(jsonCodeExamples);
+
 // Name
 // The purpose of this remains a mystery
 export type Name = t.Branded<string, NameBrand>;
@@ -53,38 +55,44 @@ export const Name = t.brand(
 export interface NameBrand {
   readonly Name: unique symbol;
 }
-export const jsonNameExamples: Array<unknown> = [];
+export const jsonNameExamples: Array<unknown> = [null];
 export const safeNameExamples = t.array(Name).decode(jsonNameExamples);
+
 // Location
 // The purpose of this remains a mystery
 export type Location = UnitsGeo_.ShortLocationString;
 export const Location = UnitsGeo_.ShortLocationString;
 export const jsonLocationExamples: Array<unknown> = [];
 export const safeLocationExamples = t.array(Location).decode(jsonLocationExamples);
+
 // Address
 // The purpose of this remains a mystery
 export type Address = Address_.Address;
 export const Address = Address_.Address;
 export const jsonAddressExamples: Array<unknown> = [];
 export const safeAddressExamples = t.array(Address).decode(jsonAddressExamples);
+
 // City
 // The purpose of this remains a mystery
 export type City = Address_.City;
 export const City = Address_.City;
 export const jsonCityExamples: Array<unknown> = [];
 export const safeCityExamples = t.array(City).decode(jsonCityExamples);
+
 // Country
 // The purpose of this remains a mystery
 export type Country = Address_.Country;
 export const Country = Address_.Country;
 export const jsonCountryExamples: Array<unknown> = [];
 export const safeCountryExamples = t.array(Country).decode(jsonCountryExamples);
+
 // AgencyId
 // The purpose of this remains a mystery
 export type AgencyId = Common_.AgencyId;
 export const AgencyId = Common_.AgencyId;
 export const jsonAgencyIdExamples: Array<unknown> = [];
 export const safeAgencyIdExamples = t.array(AgencyId).decode(jsonAgencyIdExamples);
+
 // OpeningHours
 // Opening hour of the station, object format is left for TSP to decide
 export type OpeningHours = t.Branded<{}, OpeningHoursBrand>;
@@ -96,10 +104,11 @@ export const OpeningHours = t.brand(
 export interface OpeningHoursBrand {
   readonly OpeningHours: unique symbol;
 }
-export const jsonOpeningHoursExamples: Array<unknown> = [];
+export const jsonOpeningHoursExamples: Array<unknown> = [null];
 export const safeOpeningHoursExamples = t
   .array(OpeningHours)
   .decode(jsonOpeningHoursExamples);
+
 // Facilities
 // Station facilities, including services and features
 export type Facilities = t.Branded<Array<string>, FacilitiesBrand>;
@@ -111,8 +120,9 @@ export const Facilities = t.brand(
 export interface FacilitiesBrand {
   readonly Facilities: unique symbol;
 }
-export const jsonFacilitiesExamples: Array<unknown> = [];
+export const jsonFacilitiesExamples: Array<unknown> = [null];
 export const safeFacilitiesExamples = t.array(Facilities).decode(jsonFacilitiesExamples);
+
 // Services
 // What agency and mode of transport will occupy this station
 export type Services = t.Branded<Array<TravelMode_.Default>, ServicesBrand>;
@@ -124,8 +134,9 @@ export const Services = t.brand(
 export interface ServicesBrand {
   readonly Services: unique symbol;
 }
-export const jsonServicesExamples: Array<unknown> = [];
+export const jsonServicesExamples: Array<unknown> = [null];
 export const safeServicesExamples = t.array(Services).decode(jsonServicesExamples);
+
 // Timetables
 // Timetable for passing by / originating transports
 export type Timetables = t.Branded<
@@ -171,8 +182,9 @@ export const Timetables = t.brand(
 export interface TimetablesBrand {
   readonly Timetables: unique symbol;
 }
-export const jsonTimetablesExamples: Array<unknown> = [];
+export const jsonTimetablesExamples: Array<unknown> = [null];
 export const safeTimetablesExamples = t.array(Timetables).decode(jsonTimetablesExamples);
+
 // Zone
 // Geofencing zone defined by provider that the station is within
 export type Zone = t.Branded<number | string, ZoneBrand>;
@@ -184,8 +196,9 @@ export const Zone = t.brand(
 export interface ZoneBrand {
   readonly Zone: unique symbol;
 }
-export const jsonZoneExamples: Array<unknown> = [];
+export const jsonZoneExamples: Array<unknown> = [null];
 export const safeZoneExamples = t.array(Zone).decode(jsonZoneExamples);
+
 // PlatformCode
 // Platform number
 export type PlatformCode = t.Branded<number | string, PlatformCodeBrand>;
@@ -197,10 +210,11 @@ export const PlatformCode = t.brand(
 export interface PlatformCodeBrand {
   readonly PlatformCode: unique symbol;
 }
-export const jsonPlatformCodeExamples: Array<unknown> = [];
+export const jsonPlatformCodeExamples: Array<unknown> = [null];
 export const safePlatformCodeExamples = t
   .array(PlatformCode)
   .decode(jsonPlatformCodeExamples);
+
 // Default
 // The default export. More information at the top.
 export type Default = t.Branded<{}, DefaultBrand>;
@@ -212,7 +226,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
-export const jsonDefaultExamples: Array<unknown> = [];
+export const jsonDefaultExamples: Array<unknown> = [null];
 export const safeDefaultExamples = t.array(Default).decode(jsonDefaultExamples);
 
 export default Default;
