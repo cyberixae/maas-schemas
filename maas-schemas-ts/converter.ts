@@ -680,7 +680,7 @@ function fromFile(schema: JSONSchema7): Array<DefInfo> {
   return fromDefinitions(schema.definitions).concat(fromRoot(schema));
 }
 
-type Dec = {
+type Def = {
   name: string;
   title: string;
   description: string;
@@ -689,16 +689,16 @@ type Dec = {
   runtimeType: string;
 };
 
-function foo(omg: Array<DefInfo>): Array<Dec> {
+function constructDefs(infos: Array<DefInfo>): Array<Def> {
   const metas: Record<string, DefMeta> = {};
-  omg.forEach((info: DefInfo) => {
+  infos.forEach((info: DefInfo) => {
     // eslint-disable-next-line
     metas[info.dec.name] = info.meta;
   });
-  const boo = omg.map(({ dec }) => dec);
+  const decs = infos.map(({ dec }) => dec);
   // eslint-disable-next-line
-  return gen.sort(boo).map((d) => {
-    const { name } = d;
+  return gen.sort(decs).map((dec) => {
+    const { name } = dec;
     const meta = metas[name];
     const title = meta.title || name;
     const description = meta.description || 'The purpose of this remains a mystery';
@@ -715,13 +715,13 @@ function foo(omg: Array<DefInfo>): Array<Dec> {
       title,
       description,
       examples,
-      staticType: gen.printStatic(d),
-      runtimeType: gen.printRuntime(d).replace(/\ninterface /, '\nexport interface '),
+      staticType: gen.printStatic(dec),
+      runtimeType: gen.printRuntime(dec).replace(/\ninterface /, '\nexport interface '),
     };
   });
 }
 
-const defs: Array<Dec> = foo(fromFile(schema as JSONSchema7));
+const defs: Array<Def> = constructDefs(fromFile(schema as JSONSchema7));
 
 if (returnCode === ErrorCode.ERROR) {
   process.exit(returnCode);
@@ -766,8 +766,8 @@ for (const {name, title, description, examples, staticType, runtimeType} of defs
   log(`// ${description}`);
   log(staticType);
   log(runtimeType);
-  log(`const json${name}Examples: Array<unknown> = ${JSON.stringify(examples)};`);
-  log(`const safe${name}Examples = t.array(${name}).decode(json${name}Examples);`);
+  log(`export const json${name}Examples: Array<unknown> = ${JSON.stringify(examples)};`);
+  log(`export const safe${name}Examples = t.array(${name}).decode(json${name}Examples);`);
 }
 
 log('');
