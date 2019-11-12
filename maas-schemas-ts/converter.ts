@@ -71,8 +71,6 @@ const schema: JSONSchema7 = JSON.parse(fs.readFileSync(inputFile, 'utf-8'));
 const imps = new Set<string>();
 const helpers = new Set<string>();
 const exps = new Set<string>();
-const titles: Record<string, string | undefined> = {};
-const descriptions: Record<string, string | undefined> = {};
 
 enum ErrorCode {
   WARNING = 1,
@@ -551,61 +549,91 @@ function fromSchema(schema: JSONSchema7Definition, isRoot = false): gen.TypeRefe
   throw new Error(`unknown schema: ${JSON.stringify(schema)}`);
 }
 
-function fromDefinitions(
-  definitions2: JSONSchema7['definitions'],
-): Array<[JSONSchema7['title'], JSONSchema7['description'], gen.TypeDeclaration]> {
-  const definitions = definitions2 || {};
-  return Object.entries(definitions).map(([k, v]: [string, JSONSchema7Definition]) => {
-    const scem = v;
-    const name = capitalize(k);
+type DefMeta = {
+  title: JSONSchema7['title'];
+  description: JSONSchema7['description'];
+  examples: JSONSchema7['examples'] & Array<unknown>;
+};
 
-    if (typeof scem === 'boolean') {
-      // booleans do not have meta data
-      const title = undefined;
-      const description = undefined;
-      return [
-        title,
-        description,
-        gen.typeDeclaration(
+type DefInfo = {
+  meta: DefMeta;
+  dec: gen.TypeDeclaration;
+};
+
+function fromDefinitions(definitions2: JSONSchema7['definitions']): Array<DefInfo> {
+  const definitions = definitions2 || {};
+  return Object.entries(definitions).map(
+    ([k, v]: [string, JSONSchema7Definition]): DefInfo => {
+      const scem = v;
+      const name = capitalize(k);
+
+      if (typeof scem === 'boolean') {
+        const title = undefined;
+        const description = undefined;
+        const examples = undefined;
+        return {
+          meta: {
+            title,
+            description,
+            examples,
+          },
+          dec: gen.typeDeclaration(
+            name,
+            error(`Any and never types are not supported by convert.ts`),
+            true,
+          ),
+        };
+      }
+      if ('$ref' in scem) {
+        // ref's do not have meta data
+        const title = undefined;
+        const description = undefined;
+        const examples = undefined;
+        if (typeof scem['$ref'] === 'undefined') {
+          // eslint-disable-next-line
+        throw new Error('broken input');
+        }
+        return {
+          meta: {
+            title,
+            description,
+            examples,
+          },
+          dec: gen.typeDeclaration(name, fromRef(scem['$ref']), true),
+        };
+      }
+      return {
+        meta: {
+          title: scem.title,
+          description: scem.description,
+          examples: scem.examples as Array<unknown> | undefined,
+        },
+        dec: gen.typeDeclaration(
           name,
-          gen.brandCombinator(fromSchema(scem, true), (_x) => 'true', name),
+          gen.brandCombinator(
+            fromSchema(scem, true),
+            (x) => generateChecks(x, scem),
+            name,
+          ),
           true,
         ),
-      ];
-    }
-    if ('$ref' in scem) {
-      // ref's do not have meta data
-      const title = undefined;
-      const description = undefined;
-      if (typeof scem['$ref'] === 'undefined') {
-        // eslint-disable-next-line
-        throw new Error('broken input');
-      }
-      return [title, description, gen.typeDeclaration(name, fromRef(scem['$ref']), true)];
-    }
-    return [
-      scem.title,
-      scem.description,
-      gen.typeDeclaration(
-        name,
-        gen.brandCombinator(fromSchema(scem, true), (x) => generateChecks(x, scem), name),
-        true,
-      ),
-    ];
-  });
+      };
+    },
+  );
 }
 
-function fromNonRefRoot(
-  schema: JSONSchema7,
-): Array<[JSONSchema7['title'], JSONSchema7['description'], gen.TypeDeclaration]> {
+function fromNonRefRoot(schema: JSONSchema7): Array<DefInfo> {
   // root schema info is printed in the beginning of the file
   const title = 'Default';
   const description = 'The default export. More information at the top.';
   return [
-    [
-      title,
-      description,
-      gen.typeDeclaration(
+    {
+      meta: {
+        title,
+        description,
+        examples: schema.examples as Array<unknown> | undefined,
+      },
+      dec: gen.typeDeclaration(
         'Default',
         gen.brandCombinator(
           fromSchema(schema, true),
@@ -614,13 +642,11 @@ function fromNonRefRoot(
         ),
         true,
       ),
-    ],
+    },
   ];
 }
 
-function fromRoot(
-  root: JSONSchema7,
-): Array<[JSONSchema7['title'], JSONSchema7['description'], gen.TypeDeclaration]> {
+function fromRoot(root: JSONSchema7): Array<DefInfo> {
   // root schema info is printed in the beginning of the file
   const title = 'Default';
   const description = 'The default export. More information at the top.';
@@ -632,7 +658,14 @@ function fromRoot(
     }
     exps.add('export default Default;');
     return [
-      [title, description, gen.typeDeclaration('Default', fromRef(root['$ref']), true)],
+      {
+        meta: {
+          title,
+          description,
+          examples: [],
+        },
+        dec: gen.typeDeclaration('Default', fromRef(root['$ref']), true),
+      },
     ];
   }
   const items = fromNonRefRoot(schema);
@@ -643,26 +676,52 @@ function fromRoot(
   return items;
 }
 
-function fromFile(
-  schema: JSONSchema7,
-): Array<[JSONSchema7['title'], JSONSchema7['description'], gen.TypeDeclaration]> {
+function fromFile(schema: JSONSchema7): Array<DefInfo> {
   return fromDefinitions(schema.definitions).concat(fromRoot(schema));
 }
 
-// eslint-disable-next-line
-const declarations = gen.sort(fromFile(schema as JSONSchema7).map(([t, c, d]) => {
+type Dec = {
+  name: string;
+  title: string;
+  description: string;
+  examples: Array<unknown>;
+  staticType: string;
+  runtimeType: string;
+};
+
+function foo(omg: Array<DefInfo>): Array<Dec> {
+  const metas: Record<string, DefMeta> = {};
+  omg.forEach((info: DefInfo) => {
     // eslint-disable-next-line
-  titles[d.name] = t;
-    // eslint-disable-next-line
-  descriptions[d.name] = c;
-    return d;
-  }),
-);
-const defs: Array<[string, string, string]> = declarations.map((d) => [
-  d.name,
-  gen.printStatic(d),
-  gen.printRuntime(d).replace(/\ninterface /, '\nexport interface '),
-]);
+    metas[info.dec.name] = info.meta;
+  });
+  const boo = omg.map(({ dec }) => dec);
+  // eslint-disable-next-line
+  return gen.sort(boo).map((d) => {
+    const { name } = d;
+    const meta = metas[name];
+    const title = meta.title || name;
+    const description = meta.description || 'The purpose of this remains a mystery';
+    const examples = meta.examples || [];
+    if (typeof meta.description !== 'string') {
+      info('missing description');
+    }
+    if (examples.length < 1) {
+      info('missing example');
+    }
+    imps.add("import * as t from 'io-ts';");
+    return {
+      name,
+      title,
+      description,
+      examples,
+      staticType: gen.printStatic(d),
+      runtimeType: gen.printRuntime(d).replace(/\ninterface /, '\nexport interface '),
+    };
+  });
+}
+
+const defs: Array<Dec> = foo(fromFile(schema as JSONSchema7));
 
 if (returnCode === ErrorCode.ERROR) {
   process.exit(returnCode);
@@ -702,11 +761,13 @@ log('');
 log(`export const schemaId = '${schema.$id}';`);
 
 // eslint-disable-next-line
-for (const [n, s, r] of defs) {
-  log(`// ${titles[n] || n}`);
-  log(`// ${descriptions[n] || 'The purpose of this remains a mystery'}`);
-  log(s);
-  log(r);
+for (const {name, title, description, examples, staticType, runtimeType} of defs) {
+  log(`// ${title}`);
+  log(`// ${description}`);
+  log(staticType);
+  log(runtimeType);
+  log(`const json${name}Examples: Array<unknown> = ${JSON.stringify(examples)};`);
+  log(`const safe${name}Examples = t.array(${name}).decode(json${name}Examples);`);
 }
 
 log('');
