@@ -8,6 +8,7 @@ MaaS common components that are used consistently within our own objects
 */
 
 import * as t from 'io-ts';
+import * as Units_ from 'maas-schemas-ts/core/components/units';
 import { NonEmptyArray } from 'fp-ts/lib/NonEmptyArray';
 import { nonEmptyArray } from 'io-ts-types/lib/nonEmptyArray';
 
@@ -138,6 +139,51 @@ export interface EmailBrand {
 /** examplesEmail // => { _tag: 'Right', right: examplesEmailJson } */
 export const examplesEmailJson: NonEmptyArray<unknown> = ['joe.customer@example.com'];
 export const examplesEmail = nonEmptyArray(Email).decode(examplesEmailJson);
+
+// CustomerReference
+// Any unique way to refer a customer
+export type CustomerReference = t.Branded<
+  Units_.IdentityId | Phone,
+  CustomerReferenceBrand
+>;
+export const CustomerReference = t.brand(
+  t.union([Units_.IdentityId, Phone]),
+  (x): x is t.Branded<Units_.IdentityId | Phone, CustomerReferenceBrand> => true,
+  'CustomerReference',
+);
+export interface CustomerReferenceBrand {
+  readonly CustomerReference: unique symbol;
+}
+export const examplesCustomerReferenceJson: NonEmptyArray<unknown> = [
+  '4828507e-683f-41bf-9d87-689808fbf958',
+  '+358401234567',
+];
+export const examplesCustomerReference = nonEmptyArray(CustomerReference).decode(
+  examplesCustomerReferenceJson,
+);
+
+// LooseCustomerReference
+// Any unique way to refer a customer, plus some opportunistic ways
+export type LooseCustomerReference = t.Branded<
+  CustomerReference | Email,
+  LooseCustomerReferenceBrand
+>;
+export const LooseCustomerReference = t.brand(
+  t.union([CustomerReference, Email]),
+  (x): x is t.Branded<CustomerReference | Email, LooseCustomerReferenceBrand> => true,
+  'LooseCustomerReference',
+);
+export interface LooseCustomerReferenceBrand {
+  readonly LooseCustomerReference: unique symbol;
+}
+export const examplesLooseCustomerReferenceJson: NonEmptyArray<unknown> = [
+  '4828507e-683f-41bf-9d87-689808fbf958',
+  '+358401234567',
+  'joe.customer@example.com',
+];
+export const examplesLooseCustomerReference = nonEmptyArray(
+  LooseCustomerReference,
+).decode(examplesLooseCustomerReferenceJson);
 
 // PaymentSourceId
 // The purpose of this remains a mystery
