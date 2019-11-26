@@ -96,8 +96,10 @@ export const Phone = t.brand(
 export interface PhoneBrand {
   readonly Phone: unique symbol;
 }
+/** examplesPhone // => { _tag: 'Right', right: examplesPhoneJson } */
 export const examplesPhoneJson: Array<unknown> = ['+358401234567'];
 export const examplesPhone = t.array(Phone).decode(examplesPhoneJson);
+
 // RawPhone
 // Slightly looser definition of phone number
 export type RawPhone = t.Branded<string, RawPhoneBrand>;

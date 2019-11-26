@@ -274,7 +274,6 @@ export const examplesDefaultJson: Array<unknown> = [
 
 /**
   examplesDefault._tag // => 'Right'
-
 */
 export const examplesDefault = t.array(Default).decode(examplesDefaultJson);
 
