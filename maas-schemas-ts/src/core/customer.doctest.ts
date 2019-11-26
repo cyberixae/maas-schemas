@@ -281,3 +281,12 @@ export const examplesDefault = t.array(Default).decode(examplesDefaultJson);
 export default Default;
 
 // Success
+
+import "jest"
+const __expect: jest.Expect = expect
+
+    describe("examplesDefault", () => {
+      it("examplesDefault", () => {
+        __expect(examplesDefault._tag).toEqual('Right')})
+    })
+  
