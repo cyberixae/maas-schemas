@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "generate-tests": "doctest-ts --jest `find src -name '*.ts'`",
-    "test": "jest --config jestconfig.json --no-cache",
+    "test": "yarn generate-tests && jest --config jestconfig.json --no-cache",
     "eslint": "eslint --max-warnings=0 '**/*.{ts,json}' --ignore-path .gitignore",
     "prettify": "yarn eslint --fix||true",
     "lint": "yarn eslint",
