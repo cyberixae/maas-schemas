@@ -99,7 +99,6 @@ export interface PhoneBrand {
 /** examplesPhone // => { _tag: 'Right', right: examplesPhoneJson } */
 export const examplesPhoneJson: Array<unknown> = ['+358401234567'];
 export const examplesPhone = t.array(Phone).decode(examplesPhoneJson);
-
 // RawPhone
 // Slightly looser definition of phone number
 export type RawPhone = t.Branded<string, RawPhoneBrand>;
@@ -125,6 +124,7 @@ export const Email = t.brand(
 export interface EmailBrand {
   readonly Email: unique symbol;
 }
+/** examplesEmail // => { _tag: 'Right', right: examplesEmailJson } */
 export const examplesEmailJson: Array<unknown> = ['joe.customer@example.com'];
 export const examplesEmail = t.array(Email).decode(examplesEmailJson);
 // PaymentSourceId

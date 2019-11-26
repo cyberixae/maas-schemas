@@ -179,6 +179,7 @@ export const Environment = t.brand(
 export interface EnvironmentBrand {
   readonly Environment: unique symbol;
 }
+/** examplesEnvironment // => { _tag: 'Right', right: examplesEnvironmentJson } */
 export const examplesEnvironmentJson: Array<unknown> = [
   {
     id: 'production',
@@ -228,6 +229,7 @@ export const DevEnvironment = t.brand(
 export interface DevEnvironmentBrand {
   readonly DevEnvironment: unique symbol;
 }
+/** examplesDevEnvironment // => { _tag: 'Right', right: examplesDevEnvironmentJson } */
 export const examplesDevEnvironmentJson: Array<unknown> = [
   {
     id: 'testing',
@@ -342,6 +344,7 @@ export const Default = t.brand(
 export interface DefaultBrand {
   readonly Default: unique symbol;
 }
+/** examplesDefault // => { _tag: 'Right', right: examplesDefaultJson } */
 export const examplesDefaultJson: Array<unknown> = [
   {
     index: [
