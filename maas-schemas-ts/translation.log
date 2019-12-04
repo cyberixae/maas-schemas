@@ -16,6 +16,10 @@ WARNING: skipping examples handling for $ref object
   in ./core/booking.json
 WARNING: skipping default value handling for $ref object
   in ./core/booking.json
+WARNING: skipping examples handling for $ref object
+  in ./core/booking.json
+WARNING: skipping default value handling for $ref object
+  in ./core/booking.json
 INFO: missing description
   in ./core/booking.json
 INFO: missing description
@@ -242,15 +246,23 @@ WARNING: minLength field not supported outside top-level definitions
   in ./core/components/customerSelection.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./core/components/customerSelection.json
-WARNING: minimum field not supported outside top-level definitions
+WARNING: patternProperty support has limitations
   in ./core/components/fare.json
-INFO: primitive type "string" used outside top-level definitions
+INFO: missing description
   in ./core/components/fare.json
-WARNING: minimum field not supported outside top-level definitions
+INFO: missing description
   in ./core/components/fare.json
-WARNING: minimum field not supported outside top-level definitions
+INFO: missing description
   in ./core/components/fare.json
-INFO: primitive type "string" used outside top-level definitions
+INFO: missing description
+  in ./core/components/fare.json
+INFO: missing description
+  in ./core/components/fare.json
+INFO: missing description
+  in ./core/components/fare.json
+INFO: missing description
+  in ./core/components/fare.json
+INFO: missing description
   in ./core/components/fare.json
 INFO: missing description
   in ./core/components/fare.json
@@ -516,18 +528,22 @@ INFO: missing description
   in ./core/components/units.json
 INFO: missing description
   in ./core/components/units.json
-INFO: primitive type "integer" used outside top-level definitions
-  in ./core/customer.json
-WARNING: minimum field not supported outside top-level definitions
-  in ./core/customer.json
-WARNING: patternProperty support has limitations
-  in ./core/customer.json
-INFO: primitive type "integer" used outside top-level definitions
-  in ./core/customer.json
-WARNING: minimum field not supported outside top-level definitions
-  in ./core/customer.json
-WARNING: minimum field not supported outside top-level definitions
-  in ./core/customer.json
+INFO: missing description
+  in ./core/components/units.json
+INFO: missing description
+  in ./core/components/units.json
+INFO: missing description
+  in ./core/components/units.json
+INFO: missing description
+  in ./core/components/units.json
+INFO: missing description
+  in ./core/components/units.json
+INFO: missing description
+  in ./core/components/units.json
+INFO: missing description
+  in ./core/components/units.json
+INFO: missing description
+  in ./core/components/units.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/customer.json
 INFO: primitive type "string" used outside top-level definitions
@@ -849,12 +865,6 @@ INFO: primitive type "string" used outside top-level definitions
 WARNING: minLength field not supported outside top-level definitions
   in ./core/profile.json
 WARNING: maxLength field not supported outside top-level definitions
-  in ./core/profile.json
-INFO: primitive type "integer" used outside top-level definitions
-  in ./core/profile.json
-WARNING: minimum field not supported outside top-level definitions
-  in ./core/profile.json
-WARNING: multipleOf field not supported outside top-level definitions
   in ./core/profile.json
 INFO: missing description
   in ./core/profile.json
@@ -1187,8 +1197,6 @@ INFO: primitive type "number" used outside top-level definitions
 WARNING: minimum field not supported outside top-level definitions
   in ./maas-backend/products/provider.json
 WARNING: multipleOf field not supported outside top-level definitions
-  in ./maas-backend/products/provider.json
-INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/products/provider.json
 INFO: primitive type "integer" used outside top-level definitions
   in ./maas-backend/products/provider.json

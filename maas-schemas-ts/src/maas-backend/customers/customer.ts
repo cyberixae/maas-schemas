@@ -41,7 +41,7 @@ export type Customer = t.Branded<
     profileImageUrl?: string;
     personalData?: PersonalData_.PersonalData;
     paymentSources?: Array<PaymentSource_.PaymentSource>;
-    balances?: Array<Fare_.Fare>;
+    balances?: Fare_.BalancesArray;
     region?: Region_.Region;
     authorizations?: Array<Authorization_.Authorization>;
     favoriteLocations?: Array<{}>;
@@ -61,7 +61,7 @@ export const Customer = t.brand(
       profileImageUrl: t.string,
       personalData: PersonalData_.PersonalData,
       paymentSources: t.array(PaymentSource_.PaymentSource),
-      balances: t.array(Fare_.Fare),
+      balances: Fare_.BalancesArray,
       region: Region_.Region,
       authorizations: t.array(Authorization_.Authorization),
       favoriteLocations: t.array(t.type({})),
@@ -82,7 +82,7 @@ export const Customer = t.brand(
       profileImageUrl?: string;
       personalData?: PersonalData_.PersonalData;
       paymentSources?: Array<PaymentSource_.PaymentSource>;
-      balances?: Array<Fare_.Fare>;
+      balances?: Fare_.BalancesArray;
       region?: Region_.Region;
       authorizations?: Array<Authorization_.Authorization>;
       favoriteLocations?: Array<{}>;

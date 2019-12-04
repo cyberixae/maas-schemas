@@ -152,8 +152,8 @@ export type Profile = t.Branded<
     };
     subscription?: {};
     subscriptionInstance?: SubscriptionInstance;
-    balance?: number;
-    balances?: Array<Fare_.Fare>;
+    balance?: Fare_.WmpAmount;
+    balances?: Fare_.BalancesObject;
     created?: Units_.Time;
     modified?: Units_.Time;
   } & {
@@ -201,8 +201,8 @@ export const Profile = t.brand(
       ]),
       subscription: t.type({}),
       subscriptionInstance: SubscriptionInstance,
-      balance: t.number,
-      balances: t.array(Fare_.Fare),
+      balance: Fare_.WmpAmount,
+      balances: Fare_.BalancesObject,
       created: Units_.Time,
       modified: Units_.Time,
     }),
@@ -245,8 +245,8 @@ export const Profile = t.brand(
       };
       subscription?: {};
       subscriptionInstance?: SubscriptionInstance;
-      balance?: number;
-      balances?: Array<Fare_.Fare>;
+      balance?: Fare_.WmpAmount;
+      balances?: Fare_.BalancesObject;
       created?: Units_.Time;
       modified?: Units_.Time;
     } & {
