@@ -8,11 +8,11 @@ MaaS customer schema
 */
 
 import * as t from 'io-ts';
+import * as Fare_ from 'maas-schemas-ts/core/components/fare';
 import * as Units_ from 'maas-schemas-ts/core/components/units';
 import * as Common_ from 'maas-schemas-ts/core/components/common';
 import * as Address_ from 'maas-schemas-ts/core/components/address';
 import * as I18n_ from 'maas-schemas-ts/core/components/i18n';
-import * as Fare_ from 'maas-schemas-ts/core/components/fare';
 import { NonEmptyArray } from 'fp-ts/lib/NonEmptyArray';
 import { nonEmptyArray } from 'io-ts-types/lib/nonEmptyArray';
 
@@ -34,6 +34,191 @@ const Defined = t.union([
 
 export const schemaId = 'http://maasglobal.com/core/customer.json';
 
+// WmpAmount
+// An amount of in-app credits
+export type WmpAmount = t.Branded<number, WmpAmountBrand>;
+export const WmpAmount = t.brand(
+  t.number,
+  (x): x is t.Branded<number, WmpAmountBrand> => Number.isInteger(x),
+  'WmpAmount',
+);
+export interface WmpAmountBrand {
+  readonly WmpAmount: unique symbol;
+}
+/** examplesWmpAmount // => { _tag: 'Right', right: examplesWmpAmountJson } */
+export const examplesWmpAmountJson: NonEmptyArray<unknown> = [1234];
+export const examplesWmpAmount = nonEmptyArray(WmpAmount).decode(examplesWmpAmountJson);
+
+// WmpBalance
+// An amount of in-app credits, with currency type info
+export type WmpBalance = t.Branded<
+  {
+    currency?: 'WMP';
+    amount?: WmpAmount;
+  } & {
+    currency: Defined;
+    amount: Defined;
+  },
+  WmpBalanceBrand
+>;
+export const WmpBalance = t.brand(
+  t.intersection([
+    t.partial({
+      currency: t.literal('WMP'),
+      amount: WmpAmount,
+    }),
+    t.type({
+      currency: Defined,
+      amount: Defined,
+    }),
+  ]),
+  (
+    x,
+  ): x is t.Branded<
+    {
+      currency?: 'WMP';
+      amount?: WmpAmount;
+    } & {
+      currency: Defined;
+      amount: Defined;
+    },
+    WmpBalanceBrand
+  > => true,
+  'WmpBalance',
+);
+export interface WmpBalanceBrand {
+  readonly WmpBalance: unique symbol;
+}
+/** examplesWmpBalance // => { _tag: 'Right', right: examplesWmpBalanceJson } */
+export const examplesWmpBalanceJson: NonEmptyArray<unknown> = [
+  { currency: 'WMP', amount: 1234, type: 'charge' },
+];
+export const examplesWmpBalance = nonEmptyArray(WmpBalance).decode(
+  examplesWmpBalanceJson,
+);
+
+// TokenAmount
+// An amount of in-app tokens
+export type TokenAmount = t.Branded<number, TokenAmountBrand>;
+export const TokenAmount = t.brand(
+  t.number,
+  (x): x is t.Branded<number, TokenAmountBrand> => Number.isInteger(x),
+  'TokenAmount',
+);
+export interface TokenAmountBrand {
+  readonly TokenAmount: unique symbol;
+}
+/** examplesTokenAmount // => { _tag: 'Right', right: examplesTokenAmountJson } */
+export const examplesTokenAmountJson: NonEmptyArray<unknown> = [1];
+export const examplesTokenAmount = nonEmptyArray(TokenAmount).decode(
+  examplesTokenAmountJson,
+);
+
+// TokenBalance
+// key would typically match tokenId
+export type TokenBalance = t.Branded<
+  {
+    currency?: 'TOKEN';
+    tokenId?: Fare_.TokenId;
+    amount?: TokenAmount | null;
+  } & {
+    currency: Defined;
+    tokenId: Defined;
+    amount: Defined;
+  },
+  TokenBalanceBrand
+>;
+export const TokenBalance = t.brand(
+  t.intersection([
+    t.partial({
+      currency: t.literal('TOKEN'),
+      tokenId: Fare_.TokenId,
+      amount: t.union([TokenAmount, t.null]),
+    }),
+    t.type({
+      currency: Defined,
+      tokenId: Defined,
+      amount: Defined,
+    }),
+  ]),
+  (
+    x,
+  ): x is t.Branded<
+    {
+      currency?: 'TOKEN';
+      tokenId?: Fare_.TokenId;
+      amount?: TokenAmount | null;
+    } & {
+      currency: Defined;
+      tokenId: Defined;
+      amount: Defined;
+    },
+    TokenBalanceBrand
+  > => true,
+  'TokenBalance',
+);
+export interface TokenBalanceBrand {
+  readonly TokenBalance: unique symbol;
+}
+/** examplesTokenBalance // => { _tag: 'Right', right: examplesTokenBalanceJson } */
+export const examplesTokenBalanceJson: NonEmptyArray<unknown> = [
+  { currency: 'TOKEN', tokenId: 'cx-test-token_v2', amount: 1, type: 'charge' },
+];
+export const examplesTokenBalance = nonEmptyArray(TokenBalance).decode(
+  examplesTokenBalanceJson,
+);
+
+// Balances
+// A summary of in-app credit and tokens
+export type Balances = t.Branded<
+  ({
+    WMP?: WmpBalance;
+  } & Record<string, WmpBalance | TokenBalance>) & {
+    WMP: Defined;
+  },
+  BalancesBrand
+>;
+export const Balances = t.brand(
+  t.intersection([
+    t.intersection([
+      t.partial({
+        WMP: WmpBalance,
+      }),
+      t.record(t.string, t.union([WmpBalance, TokenBalance])),
+    ]),
+    t.type({
+      WMP: Defined,
+    }),
+  ]),
+  (
+    x,
+  ): x is t.Branded<
+    ({
+      WMP?: WmpBalance;
+    } & Record<string, WmpBalance | TokenBalance>) & {
+      WMP: Defined;
+    },
+    BalancesBrand
+  > => true,
+  'Balances',
+);
+export interface BalancesBrand {
+  readonly Balances: unique symbol;
+}
+/** examplesBalances // => { _tag: 'Right', right: examplesBalancesJson } */
+export const examplesBalancesJson: NonEmptyArray<unknown> = [
+  {
+    WMP: { currency: 'WMP', amount: 1234, type: 'charge' },
+    'cx-test-token_v2': {
+      currency: 'TOKEN',
+      tokenId: 'cx-test-token_v2',
+      amount: 1,
+      type: 'charge',
+    },
+  },
+];
+export const examplesBalances = nonEmptyArray(Balances).decode(examplesBalancesJson);
+
 // Customer
 // The default export. More information at the top.
 export type Customer = t.Branded<
@@ -53,35 +238,7 @@ export type Customer = t.Branded<
     clientId?: Common_.ClientId;
     dob?: boolean | Units_.IsoDate;
     ssid?: boolean | Common_.Ssid;
-    balances?: ({
-      WMP?: {
-        currency?: 'WMP';
-        amount?: number;
-      } & {
-        currency: Defined;
-        amount: Defined;
-      };
-    } & Record<
-      string,
-      | ({
-          currency?: 'WMP';
-          amount?: number;
-        } & {
-          currency: Defined;
-          amount: Defined;
-        })
-      | ({
-          currency?: 'TOKEN';
-          tokenId?: Fare_.TokenId;
-          amount?: number | null;
-        } & {
-          currency: Defined;
-          tokenId: Defined;
-          amount: Defined;
-        })
-    >) & {
-      WMP: Defined;
-    };
+    balances?: Balances;
     subscriberType?: string;
     authToken?: Common_.EncodedQueryParam;
   },
@@ -104,52 +261,7 @@ export const Customer = t.brand(
     clientId: Common_.ClientId,
     dob: t.union([t.boolean, Units_.IsoDate]),
     ssid: t.union([t.boolean, Common_.Ssid]),
-    balances: t.intersection([
-      t.intersection([
-        t.partial({
-          WMP: t.intersection([
-            t.partial({
-              currency: t.literal('WMP'),
-              amount: t.number,
-            }),
-            t.type({
-              currency: Defined,
-              amount: Defined,
-            }),
-          ]),
-        }),
-        t.record(
-          t.string,
-          t.union([
-            t.intersection([
-              t.partial({
-                currency: t.literal('WMP'),
-                amount: t.number,
-              }),
-              t.type({
-                currency: Defined,
-                amount: Defined,
-              }),
-            ]),
-            t.intersection([
-              t.partial({
-                currency: t.literal('TOKEN'),
-                tokenId: Fare_.TokenId,
-                amount: t.union([t.number, t.null]),
-              }),
-              t.type({
-                currency: Defined,
-                tokenId: Defined,
-                amount: Defined,
-              }),
-            ]),
-          ]),
-        ),
-      ]),
-      t.type({
-        WMP: Defined,
-      }),
-    ]),
+    balances: Balances,
     subscriberType: t.string,
     authToken: Common_.EncodedQueryParam,
   }),
@@ -172,35 +284,7 @@ export const Customer = t.brand(
       clientId?: Common_.ClientId;
       dob?: boolean | Units_.IsoDate;
       ssid?: boolean | Common_.Ssid;
-      balances?: ({
-        WMP?: {
-          currency?: 'WMP';
-          amount?: number;
-        } & {
-          currency: Defined;
-          amount: Defined;
-        };
-      } & Record<
-        string,
-        | ({
-            currency?: 'WMP';
-            amount?: number;
-          } & {
-            currency: Defined;
-            amount: Defined;
-          })
-        | ({
-            currency?: 'TOKEN';
-            tokenId?: Fare_.TokenId;
-            amount?: number | null;
-          } & {
-            currency: Defined;
-            tokenId: Defined;
-            amount: Defined;
-          })
-      >) & {
-        WMP: Defined;
-      };
+      balances?: Balances;
       subscriberType?: string;
       authToken?: Common_.EncodedQueryParam;
     },

@@ -516,17 +516,7 @@ INFO: missing description
   in ./core/components/units.json
 INFO: missing description
   in ./core/components/units.json
-INFO: primitive type "integer" used outside top-level definitions
-  in ./core/customer.json
-WARNING: minimum field not supported outside top-level definitions
-  in ./core/customer.json
 WARNING: patternProperty support has limitations
-  in ./core/customer.json
-INFO: primitive type "integer" used outside top-level definitions
-  in ./core/customer.json
-WARNING: minimum field not supported outside top-level definitions
-  in ./core/customer.json
-WARNING: minimum field not supported outside top-level definitions
   in ./core/customer.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/customer.json
