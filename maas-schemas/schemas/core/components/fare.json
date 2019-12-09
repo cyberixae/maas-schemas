@@ -22,8 +22,14 @@
       "multipleOf": 1,
       "examples": [1234]
     },
-    "wmpBalance": {
-      "description": "An amount of in-app credits, with currency type info",
+    "tokenAmount": {
+      "description": "An amount of in-app tokens",
+      "type": "integer",
+      "minimum": 0,
+      "examples": [1]
+    },
+    "wmpFields": {
+      "description": "collection of in-app credit fields shared by fare and balance",
       "type": "object",
       "properties": {
         "currency": { "$ref": "http://maasglobal.com/core/components/units.json#/definitions/metaCurrencyWMP" },
@@ -33,31 +39,12 @@
         },
         "productionAmount": {
           "$ref": "#/definitions/wmpAmount"
-        },
-        "type": {
-          "$ref": "#/definitions/fareType"
         }
-      },
-      "required": ["currency", "amount"],
-      "additionalProperties": false,
-      "examples": [
-        {
-          "currency": "WMP",
-          "amount": 1234,
-          "type": "charge"
-        }
-      ]
+      }
     },
-    "tokenAmount": {
-      "description": "An amount of in-app tokens",
-      "type": "integer",
-      "minimum": 0,
-      "examples": [1]
-    },
-    "tokenBalance": {
-      "description": "An amount of in-app tokens, with currency type info",
+    "tokenFields": {
+      "description": "collection of token fields shared by fare and balance",
       "type": "object",
-      "description": "key would typically match tokenId",
       "properties": {
         "currency": { "$ref": "http://maasglobal.com/core/components/units.json#/definitions/metaCurrencyTOKEN" },
         "tokenId": {
@@ -69,13 +56,40 @@
         },
         "productionAmount": {
           "$ref": "#/definitions/tokenAmount"
-        },
+        }
+      },
+      "required": ["tokenId"]
+    },
+    "abstractFare": {
+      "type": "object",
+      "properties": {
         "type": {
           "$ref": "#/definitions/fareType"
         }
       },
-      "required": ["currency", "tokenId", "amount"],
-      "additionalProperties": false,
+      "required": ["type", "currency", "amount", "originalAmount", "productionAmount"],
+      "additionalProperties": false
+    },
+    "wmpFare": {
+      "description": "The cost of a booking in in-app credits",
+      "allOf": [
+        { "$ref": "#/definitions/abstractFare" },
+        { "$ref": "#/definitions/wmpFields" }
+      ],
+      "examples": [
+        {
+          "currency": "WMP",
+          "amount": 1234,
+          "type": "charge"
+        }
+      ]
+    },
+    "tokenFare": {
+      "description": "The cost of a booking in in-app tokens",
+      "allOf": [
+        { "$ref": "#/definitions/abstractFare" },
+        { "$ref": "#/definitions/tokenFields" }
+      ],
       "examples": [
         {
           "currency": "TOKEN",
@@ -85,7 +99,54 @@
         }
       ]
     },
-    "anyBalance": {
+    "abstractBalance": {
+      "type": "object",
+      "properties": {
+        "tokenId": { "$comment": "optional property" }
+      },
+      "required": ["currency", "amount"],
+      "additionalProperties": false
+    },
+    "wmpBalance": {
+      "description": "The cost of a booking in in-app credits",
+      "allOf": [
+        { "$ref": "#/definitions/abstractBalance" },
+        { "$ref": "#/definitions/wmpFields" }
+      ],
+      "examples": [
+        {
+          "currency": "WMP",
+          "amount": 1234
+        }
+      ]
+    },
+    "tokenBalance": {
+      "description": "The cost of a booking in in-app tokens",
+      "allOf": [
+        { "$ref": "#/definitions/abstractBalance" },
+        { "$ref": "#/definitions/tokenFields" }
+      ],
+      "examples": [
+        {
+          "currency": "TOKEN",
+          "tokenId": "cx-test-token_v2",
+          "amount": 1
+        }
+      ]
+    },
+    "fare": {
+      "oneOf": [
+        { "$ref": "#/definitions/wmpFare" },
+        { "$ref": "#/definitions/tokenFare" }
+      ]
+    },
+    "faresArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/fare"
+      }
+    },
+    "balance": {
       "oneOf": [
         { "$ref": "#/definitions/wmpBalance" },
         { "$ref": "#/definitions/tokenBalance" }
@@ -94,7 +155,7 @@
     "balancesArray": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/anyBalance"
+        "$ref": "#/definitions/balance"
       }
     },
     "balancesObject": {
@@ -124,8 +185,5 @@
         }
       ]
     }
-  },
-  "allOf": [
-    { "$ref": "#/definitions/anyBalance" }
-  ]
+  }
 }
