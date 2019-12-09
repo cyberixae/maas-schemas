@@ -2,88 +2,6 @@
   "$id": "http://maasglobal.com/core/customer.json",
   "description": "MaaS customer schema",
   "type": "object",
-  "definitions": {
-    "wmpAmount": {
-      "description": "An amount of in-app credits",
-      "type": "integer",
-      "minimum": 0,
-      "examples": [1234]
-    },
-    "wmpBalance": {
-      "description": "An amount of in-app credits, with currency type info",
-      "type": "object",
-      "properties": {
-        "currency": { "const": "WMP" },
-        "amount": { "$ref": "#/definitions/wmpAmount" }
-      },
-      "required": ["currency", "amount"],
-      "additionalProperties": true,
-      "examples": [
-        {
-          "currency": "WMP",
-          "amount": 1234,
-          "type": "charge"
-        }
-      ]
-    },
-    "tokenAmount": {
-      "description": "An amount of in-app tokens",
-      "type": "integer",
-      "minimum": 0,
-      "examples": [1]
-    },
-    "tokenBalance": {
-      "description": "An amount of in-app tokens, with currency type info",
-      "type": "object",
-      "description": "key would typically match tokenId",
-      "properties": {
-        "currency": { "const": "TOKEN" },
-        "tokenId": {
-          "$ref": "http://maasglobal.com/core/components/fare.json#/definitions/tokenId"
-        },
-        "amount": {
-          "oneOf": [{ "$ref": "#/definitions/tokenAmount" }, { "type": "null" }]
-        }
-      },
-      "required": ["currency", "tokenId", "amount"],
-      "additionalProperties": true,
-      "examples": [
-        {
-          "currency": "TOKEN",
-          "tokenId": "cx-test-token_v2",
-          "amount": 1,
-          "type": "charge"
-        }
-      ]
-    },
-    "balances": {
-      "description": "A summary of in-app credit and tokens",
-      "type": "object",
-      "properties": {
-        "WMP": { "$ref": "#/definitions/wmpBalance" }
-      },
-      "patternProperties": {
-        "^[a-z]+(-[a-z]+)*-[a-z0-9_]+$": { "$ref": "#/definitions/tokenBalance" }
-      },
-      "required": ["WMP"],
-      "additionalProperties": false,
-      "examples": [
-        {
-          "WMP": {
-            "currency": "WMP",
-            "amount": 1234,
-            "type": "charge"
-          },
-          "cx-test-token_v2": {
-            "currency": "TOKEN",
-            "tokenId": "cx-test-token_v2",
-            "amount": 1,
-            "type": "charge"
-          }
-        }
-      ]
-    }
-  },
   "properties": {
     "identityId": {
       "$ref": "http://maasglobal.com/core/components/units.json#/definitions/identityId"
@@ -149,7 +67,7 @@
         }
       ]
     },
-    "balances": { "$ref": "#/definitions/balances" },
+    "balances": { "$ref": "http://maasglobal.com/core/components/fare.json#/definitions/balancesObject" },
     "subscriberType": {
       "description": "Subscriber Type",
       "type": "string"
