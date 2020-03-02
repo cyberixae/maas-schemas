@@ -491,6 +491,24 @@ function fromContains(schema: JSONSchema7): [gen.TypeReference] | [] {
   return [];
 }
 
+function fromEnumValue (s: string|boolean|number) {
+
+  return gen.literalCombinator(s);
+  const definedHelper = createHelper(
+    gen.typeDeclaration(
+      'Defined',
+      gen.unionCombinator([
+        gen.unknownRecordType,
+        gen.unknownArrayType,
+        gen.stringType,
+        gen.booleanType,
+        gen.numberType,
+        gen.nullType,
+      ]),
+    ),
+  );
+}
+
 function fromEnum(schema: JSONSchema7): [gen.TypeReference] | [] {
   if ('enum' in schema && typeof schema.enum !== 'undefined') {
     const combinators = schema.enum.map((s) => {
@@ -501,7 +519,7 @@ function fromEnum(schema: JSONSchema7): [gen.TypeReference] | [] {
         case 'string':
         case 'boolean':
         case 'number':
-          return gen.literalCombinator(s);
+          return fromEnumValue(s);
       }
       // eslint-disable-next-line
       throw new Error(`${typeof s}s are not supported as part of ENUM`);
