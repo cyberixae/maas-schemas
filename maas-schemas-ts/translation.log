@@ -68,6 +68,16 @@ WARNING: maxLength field not supported outside top-level definitions
   in ./core/card.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/card.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/card.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/card.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/card.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/card.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/card.json
 WARNING: skipping examples handling for $ref object
   in ./core/components/address.json
 WARNING: skipping default value handling for $ref object
@@ -97,6 +107,10 @@ INFO: missing description
 INFO: missing description
   in ./core/components/api-common.json
 INFO: primitive type "string" used outside top-level definitions
+  in ./core/components/authorization.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/authorization.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./core/components/authorization.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/bike-station.json
@@ -158,6 +172,26 @@ WARNING: minimum field not supported outside top-level definitions
   in ./core/components/car-rental.json
 WARNING: maximum field not supported outside top-level definitions
   in ./core/components/car-rental.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/car-rental.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/car-rental.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/car-rental.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/car-rental.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/car-rental.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/car-rental.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/car-rental.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/car-rental.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/car-rental.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/car-rental.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/car-rental.json
 WARNING: pattern field not supported outside top-level definitions
@@ -180,6 +214,16 @@ INFO: missing description
   in ./core/components/common.json
 INFO: missing description
   in ./core/components/common.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/configurator.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/configurator.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/configurator.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/configurator.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/configurator.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/configurator.json
 WARNING: minLength field not supported outside top-level definitions
@@ -202,6 +246,8 @@ WARNING: maxLength field not supported outside top-level definitions
   in ./core/components/configurator.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/configurator.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/configurator.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/configurator.json
 WARNING: minLength field not supported outside top-level definitions
@@ -246,14 +292,28 @@ WARNING: minimum field not supported outside top-level definitions
   in ./core/components/fare.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/fare.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/fare.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/fare.json
 WARNING: minimum field not supported outside top-level definitions
   in ./core/components/fare.json
 WARNING: minimum field not supported outside top-level definitions
   in ./core/components/fare.json
 INFO: primitive type "string" used outside top-level definitions
+  in ./core/components/fare.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/fare.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./core/components/fare.json
 INFO: missing description
   in ./core/components/fare.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/geolocation.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/geolocation.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/geolocation.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/geolocation.json
 WARNING: minLength field not supported outside top-level definitions
@@ -382,6 +442,10 @@ INFO: missing description
   in ./core/components/payment-parameters.json
 INFO: missing description
   in ./core/components/payment-parameters.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/personalDataAllowItem.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/personalDataAllowItem.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/personalDataAllowItem.json
 WARNING: minLength field not supported outside top-level definitions
@@ -476,7 +540,19 @@ INFO: missing description
   in ./core/components/station.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/subscriptionChangeState.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/subscriptionChangeState.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/subscriptionChangeState.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/subscriptionChangeState.json
 INFO: primitive type "string" used outside top-level definitions
+  in ./core/components/subscriptionChangeState.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/subscriptionChangeState.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/subscriptionChangeState.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./core/components/subscriptionChangeState.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/components/terms.json
@@ -527,6 +603,12 @@ INFO: primitive type "number" used outside top-level definitions
 WARNING: minimum field not supported outside top-level definitions
   in ./core/components/terms.json
 WARNING: multipleOf field not supported outside top-level definitions
+  in ./core/components/terms.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/terms.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/components/terms.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./core/components/terms.json
 INFO: missing description
   in ./core/components/terms.json
@@ -575,6 +657,10 @@ WARNING: minimum field not supported outside top-level definitions
 WARNING: minItems field not supported outside top-level definitions
   in ./core/itinerary.json
 WARNING: minItems field not supported outside top-level definitions
+  in ./core/itinerary.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/itinerary.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./core/itinerary.json
 INFO: missing description
   in ./core/itinerary.json
@@ -752,6 +838,22 @@ WARNING: maxLength field not supported outside top-level definitions
   in ./core/paymentSource.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/paymentSource.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/paymentSource.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/paymentSource.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/paymentSource.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/paymentSource.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/paymentSource.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/paymentSource.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/paymentSource.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/paymentSource.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/paymentSource.json
 WARNING: minLength field not supported outside top-level definitions
@@ -887,6 +989,12 @@ WARNING: minLength field not supported outside top-level definitions
 WARNING: maxLength field not supported outside top-level definitions
   in ./core/profile.json
 INFO: primitive type "string" used outside top-level definitions
+  in ./core/profile.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/profile.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./core/profile.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./core/profile.json
 INFO: primitive type "string" used outside top-level definitions
   in ./core/profile.json
@@ -1080,6 +1188,8 @@ WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/customers/payment-sources/setup-intent/response.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/customers/payment-sources/setup-intent/response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/customers/payment-sources/update/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/customers/personalData.json
 INFO: primitive type "string" used outside top-level definitions
@@ -1156,6 +1266,8 @@ WARNING: default field not supported outside top-level definitions
   in ./maas-backend/geocoding/geocoding-query/request.json
 WARNING: default field not supported outside top-level definitions
   in ./maas-backend/geocoding/geocoding-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/geocoding/geocoding-query/response.json
 INFO: primitive type "integer" used outside top-level definitions
   in ./maas-backend/geocoding/geocoding-reverse/request.json
 WARNING: minimum field not supported outside top-level definitions
@@ -1166,6 +1278,8 @@ WARNING: default field not supported outside top-level definitions
   in ./maas-backend/geocoding/geocoding-reverse/request.json
 WARNING: default field not supported outside top-level definitions
   in ./maas-backend/geocoding/geocoding-reverse/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/geocoding/geocoding-reverse/response.json
 WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/invoices/invoice.json
 INFO: primitive type "string" used outside top-level definitions
@@ -1173,6 +1287,14 @@ INFO: primitive type "string" used outside top-level definitions
 WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/invoices/invoiceLineItem.json
 INFO: primitive type "string" used outside top-level definitions
+  in ./maas-backend/invoices/invoiceLineItem.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/invoices/invoiceLineItem.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/invoices/invoiceLineItem.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/invoices/invoiceLineItem.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./maas-backend/invoices/invoiceLineItem.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/invoices/invoiceLineItem.json
@@ -1238,6 +1360,10 @@ WARNING: multipleOf field not supported outside top-level definitions
   in ./maas-backend/products/provider.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/products/provider.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/products/provider.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/products/provider.json
 INFO: primitive type "integer" used outside top-level definitions
   in ./maas-backend/products/provider.json
 WARNING: minimum field not supported outside top-level definitions
@@ -1252,23 +1378,49 @@ INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/products/provider.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/products/provider.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/products/provider.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/products/provider.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/products/provider.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/products/provider.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/products/provider.json
 WARNING: minItems field not supported outside top-level definitions
   in ./maas-backend/products/provider.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/products/provider.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/products/provider.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/products/provider.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/products/provider.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/products/provider.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/products/provider.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/profile/profile-devices-put/request.json
 WARNING: pattern field not supported outside top-level definitions
   in ./maas-backend/profile/profile-devices-put/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/profile/profile-devices-put/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/profile/profile-devices-put/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/profile/profile-devices-put/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/profile/profile-devices-put/response.json
 WARNING: pattern field not supported outside top-level definitions
   in ./maas-backend/profile/profile-devices-put/response.json
 INFO: primitive type "string" used outside top-level definitions
+  in ./maas-backend/profile/profile-devices-put/response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/profile/profile-devices-put/response.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./maas-backend/profile/profile-devices-put/response.json
 INFO: missing description
   in ./maas-backend/profile/profile-devices-put/response.json
@@ -1310,9 +1462,33 @@ WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/push-notification/request.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/push-notification/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/push-notification/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/push-notification/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/push-notification/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/push-notification/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/push-notification/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/push-notification/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/push-notification/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/push-notification/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/push-notification/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/push-notification/request.json
 WARNING: minItems field not supported outside top-level definitions
   in ./maas-backend/push-notification/request.json
 WARNING: maxItems field not supported outside top-level definitions
+  in ./maas-backend/push-notification/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/push-notification/request.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./maas-backend/push-notification/request.json
 WARNING: minItems field not supported outside top-level definitions
   in ./maas-backend/push-notification/request.json
@@ -1320,13 +1496,57 @@ WARNING: maxItems field not supported outside top-level definitions
   in ./maas-backend/push-notification/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
 INFO: primitive type "string" used outside top-level definitions
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./maas-backend/routes/routes-query/request.json
 WARNING: patternProperty support has limitations
   in ./maas-backend/routes/routes-query/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
 INFO: primitive type "string" used outside top-level definitions
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/routes/routes-query/request.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./maas-backend/routes/routes-query/request.json
 INFO: missing description
   in ./maas-backend/routes/routes-query/request.json
@@ -1334,6 +1554,12 @@ INFO: primitive type "integer" used outside top-level definitions
   in ./maas-backend/stations/stations-list/request.json
 WARNING: minimum field not supported outside top-level definitions
   in ./maas-backend/stations/stations-list/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/stations/stations-list/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/stations/stations-list/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/stations/stations-list/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/stations/stations-list/request.json
 WARNING: minLength field not supported outside top-level definitions
@@ -1342,6 +1568,12 @@ INFO: primitive type "integer" used outside top-level definitions
   in ./maas-backend/stations/stations-list/request.json
 WARNING: minimum field not supported outside top-level definitions
   in ./maas-backend/stations/stations-list/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/stations/stations-list/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/stations/stations-list/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/stations/stations-list/request.json
 WARNING: skipping examples handling for $ref object
   in ./maas-backend/stations/stations-list/response.json
 WARNING: skipping default value handling for $ref object
@@ -1361,6 +1593,8 @@ WARNING: skipping default value handling for $ref object
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/subscriptions/contact.json
 INFO: primitive type "string" used outside top-level definitions
+  in ./maas-backend/subscriptions/contact.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./maas-backend/subscriptions/contact.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/subscriptions/contact.json
@@ -1369,6 +1603,8 @@ WARNING: minLength field not supported outside top-level definitions
 WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/subscriptions/contact.json
 INFO: primitive type "string" used outside top-level definitions
+  in ./maas-backend/subscriptions/contact.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./maas-backend/subscriptions/contact.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/subscriptions/contact.json
@@ -1542,6 +1778,8 @@ INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/webhooks/webhooks-payments/gateway/avainpay.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/webhooks/webhooks-payments/gateway/avainpay.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/webhooks/webhooks-payments/gateway/avainpay.json
 INFO: missing description
   in ./maas-backend/webhooks/webhooks-payments/gateway/avainpay.json
 INFO: primitive type "string" used outside top-level definitions
@@ -1596,6 +1834,8 @@ WARNING: minimum field not supported outside top-level definitions
   in ./maas-backend/webhooks/webhooks-payments/gateway/stripe.json
 INFO: primitive type "string" used outside top-level definitions
   in ./maas-backend/webhooks/webhooks-payments/gateway/stripe.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./maas-backend/webhooks/webhooks-payments/gateway/stripe.json
 INFO: missing description
   in ./maas-backend/webhooks/webhooks-payments/gateway/stripe.json
 INFO: primitive type "string" used outside top-level definitions
@@ -1619,6 +1859,8 @@ INFO: primitive type "string" used outside top-level definitions
 WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/webhooks/webhooks-payments/gateway/yaband.json
 INFO: primitive type "string" used outside top-level definitions
+  in ./maas-backend/webhooks/webhooks-payments/gateway/yaband.json
+WARNING: skipping enum value generation for enum defined outside root
   in ./maas-backend/webhooks/webhooks-payments/gateway/yaband.json
 INFO: missing description
   in ./maas-backend/webhooks/webhooks-payments/gateway/yaband.json
@@ -1664,6 +1906,10 @@ WARNING: minLength field not supported outside top-level definitions
   in ./maas-backend/webhooks/zendesk-push-notification/request.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./maas-backend/webhooks/zendesk-push-notification/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-cancel/response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-cancel/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./tsp/booking-options-list/request.json
 WARNING: maxLength field not supported outside top-level definitions
@@ -1736,8 +1982,32 @@ INFO: primitive type "string" used outside top-level definitions
   in ./tsp/booking-ticket/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./tsp/booking-ticket/response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-ticket/response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-ticket/response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-ticket/response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-ticket/response.json
 INFO: primitive type "string" used outside top-level definitions
   in ./tsp/booking-ticket/response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-ticket/response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-ticket/response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-ticket/response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-ticket/response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-update/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-update/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-update/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/booking-update/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./tsp/journey-planner/request.json
 WARNING: patternProperty support has limitations
@@ -1756,11 +2026,41 @@ INFO: primitive type "integer" used outside top-level definitions
   in ./tsp/stations-list/request.json
 WARNING: minimum field not supported outside top-level definitions
   in ./tsp/stations-list/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/stations-list/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/stations-list/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/stations-list/request.json
 INFO: primitive type "string" used outside top-level definitions
   in ./tsp/vehicle-alert/request.json
 WARNING: minLength field not supported outside top-level definitions
   in ./tsp/vehicle-alert/request.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./tsp/vehicle-alert/request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/webhooks-bookings-update/remote-request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/webhooks-bookings-update/remote-request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/webhooks-bookings-update/remote-request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/webhooks-bookings-update/remote-request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/webhooks-bookings-update/remote-request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/webhooks-bookings-update/remote-request.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/webhooks-bookings-update/remote-response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/webhooks-bookings-update/remote-response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/webhooks-bookings-update/remote-response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/webhooks-bookings-update/remote-response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/webhooks-bookings-update/remote-response.json
+WARNING: skipping enum value generation for enum defined outside root
+  in ./tsp/webhooks-bookings-update/remote-response.json
 INFO: missing description
   in ./tsp/webhooks-bookings-update/remote-response.json

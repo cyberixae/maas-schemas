@@ -150,6 +150,7 @@ const inputSchema: JSONSchema7 = JSON.parse(fs.readFileSync(inputFile, 'utf-8'))
 
 const imps = new Set<string>();
 const helpers = new Set<string>();
+const enumValues: Array<string> = [];
 const exps = new Set<string>();
 
 enum ErrorCode {
@@ -491,24 +492,33 @@ function fromContains(schema: JSONSchema7): [gen.TypeReference] | [] {
   return [];
 }
 
-function fromNamedEnumValue (s: string|boolean|number, rootName: string) {
-  const helperName = `${rootName}_${s}`;
-  const enumValueHelper = createHelper(
-    gen.typeDeclaration(
-      helperName,
-      gen.literalCombinator(s),
-    ),
-  );
-  helpers.add(enumValueHelper);
-  return gen.customCombinator(helperName, helperName);
+function fromNamedEnumValue(value: string | boolean | number, rootName: string) {
+  const emptyString: '' = '';
+  const [head, ...tail] = rootName.split(emptyString);
+  const R = head.toUpperCase();
+  const r = head.toLowerCase();
+  const ootName = tail.join(emptyString);
+  const typeName = `${R}${ootName}_${value}`;
+  const valueName = `${r}${ootName}_${value}`;
+
+  const d = gen.typeDeclaration(typeName, gen.literalCombinator(value));
+  const staticType = gen.printStatic(d);
+  const runtimeCodec = gen.printRuntime(d);
+  const definition = [
+    `export ${staticType}`,
+    `export ${runtimeCodec}`,
+    `export const ${valueName}: ${typeName} = ${JSON.stringify(value)}`,
+  ].join('\n');
+  const reference = gen.customCombinator(typeName, typeName);
+  // eslint-disable-next-line
+  enumValues.push(definition);
+  return reference;
 }
 
-function fromEnum(schema: JSONSchema7, rootName: string|null): [gen.TypeReference] | [] {
-
-  if (rootName === null) {
-    warning('skipping value accessor generation for enum defined outside root');
-  }
-
+function fromEnum(
+  schema: JSONSchema7,
+  rootName: string | null,
+): [gen.TypeReference] | [] {
   if ('enum' in schema && typeof schema.enum !== 'undefined') {
     const combinators = schema.enum.map((s) => {
       if (s === null) {
@@ -518,10 +528,11 @@ function fromEnum(schema: JSONSchema7, rootName: string|null): [gen.TypeReferenc
         case 'string':
         case 'boolean':
         case 'number':
-          if (rootName !== null) {
-            return fromNamedEnumValue(s, rootName);
+          if (rootName === null) {
+            warning('skipping enum value generation for enum defined outside root');
+            return gen.literalCombinator(s);
           }
-          return gen.literalCombinator(s);
+          return fromNamedEnumValue(s, rootName);
       }
       // eslint-disable-next-line
       throw new Error(`${typeof s}s are not supported as part of ENUM`);
@@ -585,8 +596,11 @@ function fromOneOf(schema: JSONSchema7): [gen.TypeReference] | [] {
   return [];
 }
 
-function fromSchema(schema: JSONSchema7Definition, rootName: string|null = null): gen.TypeReference {
-  const isRroot = rootName !== null;
+function fromSchema(
+  schema: JSONSchema7Definition,
+  rootName: string | null = null,
+): gen.TypeReference {
+  const isRoot = rootName !== null;
   if (typeof schema === 'boolean') {
     imps.add("import * as t from 'io-ts';");
     if (schema) {
@@ -910,6 +924,8 @@ log('');
 imps.forEach(log);
 log('');
 helpers.forEach(log);
+log('');
+enumValues.forEach(log);
 log('');
 log(`export const schemaId = '${inputSchema.$id}';`);
 log('');
