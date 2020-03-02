@@ -491,25 +491,24 @@ function fromContains(schema: JSONSchema7): [gen.TypeReference] | [] {
   return [];
 }
 
-function fromEnumValue (s: string|boolean|number) {
-
-  return gen.literalCombinator(s);
-  const definedHelper = createHelper(
+function fromNamedEnumValue (s: string|boolean|number, rootName: string) {
+  const helperName = `${rootName}_${s}`;
+  const enumValueHelper = createHelper(
     gen.typeDeclaration(
-      'Defined',
-      gen.unionCombinator([
-        gen.unknownRecordType,
-        gen.unknownArrayType,
-        gen.stringType,
-        gen.booleanType,
-        gen.numberType,
-        gen.nullType,
-      ]),
+      helperName,
+      gen.literalCombinator(s),
     ),
   );
+  helpers.add(enumValueHelper);
+  return gen.customCombinator(helperName, helperName);
 }
 
-function fromEnum(schema: JSONSchema7): [gen.TypeReference] | [] {
+function fromEnum(schema: JSONSchema7, rootName: string|null): [gen.TypeReference] | [] {
+
+  if (rootName === null) {
+    warning('skipping value accessor generation for enum defined outside root');
+  }
+
   if ('enum' in schema && typeof schema.enum !== 'undefined') {
     const combinators = schema.enum.map((s) => {
       if (s === null) {
@@ -519,7 +518,10 @@ function fromEnum(schema: JSONSchema7): [gen.TypeReference] | [] {
         case 'string':
         case 'boolean':
         case 'number':
-          return fromEnumValue(s);
+          if (rootName !== null) {
+            return fromNamedEnumValue(s, rootName);
+          }
+          return gen.literalCombinator(s);
       }
       // eslint-disable-next-line
       throw new Error(`${typeof s}s are not supported as part of ENUM`);
@@ -583,7 +585,8 @@ function fromOneOf(schema: JSONSchema7): [gen.TypeReference] | [] {
   return [];
 }
 
-function fromSchema(schema: JSONSchema7Definition, isRoot = false): gen.TypeReference {
+function fromSchema(schema: JSONSchema7Definition, rootName: string|null = null): gen.TypeReference {
+  const isRroot = rootName !== null;
   if (typeof schema === 'boolean') {
     imps.add("import * as t from 'io-ts';");
     if (schema) {
@@ -622,7 +625,7 @@ function fromSchema(schema: JSONSchema7Definition, isRoot = false): gen.TypeRefe
     ...fromType(schema),
     ...fromRequired(schema),
     ...fromContains(schema),
-    ...fromEnum(schema),
+    ...fromEnum(schema, rootName),
     ...fromConst(schema),
     ...fromAllOf(schema),
     ...fromAnyOf(schema),
@@ -743,7 +746,7 @@ function fromDefinitions(definitions2: JSONSchema7['definitions']): Array<DefInp
         dec: gen.typeDeclaration(
           name,
           gen.brandCombinator(
-            fromSchema(scem, true),
+            fromSchema(scem, name),
             (x) => generateChecks(x, scem),
             name,
           ),
@@ -771,7 +774,7 @@ function fromNonRefRoot(schema: JSONSchema7): Array<DefInput> {
       dec: gen.typeDeclaration(
         defaultExport,
         gen.brandCombinator(
-          fromSchema(schema, true),
+          fromSchema(schema, defaultExport),
           (x) => generateChecks(x, schema),
           defaultExport,
         ),
