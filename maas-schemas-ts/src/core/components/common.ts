@@ -105,9 +105,12 @@ export const Phone = t.brand(
 export interface PhoneBrand {
   readonly Phone: unique symbol;
 }
-/** examplesPhone // => { _tag: 'Right', right: examplesPhoneJson } */
-export const examplesPhoneJson: NonEmptyArray<unknown> = ['+358401234567'];
-export const examplesPhone = nonEmptyArray(Phone).decode(examplesPhoneJson);
+/** ExamplesPhone.decode(examplesPhone) // => { _tag: 'Right', right: examplesPhone } */
+export const ExamplesPhone = nonEmptyArray(Phone);
+export type ExamplesPhone = NonEmptyArray<Phone>;
+export const examplesPhone: ExamplesPhone = ([
+  '+358401234567',
+] as unknown) as ExamplesPhone;
 
 // RawPhone
 // Slightly looser definition of phone number
@@ -135,9 +138,12 @@ export const Email = t.brand(
 export interface EmailBrand {
   readonly Email: unique symbol;
 }
-/** examplesEmail // => { _tag: 'Right', right: examplesEmailJson } */
-export const examplesEmailJson: NonEmptyArray<unknown> = ['joe.customer@example.com'];
-export const examplesEmail = nonEmptyArray(Email).decode(examplesEmailJson);
+/** ExamplesEmail.decode(examplesEmail) // => { _tag: 'Right', right: examplesEmail } */
+export const ExamplesEmail = nonEmptyArray(Email);
+export type ExamplesEmail = NonEmptyArray<Email>;
+export const examplesEmail: ExamplesEmail = ([
+  'joe.customer@example.com',
+] as unknown) as ExamplesEmail;
 
 // PaymentSourceId
 // The purpose of this remains a mystery

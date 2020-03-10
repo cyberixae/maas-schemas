@@ -26,11 +26,12 @@ export const Uuid = t.brand(
 export interface UuidBrand {
   readonly Uuid: unique symbol;
 }
-/** examplesUuid // => { _tag: 'Right', right: examplesUuidJson } */
-export const examplesUuidJson: NonEmptyArray<unknown> = [
+/** ExamplesUuid.decode(examplesUuid) // => { _tag: 'Right', right: examplesUuid } */
+export const ExamplesUuid = nonEmptyArray(Uuid);
+export type ExamplesUuid = NonEmptyArray<Uuid>;
+export const examplesUuid: ExamplesUuid = ([
   '4828507e-683f-41bf-9d87-689808fbf958',
-];
-export const examplesUuid = nonEmptyArray(Uuid).decode(examplesUuidJson);
+] as unknown) as ExamplesUuid;
 
 // Url
 // Uniform resource locator, see https://en.wikipedia.org/wiki/Uniform_Resource_Locator and https://mathiasbynens.be/demo/url-regex
@@ -79,13 +80,12 @@ export const ObsoleteIdentityId = t.brand(
 export interface ObsoleteIdentityIdBrand {
   readonly ObsoleteIdentityId: unique symbol;
 }
-/** examplesObsoleteIdentityId // => { _tag: 'Right', right: examplesObsoleteIdentityIdJson } */
-export const examplesObsoleteIdentityIdJson: NonEmptyArray<unknown> = [
+/** ExamplesObsoleteIdentityId.decode(examplesObsoleteIdentityId) // => { _tag: 'Right', right: examplesObsoleteIdentityId } */
+export const ExamplesObsoleteIdentityId = nonEmptyArray(ObsoleteIdentityId);
+export type ExamplesObsoleteIdentityId = NonEmptyArray<ObsoleteIdentityId>;
+export const examplesObsoleteIdentityId: ExamplesObsoleteIdentityId = ([
   'eu-west-1:4828507e-683f-41bf-9d87-689808fbf958',
-];
-export const examplesObsoleteIdentityId = nonEmptyArray(ObsoleteIdentityId).decode(
-  examplesObsoleteIdentityIdJson,
-);
+] as unknown) as ExamplesObsoleteIdentityId;
 
 // IdentityId
 // The purpose of this remains a mystery
@@ -98,14 +98,13 @@ export const IdentityId = t.brand(
 export interface IdentityIdBrand {
   readonly IdentityId: unique symbol;
 }
-/** examplesIdentityId // => { _tag: 'Right', right: examplesIdentityIdJson } */
-export const examplesIdentityIdJson: NonEmptyArray<unknown> = [
+/** ExamplesIdentityId.decode(examplesIdentityId) // => { _tag: 'Right', right: examplesIdentityId } */
+export const ExamplesIdentityId = nonEmptyArray(IdentityId);
+export type ExamplesIdentityId = NonEmptyArray<IdentityId>;
+export const examplesIdentityId: ExamplesIdentityId = ([
   'eu-west-1:4828507e-683f-41bf-9d87-689808fbf958',
   '4828507e-683f-41bf-9d87-689808fbf958',
-];
-export const examplesIdentityId = nonEmptyArray(IdentityId).decode(
-  examplesIdentityIdJson,
-);
+] as unknown) as ExamplesIdentityId;
 
 // Currency
 // Accepted monetary unit in ISO 4127 format, see https://en.wikipedia.org/wiki/ISO_4217#cite_note-1

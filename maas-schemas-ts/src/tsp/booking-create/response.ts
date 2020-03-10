@@ -114,8 +114,10 @@ export const Response = t.brand(
 export interface ResponseBrand {
   readonly Response: unique symbol;
 }
-/** examplesResponse // => { _tag: 'Right', right: examplesResponseJson } */
-export const examplesResponseJson: NonEmptyArray<unknown> = [
+/** ExamplesResponse.decode(examplesResponse) // => { _tag: 'Right', right: examplesResponse } */
+export const ExamplesResponse = nonEmptyArray(Response);
+export type ExamplesResponse = NonEmptyArray<Response>;
+export const examplesResponse: ExamplesResponse = ([
   {
     leg: {
       from: {
@@ -165,8 +167,7 @@ export const examplesResponseJson: NonEmptyArray<unknown> = [
     tspProductId: 'testtaxi1-product1',
     token: {},
   },
-];
-export const examplesResponse = nonEmptyArray(Response).decode(examplesResponseJson);
+] as unknown) as ExamplesResponse;
 
 export default Response;
 

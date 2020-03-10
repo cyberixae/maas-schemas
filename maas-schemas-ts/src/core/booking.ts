@@ -309,8 +309,10 @@ export const Booking = t.brand(
 export interface BookingBrand {
   readonly Booking: unique symbol;
 }
-/** examplesBooking // => { _tag: 'Right', right: examplesBookingJson } */
-export const examplesBookingJson: NonEmptyArray<unknown> = [
+/** ExamplesBooking.decode(examplesBooking) // => { _tag: 'Right', right: examplesBooking } */
+export const ExamplesBooking = nonEmptyArray(Booking);
+export type ExamplesBooking = NonEmptyArray<Booking>;
+export const examplesBooking: ExamplesBooking = ([
   {
     id: '12345678-ABCD-1234-ABCD-123456789ABC',
     state: 'EXPIRED',
@@ -431,8 +433,7 @@ export const examplesBookingJson: NonEmptyArray<unknown> = [
     cancelling: false,
     customer: { identityId: 'eu-west-1:4828507e-683f-41bf-9d87-689808fbf958' },
   },
-];
-export const examplesBooking = nonEmptyArray(Booking).decode(examplesBookingJson);
+] as unknown) as ExamplesBooking;
 
 export default Booking;
 

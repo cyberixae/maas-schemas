@@ -32,8 +32,10 @@ export const ComponentAddress = t.brand(
 export interface ComponentAddressBrand {
   readonly ComponentAddress: unique symbol;
 }
-/** examplesComponentAddress // => { _tag: 'Right', right: examplesComponentAddressJson } */
-export const examplesComponentAddressJson: NonEmptyArray<unknown> = [
+/** ExamplesComponentAddress.decode(examplesComponentAddress) // => { _tag: 'Right', right: examplesComponentAddress } */
+export const ExamplesComponentAddress = nonEmptyArray(ComponentAddress);
+export type ExamplesComponentAddress = NonEmptyArray<ComponentAddress>;
+export const examplesComponentAddress: ExamplesComponentAddress = ([
   'state:Tōkyō-to|district:Kanda Nishikichō 3-chōme|streetNumber:4-パレステュディオ御茶ノ水駿河台参番館|zipCode:101-0054|city:Chiyoda-City|country:Japan',
   "streetName:Tarkk'ampujänkätu|city:Helsinki|country:Finland|state:Uusimaa|streetNumber:1|zipCode:00100|district:Tapiola",
   "streetName:Hämeentie Töölöntori Lähettilääntie Tarkk'ampujänkätu",
@@ -53,10 +55,7 @@ export const examplesComponentAddressJson: NonEmptyArray<unknown> = [
   'country:skandinavisk',
   'streetNumber:1-1',
   'streetNumber:1/2-d2',
-];
-export const examplesComponentAddress = nonEmptyArray(ComponentAddress).decode(
-  examplesComponentAddressJson,
-);
+] as unknown) as ExamplesComponentAddress;
 
 // PlaceName
 // Place name (given in autocomplete)

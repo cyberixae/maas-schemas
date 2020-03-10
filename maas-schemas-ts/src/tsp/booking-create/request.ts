@@ -99,8 +99,10 @@ export const Request = t.brand(
 export interface RequestBrand {
   readonly Request: unique symbol;
 }
-/** examplesRequest // => { _tag: 'Right', right: examplesRequestJson } */
-export const examplesRequestJson: NonEmptyArray<unknown> = [
+/** ExamplesRequest.decode(examplesRequest) // => { _tag: 'Right', right: examplesRequest } */
+export const ExamplesRequest = nonEmptyArray(Request);
+export type ExamplesRequest = NonEmptyArray<Request>;
+export const examplesRequest: ExamplesRequest = ([
   {
     leg: {
       to: {
@@ -149,8 +151,7 @@ export const examplesRequestJson: NonEmptyArray<unknown> = [
     tspId: null,
     tspProduct: { id: 'testtaxi1-product1' },
   },
-];
-export const examplesRequest = nonEmptyArray(Request).decode(examplesRequestJson);
+] as unknown) as ExamplesRequest;
 
 export default Request;
 
