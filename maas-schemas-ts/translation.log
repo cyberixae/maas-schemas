@@ -954,6 +954,22 @@ WARNING: minLength field not supported outside top-level definitions
   in ./core/region.json
 WARNING: maxLength field not supported outside top-level definitions
   in ./core/region.json
+WARNING: patternProperty support has limitations
+  in ./environments/accounts.json
+INFO: missing description
+  in ./environments/accounts.json
+INFO: missing description
+  in ./environments/accounts.json
+INFO: missing description
+  in ./environments/accounts.json
+INFO: missing description
+  in ./environments/accounts.json
+INFO: missing description
+  in ./environments/accounts.json
+INFO: missing description
+  in ./environments/accounts.json
+INFO: missing description
+  in ./environments/environments.json
 INFO: missing description
   in ./environments/environments.json
 INFO: missing description

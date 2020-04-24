@@ -10,6 +10,7 @@ The base environments object with several environment groups and related meta da
 import * as t from 'io-ts';
 import * as Common_ from 'maas-schemas-ts/core/components/common';
 import * as Units_ from 'maas-schemas-ts/core/components/units';
+import * as Accounts_ from 'maas-schemas-ts/environments/accounts';
 import { NonEmptyArray } from 'fp-ts/lib/NonEmptyArray';
 import { nonEmptyArray } from 'io-ts-types/lib/nonEmptyArray';
 
@@ -175,6 +176,7 @@ export type Environment = t.Branded<
     api?: EnvironmentUrl;
     live?: EnvironmentLive;
     contact?: Developer;
+    account?: Accounts_.AccountAlias;
     name?: EnvironmentName;
     description?: EnvironmentDescription;
   } & {
@@ -182,6 +184,7 @@ export type Environment = t.Branded<
     api: Defined;
     live: Defined;
     contact: Defined;
+    account: Defined;
   },
   EnvironmentBrand
 >;
@@ -192,6 +195,7 @@ export const Environment = t.brand(
       api: EnvironmentUrl,
       live: EnvironmentLive,
       contact: Developer,
+      account: Accounts_.AccountAlias,
       name: EnvironmentName,
       description: EnvironmentDescription,
     }),
@@ -200,6 +204,7 @@ export const Environment = t.brand(
       api: Defined,
       live: Defined,
       contact: Defined,
+      account: Defined,
     }),
   ]),
   (
@@ -210,6 +215,7 @@ export const Environment = t.brand(
       api?: EnvironmentUrl;
       live?: EnvironmentLive;
       contact?: Developer;
+      account?: Accounts_.AccountAlias;
       name?: EnvironmentName;
       description?: EnvironmentDescription;
     } & {
@@ -217,6 +223,7 @@ export const Environment = t.brand(
       api: Defined;
       live: Defined;
       contact: Defined;
+      account: Defined;
     },
     EnvironmentBrand
   > => true,
@@ -231,6 +238,7 @@ export const examplesEnvironment: NonEmptyArray<Environment> = ([
     id: 'production',
     api: 'https://production.example.com/api/',
     live: true,
+    account: 'production',
     contact: { name: 'Alisha Admin', email: 'admin@example.com' },
     description: 'Production environment',
   },
@@ -281,6 +289,7 @@ export const examplesDevEnvironment: NonEmptyArray<DevEnvironment> = ([
     id: 'testing',
     api: 'https://testing.example.com/api/',
     live: false,
+    account: 'testing',
     contact: { name: 'Alisha Admin' },
     description: 'Testing environment',
   },
@@ -376,6 +385,7 @@ export const examplesEnvironmentGroup: NonEmptyArray<EnvironmentGroup> = ([
         id: 'production',
         api: 'https://production.example.com/api/',
         live: true,
+        account: 'production',
         contact: { name: 'Alisha Admin', email: 'admin@example.com' },
         description: 'Production environment',
       },
@@ -383,6 +393,7 @@ export const examplesEnvironmentGroup: NonEmptyArray<EnvironmentGroup> = ([
         id: 'testing',
         api: 'https://testing.example.com/api/',
         live: false,
+        account: 'testing',
         contact: { name: 'Alisha Admin' },
         description: 'Testing environment',
       },
@@ -395,6 +406,7 @@ export const examplesEnvironmentGroup: NonEmptyArray<EnvironmentGroup> = ([
         id: 'fantasy-topping',
         api: 'https://fantasy-topping.example.com/api/',
         live: false,
+        account: 'testing',
         contact: { name: 'Dennis Developer' },
         name: 'Fantasy Topping',
         description: 'Add support for pizza customization',
@@ -403,11 +415,24 @@ export const examplesEnvironmentGroup: NonEmptyArray<EnvironmentGroup> = ([
   },
 ] as unknown) as NonEmptyArray<EnvironmentGroup>;
 
+// EnvironmentIndex
+// The purpose of this remains a mystery
+export type EnvironmentIndex = t.Branded<Array<EnvironmentGroup>, EnvironmentIndexBrand>;
+export const EnvironmentIndex = t.brand(
+  t.array(EnvironmentGroup),
+  (x): x is t.Branded<Array<EnvironmentGroup>, EnvironmentIndexBrand> => true,
+  'EnvironmentIndex',
+);
+export interface EnvironmentIndexBrand {
+  readonly EnvironmentIndex: unique symbol;
+}
+
 // Environments
 // The default export. More information at the top.
 export type Environments = t.Branded<
   {
-    index?: Array<EnvironmentGroup>;
+    accounts?: Accounts_.AccountIndex;
+    index?: EnvironmentIndex;
   } & {
     index: Defined;
   },
@@ -416,7 +441,8 @@ export type Environments = t.Branded<
 export const Environments = t.brand(
   t.intersection([
     t.partial({
-      index: t.array(EnvironmentGroup),
+      accounts: Accounts_.AccountIndex,
+      index: EnvironmentIndex,
     }),
     t.type({
       index: Defined,
@@ -426,7 +452,8 @@ export const Environments = t.brand(
     x,
   ): x is t.Branded<
     {
-      index?: Array<EnvironmentGroup>;
+      accounts?: Accounts_.AccountIndex;
+      index?: EnvironmentIndex;
     } & {
       index: Defined;
     },
@@ -440,6 +467,14 @@ export interface EnvironmentsBrand {
 /** require('io-ts-validator').validator(nonEmptyArray(Environments)).decodeSync(examplesEnvironments) // => examplesEnvironments */
 export const examplesEnvironments: NonEmptyArray<Environments> = ([
   {
+    accounts: {
+      production: {
+        id: '001234567890',
+        name: 'Example Account',
+        description: 'This account is but an example account',
+      },
+      testing: { id: '101234567890' },
+    },
     index: [
       {
         name: 'Core Environments',
@@ -448,6 +483,7 @@ export const examplesEnvironments: NonEmptyArray<Environments> = ([
             id: 'production',
             api: 'https://production.example.com/api/',
             live: true,
+            account: 'production',
             contact: { name: 'Alisha Admin', email: 'admin@example.com' },
             description: 'Production environment',
           },
@@ -455,6 +491,7 @@ export const examplesEnvironments: NonEmptyArray<Environments> = ([
             id: 'testing',
             api: 'https://testing.example.com/api/',
             live: false,
+            account: 'testing',
             contact: { name: 'Alisha Admin' },
             description: 'Testing environment',
           },
@@ -467,6 +504,7 @@ export const examplesEnvironments: NonEmptyArray<Environments> = ([
             id: 'fantasy-topping',
             api: 'https://fantasy-topping.example.com/api/',
             live: false,
+            account: 'testing',
             contact: { name: 'Dennis Developer' },
             name: 'Fantasy Topping',
             description: 'Add support for pizza customization',
