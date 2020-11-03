@@ -147,7 +147,7 @@
     "optionalParameters": {
       "type": "array",
       "items": {
-        "anyOf": [
+        "oneOf": [
           {
             "$ref": "#/definitions/selection"
           },

@@ -14,7 +14,7 @@
       "type": "object",
       "properties": {
         "timestamp": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "http://maasglobal.com/core/components/units.json#/definitions/time"
             },

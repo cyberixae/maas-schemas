@@ -1,7 +1,7 @@
 {
   "$id": "http://maasglobal.com/maas-backend/booking-option-create/response.json",
   "description": "Response schema for booking-option-create",
-  "anyOf": [
+  "oneOf": [
     {
       "type": "object",
       "properties": {

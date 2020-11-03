@@ -19,7 +19,7 @@
       "$ref": "http://maasglobal.com/core/components/units.json#/definitions/time"
     },
     "mode": {
-      "anyOf": [
+      "oneOf": [
         {
           "$ref": "http://maasglobal.com/core/components/travel-mode.json#/definitions/personalMode"
         },
@@ -152,7 +152,7 @@
       "$ref": "#/definitions/legExtensions"
     },
     {
-      "anyOf": [
+      "oneOf": [
         {
           "$ref": "#/definitions/legCore"
         },

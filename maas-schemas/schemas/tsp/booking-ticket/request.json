@@ -8,7 +8,7 @@
     },
     "ticket": {
       "description": "Ticket path.",
-      "anyOf": [
+      "oneOf": [
         {
           "type": "string",
           "pattern": "[a-z]\\.[svg|html|pdf]"

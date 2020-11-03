@@ -16,7 +16,7 @@
       "$ref": "http://maasglobal.com/core/components/units-geo.json#/definitions/shortLocationString"
     },
     "fromName": {
-      "anyOf": [
+      "oneOf": [
         {
           "$ref": "http://maasglobal.com/core/components/address.json#/definitions/placeName"
         },
@@ -27,7 +27,7 @@
       ]
     },
     "fromAddress": {
-      "anyOf": [
+      "oneOf": [
         {
           "description": "Componentized from address",
           "allOf": [{ "$ref": "http://maasglobal.com/core/components/address.json#/definitions/componentAddress" }]
@@ -43,7 +43,7 @@
       "allOf": [{ "$ref": "http://maasglobal.com/core/components/units-geo.json#/definitions/distance" }]
     },
     "to": {
-      "anyOf": [
+      "oneOf": [
         {
           "$ref": "http://maasglobal.com/core/components/units-geo.json#/definitions/shortLocationString"
         },
@@ -54,7 +54,7 @@
       ]
     },
     "toName": {
-      "anyOf": [
+      "oneOf": [
         {
           "$ref": "http://maasglobal.com/core/components/address.json#/definitions/placeName"
         },
@@ -65,7 +65,7 @@
       ]
     },
     "toAddress": {
-      "anyOf": [
+      "oneOf": [
         {
           "$ref": "http://maasglobal.com/core/components/address.json#/definitions/componentAddress"
         },

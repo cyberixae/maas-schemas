@@ -17,5 +17,5 @@
     }
   },
   "additionalProperties": false,
-  "anyOf": [{ "required": ["authToken", "nonce", "validTo"] }, { "required": ["error", "nonce"] }]
+  "oneOf": [{ "required": ["authToken", "nonce", "validTo"] }, { "required": ["error", "nonce"] }]
 }

@@ -53,7 +53,7 @@
     },
     "dob": {
       "description": "The customer's date of birth or boolean indicating if the value is already in DB",
-      "anyOf": [
+      "oneOf": [
         {
           "type": "boolean"
         },
@@ -64,7 +64,7 @@
     },
     "ssid": {
       "description": "Social Security ID",
-      "anyOf": [
+      "oneOf": [
         {
           "type": "boolean"
         },

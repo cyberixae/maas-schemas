@@ -25,7 +25,7 @@
               "$ref": "http://maasglobal.com/maas-backend/customers/payment-sources/paymentSource.json#/definitions/alias"
             }
           },
-          "anyOf": [{ "required": ["isDefault"] }, { "required": ["alias"] }],
+          "oneOf": [{ "required": ["isDefault"] }, { "required": ["alias"] }],
           "additionalProperties": false
         }
       },

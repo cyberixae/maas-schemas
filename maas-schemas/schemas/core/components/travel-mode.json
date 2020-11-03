@@ -1,7 +1,7 @@
 {
   "$id": "http://maasglobal.com/core/components/travel-mode.json",
   "description": "Transfer modes used for MaaS internal services",
-  "anyOf": [
+  "oneOf": [
     { "$ref": "#/definitions/waitingMode" },
     { "$ref": "#/definitions/transferMode" },
     { "$ref": "#/definitions/personalMode" },

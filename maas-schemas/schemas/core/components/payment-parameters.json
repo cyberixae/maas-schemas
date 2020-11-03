@@ -16,7 +16,7 @@
       }
     },
     "avainpayPaymentParameters": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "object",
           "description": "JSAPI payment parameters @ v1.0.2",
